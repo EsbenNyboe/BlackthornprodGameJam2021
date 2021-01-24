@@ -19,4 +19,10 @@ public class ThrowableObjectScriptableObjectDefinition : ScriptableObject
     public ThrowableObjectsType objectType;
     public int speedBonusGiven;
     public int pointsRemoved;
+    public Sprite[] idleSprites;
+    public Sprite[] pickUpSprites;
+    public Sprite[] heldSprites;
+    public Sprite[] thrownSprites;
+    public Sprite[] landSprites;
+    public Sprite[] drownSprites;
  }

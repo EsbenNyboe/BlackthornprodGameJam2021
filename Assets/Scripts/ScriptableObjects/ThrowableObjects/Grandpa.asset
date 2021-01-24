@@ -10,8 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c78a8acb0a455014998c3510896e53c0, type: 3}
-  m_Name: ThrowableObjectScriptableObjectDefinition
+  m_Name: Grandpa
   m_EditorClassIdentifier: 
-  objectType: 1
+  objectType: 0
   speedBonusGiven: 0
   pointsRemoved: 0
+  idleSprites: []
+  pickUpSprites: []
+  heldSprites: []
+  thrownSprites: []
+  landSprites: []
+  drownSprites: []
