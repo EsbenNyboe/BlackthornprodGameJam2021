@@ -8,7 +8,7 @@ using UnityEngine;
  * Twitter: @MrFBMuniz
  * Created: 23/01/2021 : dd/mm/yyyy
  * 
- * Class created with the goal to handle throwing objects by using it's RigidBody2D component for the BlackthornProd GameJam #3
+ * Event: BlackthornProd GameJam #3
  * *******************************************************************************************/
 
 
@@ -40,10 +40,14 @@ public class ThrowObjectSystem
         }
     }
     /// <summary>
-    /// Throws an object using its RigidBody2D component by adding Impulse force to it
+    /// Throws an object using its RigidBody2D component by adding Impulse force to it 
+    /// <para>Reminder: Angle in unity begins at the "top of the clock" instead of the right side of it</para>
     /// </summary>
+    /// <remarks>
+    /// Use 45° (sharp 45 right) and -45° (sharp 45 left) instead of 45°(sharp 45 right) and 315°(sharp 45 left)
+    /// </remarks>
     /// <param name="objectgameobject">Object that is going to be thrown (it has to have the RigidBody2D component)</param>
-    /// <param name="angle">Angle to where the object should be thrown to</param>
+    /// <param name="angle">Angle(degrees) to where the object should be thrown to</param>
     /// <param name="force">Amount of force of the thrown</param>
     public void ThrowObject(GameObject objectgameobject, float angle, float force)
     {//this is so we can use -45(left) or 45(right) instead of 315(left) and 45(right)
@@ -57,7 +61,7 @@ public class ThrowObjectSystem
         {
             auxAngle = 180 + angle;
         }
-        //this fixes the counter-clock way that Unity handles the angle units
+        //this fixes the weird way that Unity handles the angle units initial position
         auxAngle -= 90;  
         Quaternion rotation = Quaternion.AngleAxis(auxAngle, Vector3.forward);
         Vector3 direction = rotation*Vector3.up ;

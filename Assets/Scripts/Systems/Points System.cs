@@ -8,9 +8,9 @@ using System;
  * Author: Muniz
  * Youtube: https://www.youtube.com/channel/UCAOamcXgoT0gVjV1AG5b1Fg
  * Twitter: @MrFBMuniz
- * Created: 23/01/2021 : dd/mm/yyyy
+ * Created: 24/01/2021 : dd/mm/yyyy
  * 
- * Class created with the goal of handling all types of point systems for the BlackthornProd GameJam #3
+ *  Event: BlackthornProd GameJam #3
  * *******************************************************************************************/
 
 
