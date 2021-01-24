@@ -444,7 +444,7 @@ Transform:
   m_GameObject: {fileID: 707342621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.280002, y: -2.9, z: 0}
-  m_LocalScale: {x: 2.2787004, y: 2.2787, z: 2.2787004}
+  m_LocalScale: {x: 2.2787004, y: 1.47, z: 2.2787004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -925,8 +925,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369826401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.609997, y: 0.15000021, z: 0}
-  m_LocalScale: {x: 3.4605684, y: 3.4605684, z: 3.4605684}
+  m_LocalPosition: {x: 57.4, y: -1.4, z: 0}
+  m_LocalScale: {x: 3.4605684, y: 1.98, z: 3.4605684}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  timeOnTheWaveToFall: 3
+  timeOnTheWaveToFall: 5
 --- !u!1 &2082526265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 2087402508}
   - component: {fileID: 2087402507}
   - component: {fileID: 2087402506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BallTester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,10 +1273,12 @@ MonoBehaviour:
   forceWind: 0
   windForce: 0.4
   windAngle: -20
-  forceAngle45Right: 18
-  forceAngle45Left: 12
-  forceAngle90: 16
+  maxPullDistance: 1
+  maxPullForce: 20
   tester: {fileID: 2087402505}
+  throwableMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &2145813145
 Transform:
   m_ObjectHideFlags: 0
