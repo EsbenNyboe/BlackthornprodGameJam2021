@@ -3,7 +3,17 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Farts_On_Dog" ID="{80732BA5-4575-4F0A-8E05-F82A69F0A659}"/>
+				<Event Name="TestEvent" ID="{80732BA5-4575-4F0A-8E05-F82A69F0A659}">
+					<ChildrenList>
+						<Action Name="" ID="{B60D1FF7-A052-4959-BEF4-AC0D029F151F}" ShortID="1044659649">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="plop_1" ID="{C5DB268E-0967-42B4-B2CC-F0ED83BEA4F9}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
