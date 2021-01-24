@@ -12,21 +12,7 @@ using UnityEngine;
  * *******************************************************************************************/
 
 //Behavior of the throwable object, child of ThrowableObjectsMasterClass
-public class ThrowableObjectBehavior : ThrowableObjectsMasterClass
+public class DefaultPersonBehavior : ThrowableObjectsMasterClass
 {
-    //A scriptable object has to be set in the script component
-    [SerializeField] ThrowableObjectScriptableObjectDefinition throwableScriptableObject;
-
-    void Awake()
-    {
-        objectType = throwableScriptableObject.objectType;
-        speedBonusGiven = throwableScriptableObject.speedBonusGiven;
-        pointsRemoved = throwableScriptableObject.pointsRemoved;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+     
 }

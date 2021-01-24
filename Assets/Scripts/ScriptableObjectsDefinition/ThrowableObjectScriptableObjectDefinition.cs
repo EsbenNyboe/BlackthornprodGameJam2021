@@ -19,4 +19,4 @@ public class ThrowableObjectScriptableObjectDefinition : ScriptableObject
     public ThrowableObjectsType objectType;
     public int speedBonusGiven;
     public int pointsRemoved;
-}
+ }

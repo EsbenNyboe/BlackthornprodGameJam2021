@@ -14,10 +14,19 @@ using UnityEngine;
 //This class is just the Master Class for all Throwable Objects
 public abstract class ThrowableObjectsMasterClass : MonoBehaviour
 {
-    public ThrowableObjectsType objectType;
-    public int speedBonusGiven;
-    public int pointsRemoved;
-    
+    //A scriptable object has to be set in the script component
+    [SerializeField] ThrowableObjectScriptableObjectDefinition throwableScriptableObject;
+    protected ThrowableObjectsType objectType;
+    protected int speedBonusGiven;
+    protected int pointsRemoved;
+ 
+
+    void Awake()
+    {
+        objectType = throwableScriptableObject.objectType;
+        speedBonusGiven = throwableScriptableObject.speedBonusGiven;
+        pointsRemoved = throwableScriptableObject.pointsRemoved;
+     }
 }
 public enum ThrowableObjectsType
 {

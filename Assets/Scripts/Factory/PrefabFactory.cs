@@ -15,11 +15,11 @@ using System;
  * *******************************************************************************************/
 
 /// <summary>
-/// Prefab factory in general
+/// Prefab factory in general. Attach this script to a Gameobject and fill the script with the information needed
 /// </summary>
 public class PrefabFactory : MonoBehaviour
 {
-    
+    [Header("Resource entrance")]
     [SerializeField] ProductData[] productDatas;
     public static PrefabFactory instance;
     private void Awake()

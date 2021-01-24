@@ -50,7 +50,7 @@ public class ThrowObjectSystem
     /// <param name="angle">Angle(degrees) to where the object should be thrown to</param>
     /// <param name="force">Amount of force of the thrown</param>
     public void ThrowObject(GameObject objectgameobject, float angle, float force)
-    {//this is so we can use -45(left) or 45(right) instead of 315(left) and 45(right)
+    {//this is so we can use -45(left) or 45(right) instead of 135(left) and 45(right)
         float auxAngle;
 
         if(angle >= 0)
