@@ -68,8 +68,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585901627460702954
-    List: []
+    m_lastTime: -8585901109014728554
+    List:
+    - name: TestEvent
+      guid: a52b738075450a4f8e05f82a69f0a659
+      id: 1097980931
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TestEvent
+        ObjectType: 3
+      Path: Default Work Unit\TestEvent
+      maxAttenuation: 0
+      maxDuration: 0.665969
+      minDuration: 0.665969
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -110,6 +122,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585901627457362146
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /BlackthornprodGameJam2021_WwiseProject
+  - /BlackthornprodGameJam2021_WwiseProject/Events
+  - /BlackthornprodGameJam2021_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
