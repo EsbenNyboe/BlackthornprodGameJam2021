@@ -1,0 +1,69 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+/*********************************************************************************************
+ * Throw Object System
+ * Author: Muniz
+ * Youtube: https://www.youtube.com/channel/UCAOamcXgoT0gVjV1AG5b1Fg
+ * Twitter: @MrFBMuniz
+ * Created: 23/01/2021 : dd/mm/yyyy
+ * 
+ * Class created with the goal to handle throwing objects by using it's RigidBody2D component for the BlackthornProd GameJam #3
+ * *******************************************************************************************/
+
+
+/// <summary>
+/// Class to handle the logic around Thowing objects using its RigidBody2D component
+/// </summary>
+public class ThrowObjectSystem
+{
+    Rigidbody2D objectRigidBody;
+
+
+    /// <summary>
+    /// Throws an object using its RigidBody2D component by adding Impulse force to it
+    /// </summary>
+    /// <param name="objectgameobject">Object that is going to be thrown (it has to have the RigidBody2D component)</param>
+    /// <param name="direction">Direction to where the object should be thrown to</param>
+    /// <param name="force">Amount of force of the thrown</param>
+    public void ThrowObject(GameObject objectgameobject,Vector3 direction, float force)
+    {
+        if(objectgameobject != null && objectgameobject.GetComponent<Rigidbody2D>() != null)
+        {
+            direction = direction.normalized;
+            objectRigidBody = objectgameobject.GetComponent<Rigidbody2D>();
+            objectRigidBody.AddForce(force * direction, ForceMode2D.Impulse);
+        }
+        else
+        {
+            Debug.LogError("either the gameobject is null or the gameobject doesn't have the RigidBody2D component attached");
+        }
+    }
+    /// <summary>
+    /// Throws an object using its RigidBody2D component by adding Impulse force to it
+    /// </summary>
+    /// <param name="objectgameobject">Object that is going to be thrown (it has to have the RigidBody2D component)</param>
+    /// <param name="angle">Angle to where the object should be thrown to</param>
+    /// <param name="force">Amount of force of the thrown</param>
+    public void ThrowObject(GameObject objectgameobject, float angle, float force)
+    {//this is so we can use -45(left) or 45(right) instead of 315(left) and 45(right)
+        float auxAngle;
+
+        if(angle >= 0)
+        {
+            auxAngle = angle;
+        }
+        else
+        {
+            auxAngle = 180 + angle;
+        }
+        //this fixes the counter-clock way that Unity handles the angle units
+        auxAngle -= 90;  
+        Quaternion rotation = Quaternion.AngleAxis(auxAngle, Vector3.forward);
+        Vector3 direction = rotation*Vector3.up ;
+        ThrowObject(objectgameobject, direction, force);
+    }
+
+
+
+}
