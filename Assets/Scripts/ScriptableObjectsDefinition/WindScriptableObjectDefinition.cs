@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /*********************************************************************************************
- * Default Person Behaviour
+ * Wind Scriptable Object Definition
  * Author: Muniz
  * Youtube: https://www.youtube.com/channel/UCAOamcXgoT0gVjV1AG5b1Fg
  * Twitter: @MrFBMuniz
@@ -11,8 +12,11 @@ using UnityEngine;
  *  Event: BlackthornProd GameJam #3
  * *******************************************************************************************/
 
-//Behavior of the throwable object, child of ThrowableObjectsMasterClass
-public class DefaultPersonBehavior : ThrowableObjectsMasterClass
+//Definition for the scriptable objects of wind references
+[CreateAssetMenu(fileName = "ScriptableObjects", menuName = "Wind")]
+public class WindScriptableObjectDefinition : ScriptableObject
 {
-     
+     public float windForce;
+    public float windAngle;
+
 }

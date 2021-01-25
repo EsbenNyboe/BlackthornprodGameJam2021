@@ -1116,6 +1116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087402510}
   - component: {fileID: 2087402509}
+  - component: {fileID: 2087402511}
   - component: {fileID: 2087402508}
   - component: {fileID: 2087402507}
   - component: {fileID: 2087402506}
@@ -1226,7 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035a49db037be9844ac2f6fcd4396b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwableScriptableObject: {fileID: 11400000, guid: 8da7047fd0beaa6419e9444659ceb992, type: 2}
+  throwableScriptableObject: {fileID: 11400000, guid: b19f0a5ccc9588c4498a9504521e4803, type: 2}
 --- !u!4 &2087402510
 Transform:
   m_ObjectHideFlags: 0
@@ -1241,6 +1242,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087402511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087402505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48d37e4173ca98469519dac4882b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windScriptableObject: {fileID: 11400000, guid: 19ddddd921f9bc74ab47f9f5f7e528b3, type: 2}
 --- !u!1 &2145813143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145813145}
   - component: {fileID: 2145813144}
+  - component: {fileID: 2145813146}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1270,15 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b969a534f22cef14c82fe0b5e580efa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceWind: 0
-  windForce: 0.4
-  windAngle: -20
-  maxPullDistance: 1
-  maxPullForce: 20
   tester: {fileID: 2087402505}
-  throwableMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!4 &2145813145
 Transform:
   m_ObjectHideFlags: 0
@@ -1293,3 +1300,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145813146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145813143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6eaa4409d7b474abbdaeee06c0453a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPullDistance: 7
+  maxPullForce: 20
+  throwableMask:
+    serializedVersion: 2
+    m_Bits: 256

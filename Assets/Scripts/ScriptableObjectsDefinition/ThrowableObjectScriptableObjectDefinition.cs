@@ -13,12 +13,15 @@ using UnityEngine;
  * *******************************************************************************************/
 
 //Definition for the scriptable objects of all Throwable objects
-[CreateAssetMenu(fileName = "ThrowableObjectScriptableObjectDefinition", menuName = "Throwable Object")]
+[CreateAssetMenu(fileName = "ScriptableObjects", menuName = "Throwable Object")]
 public class ThrowableObjectScriptableObjectDefinition : ScriptableObject
 {
     public ThrowableObjectsType objectType;
     public int speedBonusGiven;
     public int pointsRemoved;
+    public string landSoundEvent;
+    public string thrownSoundEvent;
+    public string drownSoundEvent;
     public Sprite[] idleSprites;
     public Sprite[] pickUpSprites;
     public Sprite[] heldSprites;

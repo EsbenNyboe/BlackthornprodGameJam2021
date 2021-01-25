@@ -15,3 +15,22 @@ MonoBehaviour:
   objectType: 5
   speedBonusGiven: 12
   pointsRemoved: 5
+  landSoundEvent: 
+  thrownSoundEvent: 
+  drownSoundEvent: 
+  idleSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pickUpSprites: []
+  heldSprites: []
+  thrownSprites: []
+  landSprites: []
+  drownSprites: []
