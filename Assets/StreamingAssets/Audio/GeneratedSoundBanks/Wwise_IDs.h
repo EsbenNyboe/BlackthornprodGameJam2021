@@ -13,8 +13,16 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID NPC_COLLFLOOR = 495534887U;
+        static const AkUniqueID NPC_COLLWATER = 139855160U;
+        static const AkUniqueID PLAYER_THROW = 65181031U;
         static const AkUniqueID TESTEVENT = 1097980931U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID THROWPOWER = 2111892502U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

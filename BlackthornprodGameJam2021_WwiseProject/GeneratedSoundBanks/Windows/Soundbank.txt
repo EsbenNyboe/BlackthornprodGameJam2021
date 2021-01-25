@@ -1,6 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
+	65181031	Player_Throw			\Default Work Unit\Player_Throw	
+	139855160	NPC_CollWater			\Default Work Unit\NPC_CollWater	
+	495534887	NPC_CollFloor			\Default Work Unit\NPC_CollFloor	
 	1097980931	TestEvent			\Default Work Unit\TestEvent	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	80753156	plop_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\plop_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\plop_1		127928
+	165999230	SolidCollision_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\SolidCollision_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SolidCollision_1		24656
+	390813675	Scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_1		97164
+	404512114	Scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_2		105950
+	451614913	Throw_1low	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Throw_1low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1low		31124
+	558849201	Throw_1high	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Throw_1high_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1high		18620
+	615628854	Splash_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Splash_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splash_3		50128
+	760535665	Scream_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Scream_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_3		158036
 

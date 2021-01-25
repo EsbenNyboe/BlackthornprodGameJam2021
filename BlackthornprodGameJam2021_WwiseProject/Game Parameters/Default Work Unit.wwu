@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E3BFB196-C756-4ED2-A3FB-64A921B24949}" SchemaVersion="97">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{E3BFB196-C756-4ED2-A3FB-64A921B24949}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E3BFB196-C756-4ED2-A3FB-64A921B24949}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="ThrowPower" ID="{85ED8721-368D-49E4-8EF2-AC691D9063E6}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

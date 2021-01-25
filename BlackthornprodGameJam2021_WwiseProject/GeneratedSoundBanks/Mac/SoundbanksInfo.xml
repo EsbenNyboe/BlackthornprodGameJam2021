@@ -11,16 +11,56 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2953616821">
+		<SoundBank Id="1355168291" Language="SFX" Hash="632905476">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="903899526">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1948458306">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="495534887" Name="NPC_CollFloor" ObjectPath="\Events\Default Work Unit\NPC_CollFloor" DurationType="OneShot" DurationMin="0.278821" DurationMax="0.278821">
+					<IncludedMemoryFiles>
+						<File Id="165999230" Language="SFX">
+							<ShortName>SolidCollision_1.wav</ShortName>
+							<Path>SFX\SolidCollision_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="139855160" Name="NPC_CollWater" ObjectPath="\Events\Default Work Unit\NPC_CollWater" DurationType="OneShot" DurationMin="0.567619" DurationMax="0.567619">
+					<IncludedMemoryFiles>
+						<File Id="615628854" Language="SFX">
+							<ShortName>Splash_3.wav</ShortName>
+							<Path>SFX\Splash_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="65181031" Name="Player_Throw" ObjectPath="\Events\Default Work Unit\Player_Throw" DurationType="OneShot" DurationMin="1.088262" DurationMax="1.811877">
+					<IncludedMemoryFiles>
+						<File Id="390813675" Language="SFX">
+							<ShortName>Scream_1.wav</ShortName>
+							<Path>SFX\Scream_1_10C4C929.wem</Path>
+						</File>
+						<File Id="404512114" Language="SFX">
+							<ShortName>Scream_2.wav</ShortName>
+							<Path>SFX\Scream_2_10C4C929.wem</Path>
+						</File>
+						<File Id="451614913" Language="SFX">
+							<ShortName>Throw_1low.wav</ShortName>
+							<Path>SFX\Throw_1low_10C4C929.wem</Path>
+						</File>
+						<File Id="558849201" Language="SFX">
+							<ShortName>Throw_1high.wav</ShortName>
+							<Path>SFX\Throw_1high_10C4C929.wem</Path>
+						</File>
+						<File Id="760535665" Language="SFX">
+							<ShortName>Scream_3.wav</ShortName>
+							<Path>SFX\Scream_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1097980931" Name="TestEvent" ObjectPath="\Events\Default Work Unit\TestEvent" DurationType="OneShot" DurationMin="0.665969" DurationMax="0.665969">
 					<IncludedMemoryFiles>
 						<File Id="80753156" Language="SFX">

@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0AA84755-DE68-43F9-8017-1AB091F00E21}" SchemaVersion="97">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{0AA84755-DE68-43F9-8017-1AB091F00E21}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0AA84755-DE68-43F9-8017-1AB091F00E21}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="ThrowingMechanic" ID="{4538C82E-0E1B-4DD2-9E66-C1650BA12735}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Player_Throw" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_CollWater" ID="{A64385B5-49B5-46C6-A936-58C90FED9A21}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_CollFloor" ID="{17955327-BFF8-43A4-B901-1431530910B2}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="ThrowPower" ID="{85ED8721-368D-49E4-8EF2-AC691D9063E6}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

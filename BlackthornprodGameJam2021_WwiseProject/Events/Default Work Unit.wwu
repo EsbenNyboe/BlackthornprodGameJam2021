@@ -14,6 +14,92 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Player_Throw" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}">
+					<ChildrenList>
+						<Action Name="" ID="{F4544083-89C4-4998-AF6C-53A784D029C8}" ShortID="793830987">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Throw" ID="{98571B81-55E4-4F81-9B6E-B8CD8252648E}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A558CF75-80BA-4AFC-88E0-497FC2028C7E}" ShortID="98255526">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B8B0E276-5187-40E9-9B26-80E222F89FC0}" ShortID="287500630">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_CollWater" ID="{A64385B5-49B5-46C6-A936-58C90FED9A21}">
+					<ChildrenList>
+						<Action Name="" ID="{120EEA17-EDEF-42CB-A9A7-7647BD4827BF}" ShortID="71931603">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Lowpass" Type="int16" Value="56"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A98DA455-A564-4E9B-B606-84326DF09ECC}" ShortID="727925258">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Splash_3" ID="{B8A7713B-16A7-4BBF-A74C-F0A66B0329F4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D34335A9-CCDA-4322-9FAC-479655C8045A}" ShortID="701501725">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_CollFloor" ID="{17955327-BFF8-43A4-B901-1431530910B2}">
+					<ChildrenList>
+						<Action Name="" ID="{ACFEA362-521B-412B-8FB1-2973124DD9ED}" ShortID="726028257">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B510CFA6-7098-4780-9C56-C9B289770E4A}" ShortID="205778547">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SolidCollision_1" ID="{6D903966-20E4-468B-B69B-2301826E9CE5}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
