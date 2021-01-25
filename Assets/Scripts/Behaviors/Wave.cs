@@ -8,6 +8,7 @@ public class Wave : MonoBehaviour
     public bool boatRidingNow;
     public float timeOnTheWaveToFall = 1;
     private float timeOnTheWave;
+    private float startSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class Wave : MonoBehaviour
                 boat.speed = 0;
             } else
             {
-                timeOnTheWave += Time.deltaTime;
+                boat.speed -= Time.deltaTime / timeOnTheWaveToFall;
             }
         } else
         {
@@ -40,6 +41,10 @@ public class Wave : MonoBehaviour
     {
         if(other.tag == "Boat")
         {
+            if (!boatRidingNow)
+            {
+                startSpeed = boat.speed;
+            }
             boatRidingNow = true;
         }
     }
@@ -48,6 +53,10 @@ public class Wave : MonoBehaviour
     {
         if (other.tag == "Boat")
         {
+            if (boatRidingNow)
+            {
+                boat.speed = startSpeed;
+            }
             boatRidingNow = false;
         }
     }
