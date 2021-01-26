@@ -23,9 +23,10 @@ public class ThrowableObjectScriptableObjectDefinition : ScriptableObject
     public string thrownSoundEvent;
     public string drownSoundEvent;
     public Sprite[] idleSprites;
-    public Sprite[] pickUpSprites;
+    //public Sprite[] pickUpSprites; 
     public Sprite[] heldSprites;
     public Sprite[] thrownSprites;
     public Sprite[] landSprites;
     public Sprite[] drownSprites;
+    public Sprite[] AirSprites;
  }
