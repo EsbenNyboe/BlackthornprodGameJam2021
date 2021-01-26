@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 /*********************************************************************************************
  * Throw Object System
  * Author: Muniz
@@ -18,6 +19,8 @@ using UnityEngine;
 public class ThrowObjectSystem
 {
     Rigidbody2D objectRigidBody;
+    static public event EventHandler<CustomEventArgsData> onObjectThrown;
+
 
 
     /// <summary>
@@ -33,6 +36,8 @@ public class ThrowObjectSystem
             direction = direction.normalized;
             objectRigidBody = objectgameobject.GetComponent<Rigidbody2D>();
             objectRigidBody.AddForce(force * direction, ForceMode2D.Impulse);
+            CustomEventArgsData customEventArgsData = new CustomEventArgsData(objectgameobject);
+            onObjectThrown?.Invoke(this, customEventArgsData);
         }
         else
         {
@@ -68,6 +73,14 @@ public class ThrowObjectSystem
         ThrowObject(objectgameobject, direction, force);
     }
 
+    public class CustomEventArgsData : EventArgs
+    {
+       public GameObject objectGameObject;
 
+        public CustomEventArgsData(GameObject objectgameobject)
+        {
+            objectGameObject = objectgameobject;
+        }
+    }
 
 }

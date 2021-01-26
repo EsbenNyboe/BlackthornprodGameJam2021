@@ -67,11 +67,21 @@ public class ThrowInputHandler : MonoBehaviour
         //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
         if (startPulling)
         {
+            mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
+            if (distance > maxPullDistance) forcemultiplier = 1;
+            else
+            {
+                forcemultiplier = distance / maxPullDistance;
+            }
+            launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
+            Debug.DrawRay(forceTarget.transform.position, launchDirection*forcemultiplier*maxPullForce);
+
             //enter the if statement if the player let go of the left mouse button
             if (Input.GetMouseButtonUp(0))
             {
                 startPulling = false;
-                mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+              /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
                 if (distance > maxPullDistance) forcemultiplier = 1;
                 else
@@ -79,7 +89,7 @@ public class ThrowInputHandler : MonoBehaviour
                     forcemultiplier = distance / maxPullDistance;
                 }
                 launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
-                // Debug.DrawRay(forceTarget.transform.position, launchDirection * forcemultiplier * maxPullForce);
+              */
                 DoAction();
             }
 
@@ -95,7 +105,9 @@ public class ThrowInputHandler : MonoBehaviour
     {
         if (forceTarget.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None) forceTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         throwObjectSystem.ThrowObject(forceTarget, launchDirection, forcemultiplier * maxPullForce);
-        forceTarget.GetComponent<WindBehavior>().ActivateWindEffect();
+        forceTarget.GetComponent<WindBehaviour>().ActivateWindEffect();
+        Boat._instance.InstantBoost(5, .5f);
+         forceTarget.layer = 0;
          forceTarget = null;
     }
 

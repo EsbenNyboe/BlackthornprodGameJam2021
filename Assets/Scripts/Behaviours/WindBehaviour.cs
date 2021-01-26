@@ -10,7 +10,9 @@ using UnityEngine;
  * 
  *  Event: BlackthornProd GameJam #3
  * *******************************************************************************************/
-public class WindBehavior : MonoBehaviour
+
+//This class is going to be attached as a component in the target game object
+public class WindBehaviour : MonoBehaviour
 {
     [SerializeField] WindScriptableObjectDefinition windScriptableObject;
      

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Shark : MonoBehaviour
 {
@@ -12,16 +14,14 @@ public class Shark : MonoBehaviour
 
     //private Stuff
     private Boat boat;
+    bool isSharkActive;
     // Start is called before the first frame update
     void Start()
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
-
+        isSharkActive = true;
         backAndForthBoatDestinations = new Vector3[2];
-        backAndForthBoatDestinations[0] = new Vector3(5, -4, 0);
-        backAndForthBoatDestinations[1] = new Vector3(-7, -4, 0);
 
-        GoToDestination(boat.transform.position + new Vector3(2, -4, 0));
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class Shark : MonoBehaviour
             Vector3 dir = new Vector3(theDestination.x - transform.position.x, 0, 0).normalized;
             print(dir);
             transform.Translate(dir * speed * Time.deltaTime);
-            
+
             Vector3 newDestination = new Vector3(theDestination.x, theDestination.y);
             newDestination.y = transform.position.y;
 
@@ -67,5 +67,34 @@ public class Shark : MonoBehaviour
         Vector3 nextPos = backAndForthBoatDestinations[lastDestinationID];
         GoToDestination(nextPos);
         print(backAndForthBoatDestinations[lastDestinationID].x);
+    }
+
+    IEnumerator SharkHiddenCourotine()
+    {
+        isSharkActive = false;
+        Color color = GetComponent<SpriteRenderer>().color;
+        color.a = 0;
+        GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(5);
+        isSharkActive = true;
+        color.a = 1;
+        GetComponent<SpriteRenderer>().color = color;
+
+
+    }
+    //triggers when the object hits the shark
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isSharkActive)
+        {
+            if (collision.gameObject.GetComponent<ThrowableObjectsMasterClass>())
+            {//is throwable object
+                boat.PermanentBoost(3);
+                SYSTEMSDEBUG.instance.ResetBall();
+                StartCoroutine(SharkHiddenCourotine());
+
+            }
+        }
+
     }
 }

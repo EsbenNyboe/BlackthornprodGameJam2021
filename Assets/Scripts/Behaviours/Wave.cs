@@ -18,20 +18,25 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+          
         transform.Translate(Time.deltaTime * boat.speed * -1, 0, 0);
 
         if (boatRidingNow)
         {
-            if(timeOnTheWave > timeOnTheWaveToFall)
+            //Muniz:  timeOnTheWave += Time.deltaTime;  I think this was missing
+            if (timeOnTheWave > timeOnTheWaveToFall)
             {
                 boat.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 timeOnTheWave = 0;
                 boat.speed = 0;
-            } else
-            {
-                boat.speed -= Time.deltaTime / timeOnTheWaveToFall;
             }
-        } else
+            else
+            { //Muniz: I added the if statement because sometimes the boat.speed is getting negative, so the waves
+              //are going in the wrong direction
+                if (boat.speed > 0) boat.speed -= Time.deltaTime / timeOnTheWaveToFall;
+            }
+        }
+        else
         {
             timeOnTheWave = 0;
         }
@@ -39,13 +44,14 @@ public class Wave : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Boat")
+        if (other.tag == "Boat")
         {
             if (!boatRidingNow)
             {
                 startSpeed = boat.speed;
             }
-            boatRidingNow = true;
+                boatRidingNow = true;
+
         }
     }
 
@@ -57,7 +63,7 @@ public class Wave : MonoBehaviour
             {
                 boat.speed = startSpeed;
             }
-            boatRidingNow = false;
+                boatRidingNow = false;
         }
     }
 }

@@ -13,32 +13,24 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 477597c49e17084cae84904e73dbf506
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219122819076
->>>>>>> Stashed changes
+    m_lastTime: -8585901627457332137
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: f3a22119a171cc488d34c23a3c262a88
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219123138252
->>>>>>> Stashed changes
+    m_lastTime: -8585901627459822750
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -48,20 +40,16 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Master Audio Bus
         ObjectType: 2
-      Path: Default Work Unit/Master Audio Bus
+      Path: Default Work Unit\Master Audio Bus
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: df6f94bccec1ad47a727e43e28d282a9
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219121433839
->>>>>>> Stashed changes
+    m_lastTime: -8585901627457482184
     List:
     - name: Soundbank
       guid: 36f25501cb41b142a2acfeecbb651671
@@ -71,22 +59,53 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Soundbank
         ObjectType: 7
-      Path: Default Work Unit/Soundbank
+      Path: Default Work Unit\Soundbank
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901106636220889
-=======
-<<<<<<< Updated upstream
-    m_lastTime: -8585901109014728554
->>>>>>> Stashed changes
+    m_lastTime: -8585900618604068481
     List:
+    - name: NPC_CollFloor
+      guid: 27539517f8bfa443b9011431530910b2
+      id: 495534887
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_CollFloor
+        ObjectType: 3
+      Path: Default Work Unit\NPC_CollFloor
+      maxAttenuation: 0
+      maxDuration: 278821
+      minDuration: 278821
+    - name: NPC_CollWater
+      guid: b58543a6b549c646a93658c90fed9a21
+      id: 139855160
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_CollWater
+        ObjectType: 3
+      Path: Default Work Unit\NPC_CollWater
+      maxAttenuation: 0
+      maxDuration: 567619
+      minDuration: 567619
+    - name: Player_Throw
+      guid: 83fb8e14d4d7654b901d2b2479d4e05c
+      id: 65181031
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player_Throw
+        ObjectType: 3
+      Path: Default Work Unit\Player_Throw
+      maxAttenuation: 0
+      maxDuration: 1811877
+      minDuration: 1088262
     - name: TestEvent
       guid: a52b738075450a4f8e05f82a69f0a659
       id: 1097980931
@@ -97,76 +116,57 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\TestEvent
       maxAttenuation: 0
-<<<<<<< Updated upstream
       maxDuration: 665969
       minDuration: 665969
-=======
-      maxDuration: 0.665969
-      minDuration: 0.665969
-=======
-    m_lastTime: -8585901219125950228
-    List: []
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 96b1bfe356c7d24ea3fb64a921b24949
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219125850496
->>>>>>> Stashed changes
-    List: []
+    m_lastTime: -8585900618604028467
+    List:
+    - name: ThrowPower
+      guid: 2187ed858d36e4498ef2ac691d9063e6
+      id: 2111892502
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ThrowPower
+        ObjectType: 13
+      Path: Default Work Unit\ThrowPower
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 6e4cdd31e942f14981a116185ef70145
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219122858993
->>>>>>> Stashed changes
+    m_lastTime: -8585901627457422163
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 9b86f6196b34854f87eec18f382a19c5
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219122849028
->>>>>>> Stashed changes
+    m_lastTime: -8585901627457402152
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: e0ba80469ac5f3479da6cf055a84737d
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585901784174775808
-=======
-    m_lastTime: -8585901219122878941
->>>>>>> Stashed changes
+    m_lastTime: -8585901627457362146
     List: []
-  ExpandedItems:
-  - /BlackthornprodGameJam2021_WwiseProject
-  - /BlackthornprodGameJam2021_WwiseProject/Events
-  - /BlackthornprodGameJam2021_WwiseProject/Events/Default Work Unit
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
