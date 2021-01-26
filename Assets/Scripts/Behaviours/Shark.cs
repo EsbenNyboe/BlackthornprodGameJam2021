@@ -20,8 +20,8 @@ public class Shark : MonoBehaviour
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         isSharkActive = true;
-        backAndForthBoatDestinations = new Vector3[2];
-
+        isSharkActive = false;
+        changeHidden(0);
     }
 
     // Update is called once per frame
@@ -31,13 +31,11 @@ public class Shark : MonoBehaviour
         if (goingToADestination)
         {
             Vector3 dir = new Vector3(theDestination.x - transform.position.x, 0, 0).normalized;
-            print(dir);
             transform.Translate(dir * speed * Time.deltaTime);
 
             Vector3 newDestination = new Vector3(theDestination.x, theDestination.y);
             newDestination.y = transform.position.y;
 
-            print(Vector2.Distance(transform.position, newDestination));
             if (Vector2.Distance(transform.position, newDestination) < 0.3f)
             {
                 OnDestination();
@@ -49,6 +47,9 @@ public class Shark : MonoBehaviour
     {
         theDestination = destination;
         goingToADestination = true;
+
+        //make shark visible
+        changeHidden(1);
     }
 
     public void OnDestination()
@@ -62,6 +63,9 @@ public class Shark : MonoBehaviour
         else if (lastDestinationID == 1)
         {
             lastDestinationID = 0;
+            //Hide the shark
+            changeHidden(0);
+            return;
         }
         print(lastDestinationID);
         Vector3 nextPos = backAndForthBoatDestinations[lastDestinationID];
@@ -71,16 +75,9 @@ public class Shark : MonoBehaviour
 
     IEnumerator SharkHiddenCourotine()
     {
-        isSharkActive = false;
-        Color color = GetComponent<SpriteRenderer>().color;
-        color.a = 0;
-        GetComponent<SpriteRenderer>().color = color;
+        changeHidden(0);
         yield return new WaitForSeconds(5);
-        isSharkActive = true;
-        color.a = 1;
-        GetComponent<SpriteRenderer>().color = color;
-
-
+        changeHidden(1);
     }
     //triggers when the object hits the shark
     private void OnCollisionEnter2D(Collision2D collision)
@@ -96,5 +93,13 @@ public class Shark : MonoBehaviour
             }
         }
 
+    }
+
+    public void changeHidden(int oneOrzero)
+    {
+        Color color = GetComponent<SpriteRenderer>().color;
+        isSharkActive = true;
+        color.a = oneOrzero;
+        GetComponent<SpriteRenderer>().color = color;
     }
 }
