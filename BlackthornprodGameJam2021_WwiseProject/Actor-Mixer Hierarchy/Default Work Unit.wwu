@@ -275,6 +275,306 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Footsteps" ID="{A60ACFF4-34F7-44F4-8D43-D022F0267A75}" ShortID="972875422">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>31</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>200</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CF9F4BCF-922C-4B7E-B102-14BCF53F3EB2}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Footstep_Double_02" ID="{FE2EB929-BB48-47A5-8178-6C300FAC061D}" ShortID="840503599">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B8A940BD-5F55-4E4B-9CE2-30B3045DA7FD}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Double_02" ID="{F5239F91-EEA1-4DE2-A44F-8C8BEB728F67}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Double_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="927972243"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Double_02" ID="{F5239F91-EEA1-4DE2-A44F-8C8BEB728F67}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_Single_04" ID="{3E3F0C9E-5F6F-4046-A37D-3D55D0AD0D38}" ShortID="9383893">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{193CB1D4-83B2-40FF-9231-0001D8F3537B}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Single_04" ID="{DCDA785D-67AB-40CC-9A2D-FD42BEA37419}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Single_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="505317243"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Single_04" ID="{DCDA785D-67AB-40CC-9A2D-FD42BEA37419}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_Double_01" ID="{DD452EE4-3D2C-46AB-B096-D5CE8CBF1E42}" ShortID="982057716">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-100</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4280880A-CE06-4CEE-9105-3593F4D0EF5C}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Double_01" ID="{E1B48A03-3EC4-414E-9D8A-D1CDB7A4EE86}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Double_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="458202710"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Double_01" ID="{E1B48A03-3EC4-414E-9D8A-D1CDB7A4EE86}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_Single_01" ID="{A33BFA5A-8BA5-4B93-A4F7-9CAE26E346EB}" ShortID="796960056">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0CCE8A0F-41EF-4554-804D-9938BE8F583C}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Single_01" ID="{9B3B2090-091E-4484-A26E-86AC01EC573E}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Single_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="119650254"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Single_01" ID="{9B3B2090-091E-4484-A26E-86AC01EC573E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_Single_03" ID="{C1885561-E478-4A46-A636-1CE8DA54DE19}" ShortID="203414681">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2F7F3228-7DDE-4E78-A5B7-962EE3E686F1}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Single_03" ID="{81DB70B7-10B0-4E3E-BFDB-21C7230068CA}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Single_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="151638671"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Single_03" ID="{81DB70B7-10B0-4E3E-BFDB-21C7230068CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_Double_03" ID="{2FB2343D-6EF8-4CF4-B651-BAC6DFCE1D24}" ShortID="85012826">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F3DE07CB-4AB3-4136-964C-A9C54F2F2B20}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Double_03" ID="{D5C1278D-A262-41CB-8163-6E7125C87A5C}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Double_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="526004778"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Double_03" ID="{D5C1278D-A262-41CB-8163-6E7125C87A5C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footstep_Single_02" ID="{BD49E440-EA33-4417-9F96-EE1FAB0D1F92}" ShortID="457614474">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{86304C50-9FEA-467F-A21E-3FB5D1ADA047}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footstep_Single_02" ID="{DA88B81C-6400-4C14-B4E3-E8DDD43BDA06}">
+									<Language>SFX</Language>
+									<AudioFile>Footstep_Single_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="943653409"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Footstep_Single_02" ID="{DA88B81C-6400-4C14-B4E3-E8DDD43BDA06}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
