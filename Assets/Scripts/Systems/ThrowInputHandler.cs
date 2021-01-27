@@ -21,8 +21,10 @@ public class ThrowInputHandler : MonoBehaviour
     [SerializeField] float maxPullDistance;//Max distance in world units that the player can actually pull and have any effect
     [SerializeField] float maxPullForce;//Max force that the object can be thrown
     [SerializeField] float minPullForce;//Min force that the object can be thrown
-   
-    
+    [SerializeField] float boatImpulseForce;//"Force"(technically speed) applied to the boat when you throw someone
+    [SerializeField] float boatImpulseTimer;//Time that it takes for the "Force"(technically speed) to be taken of the boat after throwing someone
+
+
     [Header("Raycast2D")]
     [SerializeField] LayerMask throwableMask; //Mask of the throwable object for the RayCast2D
     float forcemultiplier;
@@ -127,7 +129,7 @@ public class ThrowInputHandler : MonoBehaviour
         throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Thrown);
 
 
-        Boat._instance.TemporaryBoost(5, .5f);
+        Boat._instance.TemporaryBoost(boatImpulseForce, boatImpulseTimer);
         targetObject.layer = 0;
         targetObject = null;
     }

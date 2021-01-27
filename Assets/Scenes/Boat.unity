@@ -2501,7 +2501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22939efc77342746a9cb940f54faba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
+  boatInertiaTime: 0.5
+  boatDistancePushed: 3
   centerOfMass: {fileID: 53092996}
 --- !u!1 &2087402505
 GameObject:
@@ -2739,7 +2741,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPullDistance: 7
   maxPullForce: 20
-  minPullForce: 0
+  minPullForce: 2
+  boatImpulseForce: 5
+  boatImpulseTimer: 0.5
   throwableMask:
     serializedVersion: 2
     m_Bits: 256
