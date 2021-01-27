@@ -9,13 +9,12 @@ public class Wave : MonoBehaviour
     public bool boatRidingNow;
     public float waveDragFactor = 1;
     private float timeOnTheWave;
-    private float startSpeed;
-    // Start is called before the first frame update
+    private GameManager gm;
     void Start()
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
 
-        GameManager gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         //set global wave drag factor
         waveDragFactor = gm.waveDragFactor;
 
@@ -54,7 +53,6 @@ public class Wave : MonoBehaviour
         {
             if (!boatRidingNow)
             {
-                startSpeed = boat.speed;
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveEnter);
             }
             boatRidingNow = true;
@@ -67,7 +65,7 @@ public class Wave : MonoBehaviour
         {
             if (boatRidingNow)
             {
-                boat.speed = startSpeed;
+                boat.speed = gm.postWaveBoatSpeed;
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveCleared);
             }
             boatRidingNow = false;

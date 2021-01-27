@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8195913032023910806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8195913032023910808}
+  - component: {fileID: 8195913032023910809}
+  - component: {fileID: 8195913032023910811}
+  - component: {fileID: 8195913032023910810}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8195913032023910808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195913032023910806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.255154, y: -1.7440372, z: -8.969921}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8195913032023910809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195913032023910806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b969a534f22cef14c82fe0b5e580efa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tester: {fileID: 0}
+--- !u!114 &8195913032023910811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195913032023910806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6eaa4409d7b474abbdaeee06c0453a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPullDistance: -10
+  maxPullForce: 20
+  minPullForce: 5
+  boatImpulseForce: 10
+  boatImpulseTimer: 0.5
+  throwableMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &8195913032023910810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195913032023910806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f63e6ff11351e48a8991d5b6950d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boatSpeedStart: 5
+  maxBoatSpeed: 50
+  fatalBoatSpeed: 0.1
+  postWaveBoatSpeed: 4
+  sharkBoostForce: 0
+  waveDragFactor: 0.5

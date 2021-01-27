@@ -6,7 +6,8 @@ using DG.Tweening;
 public class Boat : MonoBehaviour
 {
     [Header("General")]
-    public float speed = 5;
+    //[HideInInspector]
+    public float speed;
     [SerializeField] float boatInertiaTime;
     [SerializeField] float boatDistancePushed;
     
