@@ -3,18 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="TestEvent" ID="{80732BA5-4575-4F0A-8E05-F82A69F0A659}">
-					<ChildrenList>
-						<Action Name="" ID="{B60D1FF7-A052-4959-BEF4-AC0D029F151F}" ShortID="1044659649">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="plop_1" ID="{C5DB268E-0967-42B4-B2CC-F0ED83BEA4F9}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Player_Throw" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}">
+				<Event Name="NPC_Thrown" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}">
 					<ChildrenList>
 						<Action Name="" ID="{F4544083-89C4-4998-AF6C-53A784D029C8}" ShortID="793830987">
 							<ReferenceList>
@@ -111,6 +100,11 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="NPC_CollShark" ID="{41DF3983-FC4A-49AA-9CC3-E75D4BBA415F}"/>
+				<Event Name="NPC_PreparedForThrow" ID="{D768C651-E9DC-44A6-816E-04DB2D32A001}"/>
+				<Event Name="NPC_CollBird" ID="{FB04C9A0-AD98-46EE-9959-00C2272F9707}"/>
+				<Event Name="NPC_PickedUp" ID="{ADC0A475-25EC-4C75-B1EF-88750EE25ADD}"/>
+				<Event Name="NPC_DroppedByBird" ID="{B61096E6-6A73-4B6E-A363-599C108ACA7A}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

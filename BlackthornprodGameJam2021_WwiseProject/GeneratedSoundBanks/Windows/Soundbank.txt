@@ -1,11 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
-	65181031	Player_Throw			\Default Work Unit\Player_Throw	
 	139855160	NPC_CollWater			\Default Work Unit\NPC_CollWater	
 	495534887	NPC_CollFloor			\Default Work Unit\NPC_CollFloor	
-	1097980931	TestEvent			\Default Work Unit\TestEvent	
+	1730208058	Player_Footsteps			\Default Work Unit\Player_Footsteps	
+	2016968455	NPC_DroppedByBird			\Default Work Unit\NPC_DroppedByBird	
+	2050233766	NPC_PickedUp			\Default Work Unit\NPC_PickedUp	
+	2474133806	NPC_CollShark			\Default Work Unit\NPC_CollShark	
+	2756003563	NPC_Thrown			\Default Work Unit\NPC_Thrown	
+	3321089774	NPC_CollBird			\Default Work Unit\NPC_CollBird	
+	4146794365	NPC_PreparedForThrow			\Default Work Unit\NPC_PreparedForThrow	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	80753156	plop_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\plop_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\plop_1		127928
+	119650254	Footstep_Single_01	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Single_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_01		20624
+	151638671	Footstep_Single_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Single_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_03		18902
 	165999230	SolidCollision_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\SolidCollision_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SolidCollision_1		24656
 	390813675	Scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_1		97164
 	404512114	Scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_2		105950
@@ -13,4 +19,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	558849201	Throw_1high	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Throw_1high_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1high		18620
 	615628854	Splash_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Splash_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splash_3		50128
 	760535665	Scream_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Scream_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_3		158036
+	927972243	Footstep_Double_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Double_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Double_02		20224
+	943653409	Footstep_Single_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Single_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_02		16706
 

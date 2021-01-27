@@ -13,10 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID NPC_COLLBIRD = 3321089774U;
         static const AkUniqueID NPC_COLLFLOOR = 495534887U;
+        static const AkUniqueID NPC_COLLSHARK = 2474133806U;
         static const AkUniqueID NPC_COLLWATER = 139855160U;
-        static const AkUniqueID PLAYER_THROW = 65181031U;
-        static const AkUniqueID TESTEVENT = 1097980931U;
+        static const AkUniqueID NPC_DROPPEDBYBIRD = 2016968455U;
+        static const AkUniqueID NPC_PICKEDUP = 2050233766U;
+        static const AkUniqueID NPC_PREPAREDFORTHROW = 4146794365U;
+        static const AkUniqueID NPC_THROWN = 2756003563U;
+        static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

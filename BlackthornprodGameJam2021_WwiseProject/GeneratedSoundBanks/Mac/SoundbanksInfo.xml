@@ -16,11 +16,12 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="1948458306">
+		<SoundBank Id="1661994096" Language="SFX" Hash="2855535812">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3321089774" Name="NPC_CollBird" ObjectPath="\Events\Default Work Unit\NPC_CollBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="495534887" Name="NPC_CollFloor" ObjectPath="\Events\Default Work Unit\NPC_CollFloor" DurationType="OneShot" DurationMin="0.278821" DurationMax="0.278821">
 					<IncludedMemoryFiles>
 						<File Id="165999230" Language="SFX">
@@ -29,6 +30,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2474133806" Name="NPC_CollShark" ObjectPath="\Events\Default Work Unit\NPC_CollShark" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="139855160" Name="NPC_CollWater" ObjectPath="\Events\Default Work Unit\NPC_CollWater" DurationType="OneShot" DurationMin="0.567619" DurationMax="0.567619">
 					<IncludedMemoryFiles>
 						<File Id="615628854" Language="SFX">
@@ -37,7 +39,10 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="65181031" Name="Player_Throw" ObjectPath="\Events\Default Work Unit\Player_Throw" DurationType="OneShot" DurationMin="1.088262" DurationMax="1.811877">
+				<Event Id="2016968455" Name="NPC_DroppedByBird" ObjectPath="\Events\Default Work Unit\NPC_DroppedByBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2050233766" Name="NPC_PickedUp" ObjectPath="\Events\Default Work Unit\NPC_PickedUp" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4146794365" Name="NPC_PreparedForThrow" ObjectPath="\Events\Default Work Unit\NPC_PreparedForThrow" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2756003563" Name="NPC_Thrown" ObjectPath="\Events\Default Work Unit\NPC_Thrown" DurationType="OneShot" DurationMin="1.088262" DurationMax="1.811877">
 					<IncludedMemoryFiles>
 						<File Id="390813675" Language="SFX">
 							<ShortName>Scream_1.wav</ShortName>
@@ -61,11 +66,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1097980931" Name="TestEvent" ObjectPath="\Events\Default Work Unit\TestEvent" DurationType="OneShot" DurationMin="0.665969" DurationMax="0.665969">
+				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player_Footsteps" DurationType="OneShot" DurationMin="0.163314" DurationMax="0.213760">
 					<IncludedMemoryFiles>
-						<File Id="80753156" Language="SFX">
-							<ShortName>plop_1.wav</ShortName>
-							<Path>SFX\plop_1_10C4C929.wem</Path>
+						<File Id="119650254" Language="SFX">
+							<ShortName>Footstep_Single_01.wav</ShortName>
+							<Path>SFX\Footstep_Single_01_10C4C929.wem</Path>
+						</File>
+						<File Id="151638671" Language="SFX">
+							<ShortName>Footstep_Single_03.wav</ShortName>
+							<Path>SFX\Footstep_Single_03_10C4C929.wem</Path>
+						</File>
+						<File Id="927972243" Language="SFX">
+							<ShortName>Footstep_Double_02.wav</ShortName>
+							<Path>SFX\Footstep_Double_02_10C4C929.wem</Path>
+						</File>
+						<File Id="943653409" Language="SFX">
+							<ShortName>Footstep_Single_02.wav</ShortName>
+							<Path>SFX\Footstep_Single_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

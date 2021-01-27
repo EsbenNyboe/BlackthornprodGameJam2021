@@ -34,12 +34,14 @@ public class SoundSystem : MonoBehaviour
 
     public enum SoundEnum
     {
-        waves,
-        boat,
-        bird,
-        SharkPissed,
-        sound3
-
+        npcPickedUp,
+        npcPreparedForThrow,
+        npcThrown,
+        npcCollFloor,
+        npcCollBird,
+        npcDroppedByBird,
+        npcCollShark,
+        npcCollWater,
+        playerFootsteps
     }
-
 }

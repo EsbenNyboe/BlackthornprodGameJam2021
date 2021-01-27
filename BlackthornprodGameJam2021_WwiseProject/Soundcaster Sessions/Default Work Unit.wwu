@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="ThrowingMechanic" ID="{4538C82E-0E1B-4DD2-9E66-C1650BA12735}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Player_Throw" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="NPC_Thrown" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>

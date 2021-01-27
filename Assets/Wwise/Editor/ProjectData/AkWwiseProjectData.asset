@@ -68,8 +68,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585899356721622047
+    m_lastTime: -8585898473044634647
     List:
+    - name: NPC_CollBird
+      guid: a0c904fb98adee46995900c2272f9707
+      id: 3321089774
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_CollBird
+        ObjectType: 3
+      Path: Default Work Unit\NPC_CollBird
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: NPC_CollFloor
       guid: 27539517f8bfa443b9011431530910b2
       id: 495534887
@@ -82,6 +94,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.278821
       minDuration: 0.278821
+    - name: NPC_CollShark
+      guid: 8339df414afcaa499cc3e75d4bba415f
+      id: 2474133806
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_CollShark
+        ObjectType: 3
+      Path: Default Work Unit\NPC_CollShark
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: NPC_CollWater
       guid: b58543a6b549c646a93658c90fed9a21
       id: 139855160
@@ -94,6 +118,54 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.567619
       minDuration: 0.567619
+    - name: NPC_DroppedByBird
+      guid: e69610b6736a6e4ba363599c108aca7a
+      id: 2016968455
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_DroppedByBird
+        ObjectType: 3
+      Path: Default Work Unit\NPC_DroppedByBird
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: NPC_PickedUp
+      guid: 75a4c0adec25754cb1ef88750ee25add
+      id: 2050233766
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_PickedUp
+        ObjectType: 3
+      Path: Default Work Unit\NPC_PickedUp
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: NPC_PreparedForThrow
+      guid: 51c668d7dce9a644816e04db2d32a001
+      id: 4146794365
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_PreparedForThrow
+        ObjectType: 3
+      Path: Default Work Unit\NPC_PreparedForThrow
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: NPC_Thrown
+      guid: 83fb8e14d4d7654b901d2b2479d4e05c
+      id: 2756003563
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_Thrown
+        ObjectType: 3
+      Path: Default Work Unit\NPC_Thrown
+      maxAttenuation: 0
+      maxDuration: 1.811877
+      minDuration: 1.088262
     - name: Player_Footsteps
       guid: 13d4e754475bda44a5fd0f598770495e
       id: 1730208058
@@ -104,32 +176,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Player_Footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Player_Throw
-      guid: 83fb8e14d4d7654b901d2b2479d4e05c
-      id: 65181031
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player_Throw
-        ObjectType: 3
-      Path: Default Work Unit\Player_Throw
-      maxAttenuation: 0
-      maxDuration: 1.811877
-      minDuration: 1.088262
-    - name: TestEvent
-      guid: a52b738075450a4f8e05f82a69f0a659
-      id: 1097980931
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: TestEvent
-        ObjectType: 3
-      Path: Default Work Unit\TestEvent
-      maxAttenuation: 0
-      maxDuration: 0.665969
-      minDuration: 0.665969
+      maxDuration: 0.21376
+      minDuration: 0.163314
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
