@@ -2863,5 +2863,9 @@ PrefabInstance:
       propertyPath: tester
       value: 
       objectReference: {fileID: 2087402505}
+    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
+      propertyPath: sharkBoostForce
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}

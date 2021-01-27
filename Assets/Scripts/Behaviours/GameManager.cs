@@ -17,6 +17,13 @@ public class GameManager : MonoBehaviour
     //how much speed dereases by each second on wave
     public float waveDragFactor = 1;
 
+    #region singleton
+    static public GameManager instance;
+    void Awake()
+    {
+        if (instance == null) instance = this;
+    }
+    #endregion
     #region TriggerEvents
     static public event EventHandler onGameLost;
 #endregion

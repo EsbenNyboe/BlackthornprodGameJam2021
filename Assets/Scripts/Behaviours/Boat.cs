@@ -58,14 +58,14 @@ public class Boat : MonoBehaviour
 
     public IEnumerator InstantBoostCoruntine(float boostvalue, float boosttime)
     {
-        float defaultSpeed = speed;
+         
         Vector3 defaultPosition = transform.position;
         DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTime);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition + new Vector3(boatDistancePushed, 0, 0), boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
         yield return new WaitForSeconds(boosttime + boatInertiaTime);
-        DOTween.To(() => speed, (bv) => speed = bv, defaultSpeed, boatInertiaTime);
+        DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, boatInertiaTime);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
