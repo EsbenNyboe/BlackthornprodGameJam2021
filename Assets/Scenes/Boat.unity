@@ -2501,7 +2501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22939efc77342746a9cb940f54faba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
   boatInertiaTime: 0.5
   boatDistancePushed: 3
   centerOfMass: {fileID: 53092996}

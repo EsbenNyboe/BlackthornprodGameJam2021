@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Wave : MonoBehaviour
 {
     private Boat boat;
@@ -29,14 +30,14 @@ public class Wave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         transform.Translate(Time.deltaTime * boat.speed * -1, 0, 0);
 
         if (boatRidingNow)
         {
             AkSoundEngine.SetRTPCValue("BoatSpeed", boat.speed);
             if (boat.speed > 0) boat.speed -= Time.deltaTime * waveDragFactor;
-           if(boat.speed < 0)
+            if (boat.speed < 0)
             {
                 boat.speed = 0;
             }
@@ -71,5 +72,11 @@ public class Wave : MonoBehaviour
             }
             boatRidingNow = false;
         }
+    }
+
+    void OnDestroy()
+    {
+        GameManager.onGameLost -= GameManager_onGameLost;
+
     }
 }

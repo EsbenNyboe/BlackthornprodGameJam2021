@@ -47,7 +47,6 @@ public class SYSTEMSDEBUG : MonoBehaviour
         tester.GetComponent<WindBehaviour>().DeactivateWindEffect();
         tester.GetComponent<ThrowableObjectsMasterClass>().ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Idle);
         tester.layer = 8;
-
     }
 
 
