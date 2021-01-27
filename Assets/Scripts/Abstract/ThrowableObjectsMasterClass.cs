@@ -37,7 +37,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites, false, () => ChangeAnimationState(AnimationType.Air)); break;
             case AnimationType.Land:
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites); break;
-            case AnimationType.Drown:
+            case AnimationType.Drown://sound to drown
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.drownSprites); break;
             case AnimationType.Air:
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.AirSprites); break;

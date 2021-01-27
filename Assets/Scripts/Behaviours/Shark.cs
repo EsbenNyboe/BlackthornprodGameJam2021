@@ -100,6 +100,7 @@ public class Shark : MonoBehaviour
         if(oneOrzero == 1)
         {
             isSharkActive = true;
+            
         }
         else
         {

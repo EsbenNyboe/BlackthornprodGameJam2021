@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: 4
   speedBonusGiven: 0
-  pointsRemoved: 0
+  pointsRemoved: 1
   landSoundEvent: 
   thrownSoundEvent: 
   drownSoundEvent: 
