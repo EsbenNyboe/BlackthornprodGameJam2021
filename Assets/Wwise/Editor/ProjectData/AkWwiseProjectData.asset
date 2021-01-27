@@ -20,11 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 477597c49e17084cae84904e73dbf506
     GuidInternal: 
-<<<<<<< Updated upstream
     m_lastTime: -8585900785647580181
-=======
-    m_lastTime: -8585901219122819076
->>>>>>> Stashed changes
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -34,11 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f3a22119a171cc488d34c23a3c262a88
     GuidInternal: 
-<<<<<<< Updated upstream
     m_lastTime: -8585900785647680112
-=======
-    m_lastTime: -8585901219123138252
->>>>>>> Stashed changes
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -57,11 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: df6f94bccec1ad47a727e43e28d282a9
     GuidInternal: 
-<<<<<<< Updated upstream
     m_lastTime: -8585900785647600172
-=======
-    m_lastTime: -8585901219121433839
->>>>>>> Stashed changes
     List:
     - name: Soundbank
       guid: 36f25501cb41b142a2acfeecbb651671
@@ -80,19 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-<<<<<<< Updated upstream
-    m_lastTime: -8585898473044634647
-=======
-<<<<<<< Updated upstream
-    m_lastTime: -8585899356721622047
-=======
-<<<<<<< Updated upstream
-    m_lastTime: -8585899099538048027
-=======
-    m_lastTime: -8585899167105433390
->>>>>>> Stashed changes
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    m_lastTime: -8585898385033049315
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707
@@ -116,10 +92,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_CollFloor
       maxAttenuation: 0
-<<<<<<< Updated upstream
-      maxDuration: 0.278821
-      minDuration: 0.278821
-<<<<<<< Updated upstream
+      maxDuration: 278821
+      minDuration: 278821
     - name: NPC_CollShark
       guid: 8339df414afcaa499cc3e75d4bba415f
       id: 2474133806
@@ -132,12 +106,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-=======
-=======
-      maxDuration: -1
-      minDuration: -1
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     - name: NPC_CollWater
       guid: b58543a6b549c646a93658c90fed9a21
       id: 139855160
@@ -148,27 +116,11 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_CollWater
       maxAttenuation: 0
-<<<<<<< Updated upstream
-      maxDuration: 0.567619
-      minDuration: 0.567619
-<<<<<<< Updated upstream
+      maxDuration: 567619
+      minDuration: 567619
     - name: NPC_DroppedByBird
       guid: e69610b6736a6e4ba363599c108aca7a
       id: 2016968455
-=======
-=======
-<<<<<<< Updated upstream
-      maxDuration: 567619
-      minDuration: 567619
-=======
-      maxDuration: -1
-      minDuration: -1
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-    - name: Player_Footsteps
-      guid: 13d4e754475bda44a5fd0f598770495e
-      id: 1730208058
->>>>>>> Stashed changes
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -212,22 +164,11 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Thrown
       maxAttenuation: 0
-<<<<<<< Updated upstream
-      maxDuration: 1.811877
-      minDuration: 1.088262
-<<<<<<< Updated upstream
+      maxDuration: 1811877
+      minDuration: 1088262
     - name: Player_Footsteps
       guid: 13d4e754475bda44a5fd0f598770495e
       id: 1730208058
-=======
-=======
-      maxDuration: -1
-      minDuration: -1
->>>>>>> Stashed changes
-    - name: TestEvent
-      guid: a52b738075450a4f8e05f82a69f0a659
-      id: 1097980931
->>>>>>> Stashed changes
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -235,18 +176,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Player_Footsteps
       maxAttenuation: 0
-<<<<<<< Updated upstream
-      maxDuration: 0.21376
-      minDuration: 0.163314
-=======
-<<<<<<< Updated upstream
-      maxDuration: 0.665969
-      minDuration: 0.665969
-=======
-      maxDuration: -1
-      minDuration: -1
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+      maxDuration: 213760
+      minDuration: 163314
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -255,7 +186,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 96b1bfe356c7d24ea3fb64a921b24949
     GuidInternal: 
-    m_lastTime: -8585900477670459252
+    m_lastTime: -8585900647684211543
     List:
     - name: ThrowPower
       guid: 2187ed858d36e4498ef2ac691d9063e6
@@ -274,11 +205,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6e4cdd31e942f14981a116185ef70145
     GuidInternal: 
-<<<<<<< Updated upstream
     m_lastTime: -8585900785647600172
-=======
-    m_lastTime: -8585901219122858993
->>>>>>> Stashed changes
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -288,11 +215,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9b86f6196b34854f87eec18f382a19c5
     GuidInternal: 
-<<<<<<< Updated upstream
     m_lastTime: -8585900785647590179
-=======
-    m_lastTime: -8585901219122849028
->>>>>>> Stashed changes
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -302,15 +225,8 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e0ba80469ac5f3479da6cf055a84737d
     GuidInternal: 
-<<<<<<< Updated upstream
     m_lastTime: -8585900785647590179
-=======
-    m_lastTime: -8585901219122878941
->>>>>>> Stashed changes
     List: []
-  ExpandedItems:
-  - /BlackthornprodGameJam2021_WwiseProject
-  - /BlackthornprodGameJam2021_WwiseProject/Events
-  - /BlackthornprodGameJam2021_WwiseProject/Events/Default Work Unit
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
