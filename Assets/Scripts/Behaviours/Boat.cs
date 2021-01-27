@@ -8,7 +8,8 @@ public class Boat : MonoBehaviour
     [Header("General")]
     //[HideInInspector]
     public float speed;
-    [SerializeField] float boatInertiaTime;
+    public float boatInertiaTime; // 0.5f
+    public float boatInertiaTimeDeacceleration;
     [SerializeField] float boatDistancePushed;
     
     [Header("Physics")]
@@ -65,7 +66,7 @@ public class Boat : MonoBehaviour
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
         yield return new WaitForSeconds(boosttime + boatInertiaTime);
-        DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, boatInertiaTime);
+        DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, boatInertiaTimeDeacceleration);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
