@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Boat : MonoBehaviour
 {
     [Header("General")]
-    public float speed = 5;
+    //[HideInInspector]
+    public float speed;
+    [SerializeField] float boatInertiaTime;
+    [SerializeField] float boatDistancePushed;
+    
     [Header("Physics")]
     public Transform centerOfMass;
     //private stuff
@@ -18,13 +23,12 @@ public class Boat : MonoBehaviour
     {
         if (_instance == null) _instance = this;
     }
-#endregion
+    #endregion
 
     void Start()
     {
-        
+
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
-        startCamPos = Camera.main.transform.position;
     }
 
     // Update is called once per frame
@@ -34,15 +38,15 @@ public class Boat : MonoBehaviour
     public void PermanentBoost(float boostValue)
     {
         //don't do boost if speed to high
-        if(speed > GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().maxBoatSpeed)
+        if (speed > GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().maxBoatSpeed)
         {
             return;
         }
-        speed += boostValue;
-        StartCoroutine(PermanentBoostCoruntine(1.5f));
+
+        StartCoroutine(PermanentBoostCoruntine(boostValue, 1.5f));
 
     }
-    public void InstantBoost(float boostValue, float boostTime)
+    public void TemporaryBoost(float boostValue, float boostTime)
     {
         //don't do boost if speed to high
         if (speed > GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().maxBoatSpeed)
@@ -52,25 +56,32 @@ public class Boat : MonoBehaviour
         StartCoroutine(InstantBoostCoruntine(boostValue, boostTime));
     }
 
-    public IEnumerator InstantBoostCoruntine(float boostValue, float boostTime)
+    public IEnumerator InstantBoostCoruntine(float boostvalue, float boosttime)
     {
-        float defaultSpeed = speed;
-        speed += boostValue;
-        //Camera.main.transform.position = startCamPos + new Vector3(-1f, 0, 0);
+         
+        Vector3 defaultPosition = transform.position;
+        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTime);
+        //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition + new Vector3(boatDistancePushed, 0, 0), boatInertiaTime);
+
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
-        yield return new WaitForSeconds(boostTime);
-        speed = defaultSpeed;
+        yield return new WaitForSeconds(boosttime + boatInertiaTime);
+        DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, boatInertiaTime);
+        //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
+
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
-        //Camera.main.transform.position = startCamPos;
     }
-    public IEnumerator PermanentBoostCoruntine(float effectTime)
+    public IEnumerator PermanentBoostCoruntine(float boostvalue, float effectTime)
     {
-         //Camera.main.transform.position = startCamPos + new Vector3(-1f, 0, 0);
+        Vector3 defaultPosition = transform.position;
+        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTime);
+        //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition + new Vector3(boatDistancePushed, 0, 0), boatInertiaTime);
+
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
-        yield return new WaitForSeconds(effectTime);
-      
+        yield return new WaitForSeconds(effectTime + boatInertiaTime);
+      //  DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
+
+
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
-        //Camera.main.transform.position = startCamPos;
     }
 
 

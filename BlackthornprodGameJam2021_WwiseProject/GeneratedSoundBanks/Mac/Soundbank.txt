@@ -1,13 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
 	139855160	NPC_CollWater			\Default Work Unit\NPC_CollWater	
+	264499973	Wave_Enter			\Default Work Unit\Wave_Enter	
 	495534887	NPC_CollFloor			\Default Work Unit\NPC_CollFloor	
+	540993415	Start_Music			\MusicEvents\Start_Music	
 	1730208058	Player_Footsteps			\Default Work Unit\Player_Footsteps	
+	1973806823	Wave_Cleared			\Default Work Unit\Wave_Cleared	
 	2016968455	NPC_DroppedByBird			\Default Work Unit\NPC_DroppedByBird	
 	2050233766	NPC_PickedUp			\Default Work Unit\NPC_PickedUp	
 	2474133806	NPC_CollShark			\Default Work Unit\NPC_CollShark	
 	2756003563	NPC_Thrown			\Default Work Unit\NPC_Thrown	
+	2761884803	Wave_Lost			\Default Work Unit\Wave_Lost	
 	3321089774	NPC_CollBird			\Default Work Unit\NPC_CollBird	
+	3626999974	Start_Ambience			\Default Work Unit\Start_Ambience	
 	4146794365	NPC_PreparedForThrow			\Default Work Unit\NPC_PreparedForThrow	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	659411096	BoatSpeed			\Default Work Unit\BoatSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	119650254	Footstep_Single_01	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_01		20624
@@ -21,4 +29,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	760535665	Scream_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Scream_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_3		158036
 	927972243	Footstep_Double_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Double_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Double_02		20224
 	943653409	Footstep_Single_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_02		16706
+	989576615	OceanAmbience_1 stereo loop	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\OceanAmbience_1 stereo loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience_Ocean\OceanAmbience_1 stereo loop		8235836
+	1068246890	BoatCreak_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\BoatCreak_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boat_Creak\BoatCreak_1		361860
 

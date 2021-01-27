@@ -22,10 +22,16 @@ namespace AK
         static const AkUniqueID NPC_PREPAREDFORTHROW = 4146794365U;
         static const AkUniqueID NPC_THROWN = 2756003563U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
+        static const AkUniqueID START_AMBIENCE = 3626999974U;
+        static const AkUniqueID START_MUSIC = 540993415U;
+        static const AkUniqueID WAVE_CLEARED = 1973806823U;
+        static const AkUniqueID WAVE_ENTER = 264499973U;
+        static const AkUniqueID WAVE_LOST = 2761884803U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BOATSPEED = 659411096U;
         static const AkUniqueID THROWPOWER = 2111892502U;
     } // namespace GAME_PARAMETERS
 

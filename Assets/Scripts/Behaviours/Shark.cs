@@ -27,7 +27,7 @@ public class Shark : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(goingToADestination);
+       // print(goingToADestination);
         if (goingToADestination)
         {
             Vector3 dir = new Vector3(theDestination.x - transform.position.x, 0, 0).normalized;
@@ -87,7 +87,7 @@ public class Shark : MonoBehaviour
             if (collision.gameObject.GetComponent<ThrowableObjectsMasterClass>())
             {//is throwable object
                 float boostValue = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().sharkBoostForce;
-                boat.PermanentBoost(boostValue);
+                boat.TemporaryBoost(boostValue,3);
                 SYSTEMSDEBUG.instance.ResetBall();
                 StartCoroutine(SharkHiddenCourotine());
 

@@ -10,15 +10,31 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Wave_Enter" ID="{1F220B65-BAB2-4595-8EC0-5D72D97CDED3}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="NPC_CollWater" ID="{A64385B5-49B5-46C6-A936-58C90FED9A21}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wave_Lost" ID="{F853C051-C1CE-4A60-A6CE-F11EC454B18D}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="NPC_CollFloor" ID="{17955327-BFF8-43A4-B901-1431530910B2}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="2" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Wave_Cleared" ID="{0B9D7E22-E805-4099-AF77-2C9EA15791DE}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="2" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="BoatSpeed" ID="{18021920-B828-408A-8AFA-4AEA5B64FE97}"/>
+							<Value>3.26518691588785</Value>
+						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ThrowPower" ID="{85ED8721-368D-49E4-8EF2-AC691D9063E6}"/>
 							<Value>50</Value>
