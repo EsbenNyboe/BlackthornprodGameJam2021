@@ -33,12 +33,22 @@ public class Boat : MonoBehaviour
     }
     public void PermanentBoost(float boostValue)
     {
+        //don't do boost if speed to high
+        if(speed > GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().maxBoatSpeed)
+        {
+            return;
+        }
         speed += boostValue;
         StartCoroutine(PermanentBoostCoruntine(1.5f));
 
     }
     public void InstantBoost(float boostValue, float boostTime)
     {
+        //don't do boost if speed to high
+        if (speed > GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().maxBoatSpeed)
+        {
+            return;
+        }
         StartCoroutine(InstantBoostCoruntine(boostValue, boostTime));
     }
 

@@ -24,7 +24,6 @@ public class SharkSpawner : MonoBehaviour
     {
         if(other.tag == "Boat")
         {
-            print("why?");
             sharkSpawedInScene.GoToDestination(sharkSpawedInScene.backAndForthBoatDestinations[0]);
         }
     }

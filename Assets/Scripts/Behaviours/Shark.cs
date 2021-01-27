@@ -86,7 +86,8 @@ public class Shark : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<ThrowableObjectsMasterClass>())
             {//is throwable object
-                boat.PermanentBoost(3);
+                float boostValue = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().sharkBoostForce;
+                boat.PermanentBoost(boostValue);
                 SYSTEMSDEBUG.instance.ResetBall();
                 StartCoroutine(SharkHiddenCourotine());
 
@@ -94,7 +95,7 @@ public class Shark : MonoBehaviour
         }
 
     }
-
+    //Hide / Unhide the shark 0 hidden 1 non hidden
     public void changeHidden(int oneOrzero)
     {
         if(oneOrzero == 1)
