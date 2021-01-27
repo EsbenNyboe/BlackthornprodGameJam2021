@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  speedDecreaseByDragPerSecond: 1
+  waveDragFactor: 1
 --- !u!60 &430068764
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  speedDecreaseByDragPerSecond: 1
+  waveDragFactor: 1
 --- !u!253 &707342626
 BuoyancyEffector2D:
   m_ObjectHideFlags: 0
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  speedDecreaseByDragPerSecond: 1
+  waveDragFactor: 1
 --- !u!60 &839451064
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  speedDecreaseByDragPerSecond: 1
+  waveDragFactor: 1
 --- !u!60 &936529110
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  speedDecreaseByDragPerSecond: 1
+  waveDragFactor: 1
 --- !u!253 &1369826406
 BuoyancyEffector2D:
   m_ObjectHideFlags: 0
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatRidingNow: 0
-  speedDecreaseByDragPerSecond: 1
+  waveDragFactor: 1
 --- !u!60 &2070155083
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2739,6 +2739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPullDistance: 7
   maxPullForce: 20
+  minPullForce: 0
   throwableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2755,7 +2756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBoatSpeed: 50
-  fatalBoatSpeed: 0
+  fatalBoatSpeed: 1
   sharkBoostForce: 3
   waveDragFactor: 1
 --- !u!1001 &86795999342432786

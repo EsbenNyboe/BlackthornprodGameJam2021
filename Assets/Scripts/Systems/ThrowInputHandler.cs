@@ -17,9 +17,13 @@ using System;
 //Handler of the player input for the main mechanic. 
 public class ThrowInputHandler : MonoBehaviour
 {
-
+    [Header("Input Control")]
     [SerializeField] float maxPullDistance;//Max distance in world units that the player can actually pull and have any effect
     [SerializeField] float maxPullForce;//Max force that the object can be thrown
+    [SerializeField] float minPullForce;//Min force that the object can be thrown
+   
+    
+    [Header("Raycast2D")]
     [SerializeField] LayerMask throwableMask; //Mask of the throwable object for the RayCast2D
     float forcemultiplier;
     GameObject targetObject;
@@ -47,8 +51,7 @@ public class ThrowInputHandler : MonoBehaviour
     private void Awake()
     {
         throwObjectSystem = new ThrowObjectSystem();
-
-
+ 
     }
 
     // As default, left mouse button is the main controller.You can change it in the Update function
@@ -78,8 +81,13 @@ public class ThrowInputHandler : MonoBehaviour
             {
                 forcemultiplier = distance / maxPullDistance;
             }
+            float finalForce = forcemultiplier * maxPullForce;
+            if(finalForce < minPullForce)
+            {
+                finalForce = minPullForce;
+            }
             launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
-            Debug.DrawRay(targetObject.transform.position, launchDirection * forcemultiplier * maxPullForce);
+            Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
             throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
             //enter the if statement if the player let go of the left mouse button
             if (Input.GetMouseButtonUp(0))
@@ -119,7 +127,7 @@ public class ThrowInputHandler : MonoBehaviour
         throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Thrown);
 
 
-        Boat._instance.InstantBoost(5, .5f);
+        Boat._instance.TemporaryBoost(5, .5f);
         targetObject.layer = 0;
         targetObject = null;
     }

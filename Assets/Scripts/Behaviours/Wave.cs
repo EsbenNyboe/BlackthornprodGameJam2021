@@ -17,6 +17,13 @@ public class Wave : MonoBehaviour
         GameManager gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         //set global wave drag factor
         waveDragFactor = gm.waveDragFactor;
+
+        GameManager.onGameLost += GameManager_onGameLost;
+    }
+
+    private void GameManager_onGameLost(object sender, System.EventArgs e)
+    {
+        GetComponent<PolygonCollider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -29,6 +36,10 @@ public class Wave : MonoBehaviour
         {
             AkSoundEngine.SetRTPCValue("BoatSpeed", boat.speed);
             if (boat.speed > 0) boat.speed -= Time.deltaTime * waveDragFactor;
+           if(boat.speed < 0)
+            {
+                boat.speed = 0;
+            }
         }
         else
         {

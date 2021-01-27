@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class GameManager : MonoBehaviour
     //how much speed dereases by each second on wave
     public float waveDragFactor = 1;
     // Start is called before the first frame update
+
+    #region TriggerEvents
+    static public event EventHandler onGameLost;
+#endregion
     void Start()
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
@@ -33,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseGame()
     {
+        onGameLost?.Invoke(this, EventArgs.Empty);
         print("Game Lost");
         //Make Boat sink
         boat.GetComponent<Rigidbody2D>().mass = 50;

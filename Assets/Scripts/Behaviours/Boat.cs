@@ -42,7 +42,7 @@ public class Boat : MonoBehaviour
         StartCoroutine(PermanentBoostCoruntine(1.5f));
 
     }
-    public void InstantBoost(float boostValue, float boostTime)
+    public void TemporaryBoost(float boostValue, float boostTime)
     {
         //don't do boost if speed to high
         if (speed > GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().maxBoatSpeed)
