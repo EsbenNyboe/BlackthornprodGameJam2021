@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78a8acb0a455014998c3510896e53c0, type: 3}
+  m_Name: Husband_2
+  m_EditorClassIdentifier: 
+  objectType: 2
+  speedBonusGiven: 0
+  pointsRemoved: 0
+  landSoundEvent: 
+  thrownSoundEvent: 
+  drownSoundEvent: 
+  idleSprites:
+  - {fileID: -571803049720062838, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 3723009071816500770, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 5368503552934629034, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 2788122944219019934, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  heldSprites:
+  - {fileID: -8257435895579433734, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 5267168853030923242, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  thrownSprites:
+  - {fileID: -7103239352562961892, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  landSprites:
+  - {fileID: -7615211306008607279, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: -6017269784048035146, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 6493183879818536385, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  drownSprites:
+  - {fileID: 2708648524443065047, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 5035011414137048963, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 4583875927333216517, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 1772990294291436409, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  AirSprites:
+  - {fileID: -1093179283270631507, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: -4774102633281606453, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 2634536722591868109, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}
+  - {fileID: 2008024450353684051, guid: 03f12504bb6a95945827afa0f3d9e7bf, type: 3}

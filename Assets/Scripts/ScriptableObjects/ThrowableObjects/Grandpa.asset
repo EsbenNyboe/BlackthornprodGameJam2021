@@ -15,9 +15,30 @@ MonoBehaviour:
   objectType: 0
   speedBonusGiven: 0
   pointsRemoved: 0
-  idleSprites: []
-  pickUpSprites: []
-  heldSprites: []
-  thrownSprites: []
-  landSprites: []
-  drownSprites: []
+  landSoundEvent: 
+  thrownSoundEvent: 
+  drownSoundEvent: 
+  idleSprites:
+  - {fileID: 3483660430088893595, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: -3033514480428192132, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 1808175305271523550, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 5155303126940076749, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  heldSprites:
+  - {fileID: 7293592441362353138, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 2927890435393587308, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  thrownSprites:
+  - {fileID: 953094933367420871, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  landSprites:
+  - {fileID: 4424861017596689274, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 3427092763700363821, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: -2672468848789818252, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  drownSprites:
+  - {fileID: -8119009366048866773, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: -2911541039325392254, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 7513424208768015818, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: -3540953663635759448, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  AirSprites:
+  - {fileID: -2250270794417757423, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 1752277990214800965, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 1678969986529648822, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}
+  - {fileID: 2602157490895585015, guid: 69d28f1d78e3d234092f9422494d80ad, type: 3}

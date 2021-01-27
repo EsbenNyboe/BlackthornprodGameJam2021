@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78a8acb0a455014998c3510896e53c0, type: 3}
+  m_Name: GrandMa
+  m_EditorClassIdentifier: 
+  objectType: 1
+  speedBonusGiven: 0
+  pointsRemoved: 0
+  landSoundEvent: 
+  thrownSoundEvent: 
+  drownSoundEvent: 
+  idleSprites:
+  - {fileID: -5780191894954759435, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: -3097576679876003428, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: -146227855974222666, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: 8177295721787017468, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  heldSprites:
+  - {fileID: 4557840289601273782, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: 3104501537154819933, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  thrownSprites:
+  - {fileID: -8840172528434432255, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  landSprites:
+  - {fileID: 7570525896483931412, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: -1578034499477825316, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: 3411065117991643268, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  drownSprites:
+  - {fileID: 3382673268444501235, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: 2890525936083906769, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: -3780248210990933949, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: 6355461720892944191, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  AirSprites:
+  - {fileID: -7939170407234494145, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: -5577110537386503960, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: -1253447985282871706, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
+  - {fileID: 405372459355218602, guid: cd995a3d3cf241e4aa7c9550db53838c, type: 3}
