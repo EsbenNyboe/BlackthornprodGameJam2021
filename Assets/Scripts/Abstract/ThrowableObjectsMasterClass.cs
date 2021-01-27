@@ -16,16 +16,52 @@ using System;
 public abstract class ThrowableObjectsMasterClass : MonoBehaviour
 {
     //A scriptable object has to be set in the script component
-    [SerializeField]protected ThrowableObjectScriptableObjectDefinition throwableScriptableObject;
-     
-}
-public enum ThrowableObjectsType
-{
-    GrandPa,
-    GrandMa,
-    Husband,
-    Wife,
-    Kid,
-    Dog,
+    [SerializeField] protected ThrowableObjectScriptableObjectDefinition throwableScriptableObject;
+    SpriteRendererAnimator spriteRendererAnimator;
 
+    private void Start()
+    {
+        spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
+        ChangeAnimationState(AnimationType.Idle);
+    }
+    public void ChangeAnimationState(AnimationType animationtype)
+    {
+
+        switch (animationtype)
+        {
+            case AnimationType.Idle:
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.idleSprites); break;
+            case AnimationType.Held:
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites); break;
+            case AnimationType.Thrown:
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites, false, () => ChangeAnimationState(AnimationType.Air)); break;
+            case AnimationType.Land:
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites); break;
+            case AnimationType.Drown:
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.drownSprites); break;
+            case AnimationType.Air:
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.AirSprites); break;
+        }
+
+    }
+
+
+    public enum AnimationType
+    {
+        Idle,
+        Held,
+        Thrown,
+        Land,
+        Drown,
+        Air
+    }
+
+  
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Water"))
+        {
+            ChangeAnimationState(AnimationType.Drown);
+        }
+    }
 }

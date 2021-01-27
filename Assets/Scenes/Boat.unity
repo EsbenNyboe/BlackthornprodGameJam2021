@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 53092996}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: CenterOfMass
   m_TagString: Untagged
   m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
@@ -271,7 +271,7 @@ MonoBehaviour:
   goingToADestination: 0
   theDestination: {x: 0, y: 0, z: 0}
   backAndForthBoatDestinations:
-  - {x: -5, y: 0, z: 0}
+  - {x: -15, y: 0, z: 0}
   - {x: -35, y: 0, z: 0}
 --- !u!61 &333047951
 BoxCollider2D:
@@ -361,7 +361,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5f431fb62cc964c46b7983bfcc4f8fbe, type: 3}
-  m_Color: {r: 0, g: 0.2830189, b: 0.2797658, a: 1}
+  m_Color: {r: 0, g: 0.2830189, b: 0.2797658, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -416,7 +416,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 513
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -923,7 +923,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 513
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -962,7 +962,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 513
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -1236,7 +1236,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 513
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 1252115113}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1761,7 +1761,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 513
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -1860,6 +1860,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 306166916}
+  - {fileID: 1987229159}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2043,6 +2044,86 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1987229158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987229159}
+  - component: {fileID: 1987229161}
+  - component: {fileID: 1987229160}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1987229159
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987229158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1514542583}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1500, y: -132.9}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1987229160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987229158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.40392157, g: 0.42600632, b: 0.8509804, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 38
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 84
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "If you want to change the NPC,\n just change the ScriptableObject \nchoosen
+    in \"ThrowableObject\" GameObject\n >> DefautPersonBehaviour >> throwableScriptableObject"
+--- !u!222 &1987229161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987229158}
+  m_CullTransparentMesh: 0
 --- !u!1 &2070155080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +2155,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 513
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -2273,7 +2354,7 @@ GameObject:
   - component: {fileID: 2082526266}
   - component: {fileID: 2082526267}
   - component: {fileID: 2082526270}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: Boat
   m_TagString: Boat
   m_Icon: {fileID: 0}
@@ -2434,16 +2515,17 @@ GameObject:
   - component: {fileID: 2087402511}
   - component: {fileID: 2087402508}
   - component: {fileID: 2087402507}
+  - component: {fileID: 2087402512}
   - component: {fileID: 2087402506}
   m_Layer: 8
-  m_Name: BallTester
+  m_Name: ThrowableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &2087402506
-CircleCollider2D:
+--- !u!61 &2087402506
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2455,9 +2537,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.83}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 2.6875, y: 2.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Size: {x: 0.84, y: 1}
+  m_EdgeRadius: 0
 --- !u!50 &2087402507
 Rigidbody2D:
   serializedVersion: 4
@@ -2478,7 +2570,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
+  m_Constraints: 5
 --- !u!212 &2087402508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2519,12 +2611,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 2.6875, y: 2.6875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2542,7 +2634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035a49db037be9844ac2f6fcd4396b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwableScriptableObject: {fileID: 0}
+  throwableScriptableObject: {fileID: 11400000, guid: 6f446680fc404c243b545df7be08c59c, type: 2}
 --- !u!4 &2087402510
 Transform:
   m_ObjectHideFlags: 0
@@ -2552,7 +2644,7 @@ Transform:
   m_GameObject: {fileID: 2087402505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.77, y: 2.5900002, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -2570,6 +2662,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windScriptableObject: {fileID: 11400000, guid: 19ddddd921f9bc74ab47f9f5f7e528b3, type: 2}
+--- !u!114 &2087402512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087402505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c70ac483882f469840d2a8ed62f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSprites: []
+  spritePerFrame: 20
+  loopTheAnimation: 1
+  destroyOnAnimationEnded: 0
 --- !u!1 &2145813143
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,27 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c78a8acb0a455014998c3510896e53c0, type: 3}
-  m_Name: Dog
+  m_Name: notdefined
   m_EditorClassIdentifier: 
-  objectType: 5
-  speedBonusGiven: 12
-  pointsRemoved: 5
+  objectType: 0
+  speedBonusGiven: 0
+  pointsRemoved: 0
   landSoundEvent: 
   thrownSoundEvent: 
   drownSoundEvent: 
-  idleSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  pickUpSprites: []
+  idleSprites: []
   heldSprites: []
   thrownSprites: []
   landSprites: []
   drownSprites: []
+  AirSprites: []

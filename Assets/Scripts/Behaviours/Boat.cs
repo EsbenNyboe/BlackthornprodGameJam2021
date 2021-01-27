@@ -44,18 +44,18 @@ public class Boat : MonoBehaviour
 
     public IEnumerator InstantBoostCoruntine(float boostValue, float boostTime)
     {
+        float defaultSpeed = speed;
         speed += boostValue;
         //Camera.main.transform.position = startCamPos + new Vector3(-1f, 0, 0);
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
         yield return new WaitForSeconds(boostTime);
-        speed -= boostValue;
+        speed = defaultSpeed;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
         //Camera.main.transform.position = startCamPos;
     }
     public IEnumerator PermanentBoostCoruntine(float effectTime)
     {
-        
-        //Camera.main.transform.position = startCamPos + new Vector3(-1f, 0, 0);
+         //Camera.main.transform.position = startCamPos + new Vector3(-1f, 0, 0);
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
         yield return new WaitForSeconds(effectTime);
       

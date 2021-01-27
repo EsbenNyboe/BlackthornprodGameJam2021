@@ -8,6 +8,7 @@ public class SYSTEMSDEBUG : MonoBehaviour
     [SerializeField] GameObject tester;
     Vector3 originalPosition;
     static public SYSTEMSDEBUG instance;
+    Quaternion defaultrotation;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class SYSTEMSDEBUG : MonoBehaviour
     {
 
         originalPosition = tester.transform.position;
+        defaultrotation = tester.transform.rotation;
 
     }
 
@@ -29,9 +31,7 @@ public class SYSTEMSDEBUG : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
             ResetBall();
-
         }
 
 
@@ -42,7 +42,10 @@ public class SYSTEMSDEBUG : MonoBehaviour
     {
         tester.transform.position = originalPosition;
         tester.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+        tester.transform.rotation = defaultrotation;
+        tester.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         tester.GetComponent<WindBehaviour>().DeactivateWindEffect();
+        tester.GetComponent<ThrowableObjectsMasterClass>().ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Idle);
         tester.layer = 8;
 
     }
