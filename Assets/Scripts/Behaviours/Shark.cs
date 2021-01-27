@@ -19,7 +19,7 @@ public class Shark : MonoBehaviour
     void Start()
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
-        isSharkActive = true;
+        
         isSharkActive = false;
         changeHidden(0);
     }
@@ -97,8 +97,15 @@ public class Shark : MonoBehaviour
 
     public void changeHidden(int oneOrzero)
     {
+        if(oneOrzero == 1)
+        {
+            isSharkActive = true;
+        }
+        else
+        {
+            isSharkActive = false;
+        }
         Color color = GetComponent<SpriteRenderer>().color;
-        isSharkActive = true;
         color.a = oneOrzero;
         GetComponent<SpriteRenderer>().color = color;
     }

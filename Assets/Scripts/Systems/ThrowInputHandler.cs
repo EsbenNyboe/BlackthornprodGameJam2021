@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using System;
 
 /*********************************************************************************************
@@ -21,13 +22,14 @@ public class ThrowInputHandler : MonoBehaviour
     [SerializeField] float maxPullForce;//Max force that the object can be thrown
     [SerializeField] LayerMask throwableMask; //Mask of the throwable object for the RayCast2D
     float forcemultiplier;
-    GameObject forceTarget;
+    GameObject targetObject;
+    ThrowableObjectsMasterClass throwableObjectsBehavior;
     ThrowObjectSystem throwObjectSystem;
     bool startPulling;
     Vector3 mouseOnWorldPosition;
     const float RAYCAST_RADIUS = 3;
     Vector3 launchDirection;
- 
+
 
 
     /// <summary>
@@ -49,7 +51,7 @@ public class ThrowInputHandler : MonoBehaviour
 
     }
 
-   // As default, left mouse button is the main controller.You can change it in the Update function
+    // As default, left mouse button is the main controller.You can change it in the Update function
     void Update()
     {
         //enter the if statement if the player clicks on the left mouse button
@@ -59,7 +61,8 @@ public class ThrowInputHandler : MonoBehaviour
             RaycastHit2D hitInfo = Physics2D.CircleCast(mouseOnWorldPosition, RAYCAST_RADIUS, Vector2.zero, 0, throwableMask);
             if (hitInfo && hitInfo.transform.gameObject != null)
             {
-                forceTarget = hitInfo.transform.gameObject;
+                targetObject = hitInfo.transform.gameObject;
+                throwableObjectsBehavior = hitInfo.transform.GetComponent<ThrowableObjectsMasterClass>();
                 startPulling = true;
 
             }
@@ -67,29 +70,30 @@ public class ThrowInputHandler : MonoBehaviour
         //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
         if (startPulling)
         {
+
             mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
+            float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
             if (distance > maxPullDistance) forcemultiplier = 1;
             else
             {
                 forcemultiplier = distance / maxPullDistance;
             }
-            launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
-            Debug.DrawRay(forceTarget.transform.position, launchDirection*forcemultiplier*maxPullForce);
-
+            launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
+            Debug.DrawRay(targetObject.transform.position, launchDirection * forcemultiplier * maxPullForce);
+            throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
             //enter the if statement if the player let go of the left mouse button
             if (Input.GetMouseButtonUp(0))
             {
                 startPulling = false;
-              /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
-                if (distance > maxPullDistance) forcemultiplier = 1;
-                else
-                {
-                    forcemultiplier = distance / maxPullDistance;
-                }
-                launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
-              */
+                /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                  float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
+                  if (distance > maxPullDistance) forcemultiplier = 1;
+                  else
+                  {
+                      forcemultiplier = distance / maxPullDistance;
+                  }
+                  launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
+                */
                 DoAction();
             }
 
@@ -103,13 +107,24 @@ public class ThrowInputHandler : MonoBehaviour
     /// </summary>
     void DoAction()
     {
-        if (forceTarget.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None) forceTarget.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        throwObjectSystem.ThrowObject(forceTarget, launchDirection, forcemultiplier * maxPullForce);
-        forceTarget.GetComponent<WindBehaviour>().ActivateWindEffect();
+        if (targetObject.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None)
+        {
+            targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+        throwObjectSystem.ThrowObject(targetObject, launchDirection, forcemultiplier * maxPullForce);
+        targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
+
+        //This line takes care of the throwing AND "in the air" animation
+        throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Thrown);
+
+
         Boat._instance.InstantBoost(5, .5f);
-         forceTarget.layer = 0;
-         forceTarget = null;
+        targetObject.layer = 0;
+        targetObject = null;
     }
+
+
 
     /* private void OnDrawGizmos()
      {

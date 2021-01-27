@@ -30,3 +30,13 @@ public class ThrowableObjectScriptableObjectDefinition : ScriptableObject
     public Sprite[] drownSprites;
     public Sprite[] AirSprites;
  }
+public enum ThrowableObjectsType
+{
+    GrandPa,
+    GrandMa,
+    Husband,
+    Wife,
+    Kid,
+    Dog,
+
+}

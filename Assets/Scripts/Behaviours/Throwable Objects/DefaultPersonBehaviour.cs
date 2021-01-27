@@ -12,7 +12,7 @@ using UnityEngine;
  * *******************************************************************************************/
 
 //Behavior of the throwable object, child of ThrowableObjectsMasterClass
-public class DefaultPersonBehavior : ThrowableObjectsMasterClass
+public class DefaultPersonBehaviour : ThrowableObjectsMasterClass
 {
      
 }

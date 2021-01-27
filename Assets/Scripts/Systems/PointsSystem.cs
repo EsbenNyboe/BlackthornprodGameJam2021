@@ -69,8 +69,6 @@ public class PointsSystem
         maxPoints = maxpoints;
         currentPoints = startingpoints;
     }
-
-
     /// <summary>Removes X (<paramref name="value"/>) points from this PointSystem's Current Points (always use positive values, the calculation is made within the function).</summary>
     /// <remarks>  
     /// If, after the calculation, the amount
@@ -110,7 +108,6 @@ public class PointsSystem
             Debug.LogError("value can't be negative nor zero!");
         }
     }
-
     /// <summary>Adds X (<paramref name="value"/>) points to this PointSystem's Current Points.</summary>
     /// <remarks>
     /// If, after the calculation, the amount
@@ -179,7 +176,4 @@ public class PointsSystem
     {
         return (float)currentPoints / maxPoints;
     }
-
-
-
 }
