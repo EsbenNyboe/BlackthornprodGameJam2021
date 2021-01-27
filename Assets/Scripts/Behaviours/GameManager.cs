@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.startAmbience);
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.startMusic);
     }
 
     // Update is called once per frame
@@ -34,5 +36,6 @@ public class GameManager : MonoBehaviour
         print("Game Lost");
         //Make Boat sink
         boat.GetComponent<Rigidbody2D>().mass = 50;
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveLost);
     }
 }

@@ -42,6 +42,11 @@ public class SoundSystem : MonoBehaviour
         npcDroppedByBird,
         npcCollShark,
         npcCollWater,
-        playerFootsteps
+        playerFootsteps,
+        waveEnter,
+        waveCleared,
+        waveLost,
+        startAmbience,
+        startMusic
     }
 }

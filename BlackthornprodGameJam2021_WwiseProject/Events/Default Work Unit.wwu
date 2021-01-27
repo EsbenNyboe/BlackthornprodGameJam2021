@@ -105,6 +105,81 @@
 				<Event Name="NPC_CollBird" ID="{FB04C9A0-AD98-46EE-9959-00C2272F9707}"/>
 				<Event Name="NPC_PickedUp" ID="{ADC0A475-25EC-4C75-B1EF-88750EE25ADD}"/>
 				<Event Name="NPC_DroppedByBird" ID="{B61096E6-6A73-4B6E-A363-599C108ACA7A}"/>
+				<Event Name="Start_Ambience" ID="{CB74E3D1-1AE4-4699-A530-C3BDB77FFC5E}">
+					<ChildrenList>
+						<Action Name="" ID="{1BDD7369-D3D5-429B-8FD5-F4278ED9A474}" ShortID="899850072">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Ocean" ID="{FCE5E46F-8DAB-4A5D-93B7-1FAD6D1DCA66}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0643A51D-1297-4382-91F8-99369DC13B86}" ShortID="776191359">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Ocean" ID="{FCE5E46F-8DAB-4A5D-93B7-1FAD6D1DCA66}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F2E129F3-AE69-43F5-81E6-E109F8EACC7D}" ShortID="214753575">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Ocean" ID="{FCE5E46F-8DAB-4A5D-93B7-1FAD6D1DCA66}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Lost" ID="{F853C051-C1CE-4A60-A6CE-F11EC454B18D}">
+					<ChildrenList>
+						<Action Name="" ID="{659C9C0D-4033-4584-98C0-09EFC01933CC}" ShortID="425310897">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boat_Creak" ID="{A2BA24CC-968D-41F7-868C-DBA3B8AD766C}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Enter" ID="{1F220B65-BAB2-4595-8EC0-5D72D97CDED3}">
+					<ChildrenList>
+						<Action Name="" ID="{8B93A99D-B6C9-467F-A90B-1D6DD3D77338}" ShortID="687850754">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boat_Creak" ID="{A2BA24CC-968D-41F7-868C-DBA3B8AD766C}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Cleared" ID="{0B9D7E22-E805-4099-AF77-2C9EA15791DE}">
+					<ChildrenList>
+						<Action Name="" ID="{88E7BD24-7337-455E-BA01-AB28F10E5944}" ShortID="410153936">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boat_Creak" ID="{A2BA24CC-968D-41F7-868C-DBA3B8AD766C}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

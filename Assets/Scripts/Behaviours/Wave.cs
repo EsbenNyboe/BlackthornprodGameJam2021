@@ -26,8 +26,9 @@ public class Wave : MonoBehaviour
         transform.Translate(Time.deltaTime * boat.speed * -1, 0, 0);
 
         if (boatRidingNow)
-        { 
-             if (boat.speed > 0) boat.speed -= Time.deltaTime * waveDragFactor;
+        {
+            AkSoundEngine.SetRTPCValue("BoatSpeed", boat.speed);
+            if (boat.speed > 0) boat.speed -= Time.deltaTime * waveDragFactor;
         }
         else
         {
@@ -42,8 +43,9 @@ public class Wave : MonoBehaviour
             if (!boatRidingNow)
             {
                 startSpeed = boat.speed;
+                SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveEnter);
             }
-                boatRidingNow = true;
+            boatRidingNow = true;
         }
     }
 
@@ -54,8 +56,9 @@ public class Wave : MonoBehaviour
             if (boatRidingNow)
             {
                 boat.speed = startSpeed;
+                SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveCleared);
             }
-                boatRidingNow = false;
+            boatRidingNow = false;
         }
     }
 }

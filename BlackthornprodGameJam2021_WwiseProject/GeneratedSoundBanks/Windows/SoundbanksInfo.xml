@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="905446570">
+		<SoundBank Id="1355168291" Language="SFX" Hash="489488042">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="2855535812">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1313952302">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
@@ -86,7 +86,29 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3626999974" Name="Start_Ambience" ObjectPath="\Events\Default Work Unit\Start_Ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="989576615" Language="SFX">
+							<ShortName>OceanAmbience_1 stereo loop.wav</ShortName>
+							<Path>SFX\OceanAmbience_1 stereo loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\MusicEvents\Start_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1973806823" Name="Wave_Cleared" ObjectPath="\Events\Default Work Unit\Wave_Cleared" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="264499973" Name="Wave_Enter" ObjectPath="\Events\Default Work Unit\Wave_Enter" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1068246890" Language="SFX">
+							<ShortName>BoatCreak_1.wav</ShortName>
+							<Path>SFX\BoatCreak_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2761884803" Name="Wave_Lost" ObjectPath="\Events\Default Work Unit\Wave_Lost" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="659411096" Name="BoatSpeed" ObjectPath="\Game Parameters\Default Work Unit\BoatSpeed"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

@@ -87,3 +87,13 @@ MonoBehaviour:
     eventName: NPC_CollWater
   - soundType: 8
     eventName: Player_Footsteps
+  - soundType: 9
+    eventName: Wave_Enter
+  - soundType: 10
+    eventName: Wave_Cleared
+  - soundType: 11
+    eventName: Wave_Lost
+  - soundType: 12
+    eventName: Start_Ambience
+  - soundType: 13
+    eventName: Start_Music
