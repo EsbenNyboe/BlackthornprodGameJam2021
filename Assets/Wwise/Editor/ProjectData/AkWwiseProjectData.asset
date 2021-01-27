@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: df6f94bccec1ad47a727e43e28d282a9
     GuidInternal: 
-    m_lastTime: -8585900785647600172
+    m_lastTime: -8585898185988709241
     List:
     - name: Soundbank
       guid: 36f25501cb41b142a2acfeecbb651671
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585898385033049315
+    m_lastTime: -8585898185992686786
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707
@@ -178,6 +178,75 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 213760
       minDuration: 163314
+    - name: Start_Ambience
+      guid: d1e374cbe41a9946a530c3bdb77ffc5e
+      id: 3626999974
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start_Ambience
+        ObjectType: 3
+      Path: Default Work Unit\Start_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wave_Cleared
+      guid: 227e9d0b05e89940af772c9ea15791de
+      id: 1973806823
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wave_Cleared
+        ObjectType: 3
+      Path: Default Work Unit\Wave_Cleared
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Wave_Enter
+      guid: 650b221fb2ba95458ec05d72d97cded3
+      id: 264499973
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wave_Enter
+        ObjectType: 3
+      Path: Default Work Unit\Wave_Enter
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wave_Lost
+      guid: 51c053f8cec1604aa6cef11ec454b18d
+      id: 2761884803
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wave_Lost
+        ObjectType: 3
+      Path: Default Work Unit\Wave_Lost
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\MusicEvents.wwu
+    PathAndIcons:
+    - ElementName: MusicEvents
+      ObjectType: 12
+    ParentPath: MusicEvents
+    guid: 885390323fd91f438c80ab1e42196881
+    GuidInternal: 
+    m_lastTime: -8585898185992596846
+    List:
+    - name: Start_Music
+      guid: 94239384134aa24c8d621751a86fcb4c
+      id: 540993415
+      PathAndIcons:
+      - ElementName: MusicEvents
+        ObjectType: 12
+      - ElementName: Start_Music
+        ObjectType: 3
+      Path: MusicEvents\Start_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -186,8 +255,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 96b1bfe356c7d24ea3fb64a921b24949
     GuidInternal: 
-    m_lastTime: -8585900647684211543
+    m_lastTime: -8585898185992526884
     List:
+    - name: BoatSpeed
+      guid: 2019021828b88a408afa4aea5b64fe97
+      id: 659411096
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BoatSpeed
+        ObjectType: 13
+      Path: Default Work Unit\BoatSpeed
     - name: ThrowPower
       guid: 2187ed858d36e4498ef2ac691d9063e6
       id: 2111892502
