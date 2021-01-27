@@ -84,3 +84,6 @@ MonoBehaviour:
   postWaveBoatSpeed: 4
   sharkBoostForce: 0
   waveDragFactor: 0.5
+  nudgeAccerelationTime: 0.5
+  nudgeDeaccelerationTime: 5
+  boatSpeedReadOnly: 0
