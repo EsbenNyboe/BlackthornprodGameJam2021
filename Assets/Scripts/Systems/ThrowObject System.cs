@@ -33,11 +33,12 @@ public class ThrowObjectSystem
     {
         if(objectgameobject != null && objectgameobject.GetComponent<Rigidbody2D>() != null)
         {
-            direction = direction.normalized;
+             
             objectRigidBody = objectgameobject.GetComponent<Rigidbody2D>();
             objectRigidBody.AddForce(force * direction, ForceMode2D.Impulse);
             CustomEventArgsData customEventArgsData = new CustomEventArgsData(objectgameobject);
             onObjectThrown?.Invoke(this, customEventArgsData);
+            Debug.DrawRay(objectgameobject.transform.position, direction * force, Color.green, 100);
         }
         else
         {

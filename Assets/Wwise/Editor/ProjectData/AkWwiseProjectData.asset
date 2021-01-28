@@ -68,7 +68,11 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585897389762757725
+=======
+    m_lastTime: -8585897461294680736
+>>>>>>> Stashed changes
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707

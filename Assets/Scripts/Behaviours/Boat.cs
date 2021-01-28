@@ -37,6 +37,7 @@ public class Boat : MonoBehaviour
     {
         defaultScale = transform.localScale;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
+     
     }
 
     // Update is called once per frame
