@@ -55,8 +55,10 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcThrown);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites,false, () => ChangeAnimationState(AnimationType.Air)); break;
             case AnimationType.Land:                
+ 
                 SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites,false,2, ()=>SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor),() => ChangeAnimationState(AnimationType.Idle));break;
+ 
             case AnimationType.Drown:
                 SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWater);
@@ -66,6 +68,8 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         }
 
     }
+
+ 
     public enum AnimationType
     {
         Idle,

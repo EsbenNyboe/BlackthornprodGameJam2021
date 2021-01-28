@@ -23,10 +23,13 @@ public class ThrowInputHandler : MonoBehaviour
     [SerializeField] float minPullForce;//Min force that the object can be thrown
     [SerializeField] float boatImpulseForce;//"Force"(technically speed) applied to the boat when you throw someone
     [SerializeField] float boatImpulseTimer;//Time that it takes for the "Force"(technically speed) to be taken of the boat after throwing someone
+    [SerializeField] float raycastRadius;//Raycast (circle) size. We use this raycast to locate the nearest NPC to throw
 
     [Header("Tweening")]
     [SerializeField] float throwBodyShakeDuration;
     [SerializeField] float throwBodyShakeForce;
+    [SerializeField] Transform npcHeldPosition;
+    [SerializeField] float timeToHoldNPC;
 
 
     [Header("Raycast2D")]
@@ -37,8 +40,9 @@ public class ThrowInputHandler : MonoBehaviour
     ThrowObjectSystem throwObjectSystem;
     bool startPulling;
     Vector3 mouseOnWorldPosition;
-    const float RAYCAST_RADIUS = 3;
     Vector3 launchDirection;
+
+    bool isHoldingSomething;
 
     //quick-temporary fix
     bool pulled;
@@ -64,65 +68,79 @@ public class ThrowInputHandler : MonoBehaviour
 
     }
 
-    // As default, left mouse button is the main controller.You can change it in the Update function
     void Update()
     {
-        //enter the if statement if the player clicks on the left mouse button
-        if (Input.GetMouseButtonDown(0))
+        if (!isHoldingSomething)
         {
-            mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hitInfo = Physics2D.CircleCast(mouseOnWorldPosition, RAYCAST_RADIUS, Vector2.zero, 0, throwableMask);
-            if (hitInfo && hitInfo.transform.gameObject != null)
+            //Picks the NPC up
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
-                targetObject = hitInfo.transform.gameObject;
-                throwableObjectsBehavior = hitInfo.transform.GetComponent<ThrowableObjectsMasterClass>();
+
+                RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, raycastRadius, Vector2.zero, 0, throwableMask);
+                if (hitInfo && hitInfo.transform.gameObject != null)
+                {
+                    isHoldingSomething = true;
+                    targetObject = hitInfo.transform.gameObject;
+                    throwableObjectsBehavior = hitInfo.transform.GetComponent<ThrowableObjectsMasterClass>();
+                    throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                    targetObject.transform.DOMove(npcHeldPosition.position, timeToHoldNPC);
+
+                }
+            }
+        }
+        else
+        {
+            targetObject.transform.position = npcHeldPosition.position;
+            //Start aiming
+            if (Input.GetMouseButtonDown(0))
+            {
                 startPulling = true;
+            }
+
+            //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
+            if (startPulling)
+            {
+
+                mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mouseOnWorldPosition.z = 0;
+                float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
+                if (distance > maxPullDistance) forcemultiplier = 1;
+                else
+                {
+                    forcemultiplier = distance / maxPullDistance;
+                }
+                float finalForce = forcemultiplier * maxPullForce;
+                if (finalForce < minPullForce)
+                {
+                    finalForce = minPullForce;
+                }
+                launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
+                Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
+                if (!pulled)
+                {
+                    throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                    pulled = true;
+                }
+                //enter the if statement if the player let go of the left mouse button
+                if (Input.GetMouseButtonUp(0))
+                {
+                    startPulling = false;
+                    /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                      float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
+                      if (distance > maxPullDistance) forcemultiplier = 1;
+                      else
+                      {
+                          forcemultiplier = distance / maxPullDistance;
+                      }
+                      launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
+                    */
+                    DoAction(finalForce);
+                    pulled = false;
+                    isHoldingSomething = false;
+                }
 
             }
         }
-        //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
-        if (startPulling)
-        {
-
-            mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseOnWorldPosition.z = 0;
-            float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
-            if (distance > maxPullDistance) forcemultiplier = 1;
-            else
-            {
-                forcemultiplier = distance / maxPullDistance;
-            }
-            float finalForce = forcemultiplier * maxPullForce;
-            if (finalForce < minPullForce)
-            {
-                finalForce = minPullForce;
-            }
-            launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
-            Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
-            if (!pulled)
-            {
-                throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
-                pulled = true;
-            }
-            //enter the if statement if the player let go of the left mouse button
-            if (Input.GetMouseButtonUp(0))
-            {
-                startPulling = false;
-                /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                  float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
-                  if (distance > maxPullDistance) forcemultiplier = 1;
-                  else
-                  {
-                      forcemultiplier = distance / maxPullDistance;
-                  }
-                  launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
-                */
-                DoAction(finalForce);
-                pulled = false;
-            }
-
-        }
-
 
     }
 
