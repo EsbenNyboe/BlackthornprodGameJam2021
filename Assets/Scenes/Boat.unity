@@ -3562,9 +3562,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  boatInertiaTime: 0.5
   boatInertiaTimeDeacceleration: 1
-  boatDistancePushed: 3
+  boatInertiaTimeAcceleration: 2
+  boatShakeDuration: 1
+  boatShakeStrength: 0.2
   centerOfMass: {fileID: 53092996}
 --- !u!1 &2083459467
 GameObject:
@@ -3819,6 +3820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableScriptableObject: {fileID: 11400000, guid: 1356ae488c5302a43b8001bfdeaf3c03, type: 2}
+  drownTimer: 0
+  drownSpeed: 0
 --- !u!4 &2087402510
 Transform:
   m_ObjectHideFlags: 0
