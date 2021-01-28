@@ -17,8 +17,7 @@ public class GameManager : MonoBehaviour
     //how much speed dereases by each second on wave
     public float waveDragFactor = 1;
 
-    public float nudgeAccerelationTime;
-    public float nudgeDeaccelerationTime;
+     
     [Header("UI")]
     public GameObject LoseScreen;
     public GameObject WinScreen;
@@ -38,8 +37,6 @@ public class GameManager : MonoBehaviour
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         boat.speed = boatSpeedStart;
-        boat.boatInertiaTime = nudgeAccerelationTime;
-        boat.boatInertiaTimeDeacceleration = nudgeDeaccelerationTime;
         SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.startAmbience);
         SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.startMusic);
     }
