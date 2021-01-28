@@ -85,6 +85,7 @@ public class ThrowInputHandler : MonoBehaviour
         {
 
             mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseOnWorldPosition.z = 0;
             float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
             if (distance > maxPullDistance) forcemultiplier = 1;
             else
@@ -116,7 +117,7 @@ public class ThrowInputHandler : MonoBehaviour
                   }
                   launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
                 */
-                DoAction();
+                DoAction(finalForce);
                 pulled = false;
             }
 
@@ -128,7 +129,7 @@ public class ThrowInputHandler : MonoBehaviour
     /// <summary>
     /// Handles the main action of the if statement. In this case: Throws the object
     /// </summary>
-    void DoAction()
+    void DoAction(float finalforce)
     {
         if (targetObject.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None)
         {
@@ -136,7 +137,7 @@ public class ThrowInputHandler : MonoBehaviour
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
-        throwObjectSystem.ThrowObject(targetObject, launchDirection, forcemultiplier * maxPullForce);
+        throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
         targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
 

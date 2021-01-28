@@ -58,9 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6eaa4409d7b474abbdaeee06c0453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPullDistance: -10
+  maxPullDistance: 10
   maxPullForce: 20
-  minPullForce: 5
+  minPullForce: 15
   boatImpulseForce: 10
   boatImpulseTimer: 0.5
   throwBodyShakeDuration: 1
@@ -82,7 +82,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boatSpeedStart: 5
   maxBoatSpeed: 50
-  fatalBoatSpeed: 0.1
+  fatalBoatSpeed: 0.4
   postWaveBoatSpeed: 4
   sharkBoostForce: 5
   waveDragFactor: 0.5
+  LoseScreen: {fileID: 0}
+  WinScreen: {fileID: 0}
