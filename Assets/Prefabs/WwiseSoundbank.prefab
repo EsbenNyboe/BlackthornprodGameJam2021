@@ -77,7 +77,7 @@ MonoBehaviour:
     eventName: NPC_Thrown
   - soundType: 4
     eventName: NPC_CollFloor
-  - soundType: 5
+  - soundType: 23
     eventName: NPC_CollBird
   - soundType: 6
     eventName: NPC_DroppedByBird
@@ -97,21 +97,23 @@ MonoBehaviour:
     eventName: Start_Ambience
   - soundType: 14
     eventName: Start_Music
-  - soundType: 14
-    eventName: NPC_Fly_Grandpa
   - soundType: 15
-    eventName: NPC_Fly_Man
+    eventName: NPC_Fly_Grandpa
   - soundType: 16
-    eventName: NPC_Fly_Woman
+    eventName: NPC_Fly_Man
   - soundType: 17
-    eventName: NPC_Fly_Girl
+    eventName: NPC_Fly_Woman
   - soundType: 18
-    eventName: NPC_Fly_Boy
+    eventName: NPC_Fly_Girl
   - soundType: 19
-    eventName: NPC_Impact_Grandpa
+    eventName: NPC_Fly_Boy
   - soundType: 20
-    eventName: NPC_Impact_Man
+    eventName: NPC_Impact_Grandpa
   - soundType: 21
-    eventName: NPC_Impact_Woman
+    eventName: NPC_Impact_Man
   - soundType: 22
+    eventName: NPC_Impact_Woman
+  - soundType: 23
     eventName: NPC_Impact_Child
+  - soundType: 24
+    eventName: none

@@ -57,6 +57,7 @@ public class SoundSystem : MonoBehaviour
         npcImpactGrandpa,
         npcImpactMan,
         npcImpactWoman,
-        npcImpactChild
+        npcImpactChild,
+        filler
     }
 }

@@ -3819,7 +3819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035a49db037be9844ac2f6fcd4396b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwableScriptableObject: {fileID: 11400000, guid: cf79726750940024d9af2bee7b9ae03d, type: 2}
+  throwableScriptableObject: {fileID: 11400000, guid: 8d9fb5eb94243c84ba45e74b8555f14e, type: 2}
   drownTimer: 2
   deepDistance: 3
   drownSpeed: 1
@@ -4056,13 +4056,5 @@ PrefabInstance:
       propertyPath: LoseScreen
       value: 
       objectReference: {fileID: 557302801}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: fatalBoatSpeed
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: sharkBoostForce
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}

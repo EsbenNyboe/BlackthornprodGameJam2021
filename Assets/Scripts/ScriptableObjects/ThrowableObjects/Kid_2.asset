@@ -42,3 +42,5 @@ MonoBehaviour:
   - {fileID: 4795871217518782806, guid: 0491f098d8590c344aa4b2c8468dfcfa, type: 3}
   - {fileID: -4640297688425572588, guid: 0491f098d8590c344aa4b2c8468dfcfa, type: 3}
   - {fileID: -3410672223334927688, guid: 0491f098d8590c344aa4b2c8468dfcfa, type: 3}
+  screamingSound: 18
+  impactSound: 23

@@ -76,6 +76,7 @@
 									</ValueList>
 								</Property>
 								<Property Name="Lowpass" Type="int16" Value="56"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -99,6 +100,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2B9AE640-D657-4FE5-8168-9FD5AA62251C}" ShortID="978745289">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Screams" ID="{4BD0B6A8-3A0B-47F5-BAC1-C7492D23AFA9}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -142,6 +153,22 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
+									<ObjectRef Name="NPC_Screams" ID="{4BD0B6A8-3A0B-47F5-BAC1-C7492D23AFA9}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B161B41-0741-4C22-AAB6-0E8583ECE5BB}" ShortID="386284204">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
 									<ObjectRef Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
@@ -164,6 +191,22 @@
 						<Action Name="" ID="{CC932917-C3D0-4EA2-9EF6-A17D6CFA4E5A}" ShortID="579810588">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Screams" ID="{4BD0B6A8-3A0B-47F5-BAC1-C7492D23AFA9}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{36AE05A6-524B-4DE0-866B-11C45083AABD}" ShortID="362349078">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
@@ -352,9 +395,37 @@
 				<Event Name="NPC_Impact_Child" ID="{B4EA606D-7596-4E70-8625-BC01BEA591D6}">
 					<ChildrenList>
 						<Action Name="" ID="{04DBA69D-2475-49C0-9DE1-2BF0A8D80E69}" ShortID="557933788">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Kid_Impact" ID="{F2283077-5172-400C-9273-21CE994C59F1}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E5264F47-7974-4165-9EC2-820B5C0E0A55}" ShortID="490236262">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="kid_impact_1" ID="{85B92E85-103E-44FD-9A33-4B3ABDA44D2A}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9B95B2FA-96D8-4BB2-904B-3EEEDDCDEFD4}" ShortID="1004529995">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="kid_impact_2" ID="{EC02F742-63A7-4A6D-97BF-DAC69ADCFF33}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
