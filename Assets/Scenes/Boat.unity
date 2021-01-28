@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 333047952}
   - component: {fileID: 333047951}
   - component: {fileID: 333047950}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -923,7 +923,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -962,7 +962,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -1237,7 +1237,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 1252115114}
   - component: {fileID: 1252115112}
   - component: {fileID: 1252115113}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Water
   m_Icon: {fileID: 0}
@@ -1466,7 +1466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1374104}
+  m_Size: {x: 1, y: 0.9}
   m_EdgeRadius: 0
 --- !u!253 &1252115113
 BuoyancyEffector2D:
@@ -1479,7 +1479,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1809
   m_SurfaceLevel: 0.51
   m_Density: 2
   m_LinearDrag: 5
@@ -1762,7 +1762,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -1947,7 +1947,7 @@ GameObject:
   - component: {fileID: 1803765382}
   - component: {fileID: 1803765384}
   - component: {fileID: 1803765383}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Sand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,7 +2156,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   m_SurfaceLevel: 0.98
   m_Density: 2
   m_LinearDrag: 5
@@ -2502,9 +2502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  boatInertiaTime: 0.5
-  boatInertiaTimeDeacceleration: 1
-  boatDistancePushed: 3
+  boatInertiaTimeDeacceleration: 0
+  boatInertiaTimeAcceleration: 0
+  boatShakeDuration: 1.5
+  boatShakeStrength: 0.3
   centerOfMass: {fileID: 53092996}
 --- !u!1 &2087402505
 GameObject:
@@ -2639,6 +2640,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableScriptableObject: {fileID: 11400000, guid: 6f446680fc404c243b545df7be08c59c, type: 2}
+  drownTimer: 2
+  drownSpeed: 1
 --- !u!4 &2087402510
 Transform:
   m_ObjectHideFlags: 0
@@ -2864,9 +2867,5 @@ PrefabInstance:
       propertyPath: tester
       value: 
       objectReference: {fileID: 2087402505}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: sharkBoostForce
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}

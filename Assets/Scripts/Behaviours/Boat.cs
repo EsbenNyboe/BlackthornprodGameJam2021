@@ -8,10 +8,17 @@ public class Boat : MonoBehaviour
     [Header("General")]
     //[HideInInspector]
     public float speed;
-    public float boatInertiaTime; // 0.5f
-    public float boatInertiaTimeDeacceleration;
-    [SerializeField] float boatDistancePushed;
-    
+
+    [SerializeField] float boatInertiaTimeDeacceleration;// time the takes to the boat to lose maxboostspeed
+    [SerializeField] float boatInertiaTimeAcceleration; // time the takes to the boat to gain maxboostspeed
+   // [SerializeField] float boatDistancePushed;//Distance the boat is pushed when boosted (not working properly)
+
+    [Header("Tweening")]
+    [SerializeField] float boatShakeDuration;//Boat shake duration when lands on water
+    [SerializeField] float boatShakeStrength;//Boat shake force
+    private Vector3 defaultScale;
+
+
     [Header("Physics")]
     public Transform centerOfMass;
     //private stuff
@@ -28,7 +35,7 @@ public class Boat : MonoBehaviour
 
     void Start()
     {
-
+        defaultScale = transform.localScale;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
     }
 
@@ -44,7 +51,7 @@ public class Boat : MonoBehaviour
             return;
         }
 
-        StartCoroutine(PermanentBoostCoruntine(boostValue, 1.5f));
+        StartCoroutine(PermanentBoostCoroutine(boostValue, 1.5f));
 
     }
     public void TemporaryBoost(float boostValue, float boostTime)
@@ -54,36 +61,43 @@ public class Boat : MonoBehaviour
         {
             return;
         }
-        StartCoroutine(InstantBoostCoruntine(boostValue, boostTime));
+        StartCoroutine(InstantBoostCoroutine(boostValue, boostTime));
     }
 
-    public IEnumerator InstantBoostCoruntine(float boostvalue, float boosttime)
+    public IEnumerator InstantBoostCoroutine(float boostvalue, float boosttime)
     {
-         
-        Vector3 defaultPosition = transform.position;
-        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTime);
+        DOTween.Complete(gameObject);
+       // Vector3 defaultPosition = transform.position;
+        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTimeAcceleration);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition + new Vector3(boatDistancePushed, 0, 0), boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
-        yield return new WaitForSeconds(boosttime + boatInertiaTime);
+        yield return new WaitForSeconds(boosttime + boatInertiaTimeAcceleration);
         DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, boatInertiaTimeDeacceleration);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
     }
-    public IEnumerator PermanentBoostCoruntine(float boostvalue, float effectTime)
+    public IEnumerator PermanentBoostCoroutine(float boostvalue, float effectTime)
     {
         Vector3 defaultPosition = transform.position;
-        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTime);
+        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTimeAcceleration);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition + new Vector3(boatDistancePushed, 0, 0), boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
-        yield return new WaitForSeconds(effectTime + boatInertiaTime);
+        yield return new WaitForSeconds(effectTime + boatInertiaTimeAcceleration);
       //  DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
 
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
     }
 
-
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Water")
+        {
+            transform.localScale = defaultScale;
+            transform.DOShakeScale(boatShakeDuration, boatShakeStrength*Vector3.down);
+        }
+    }
 }

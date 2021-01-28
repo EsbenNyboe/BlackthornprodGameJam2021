@@ -24,6 +24,10 @@ public class ThrowInputHandler : MonoBehaviour
     [SerializeField] float boatImpulseForce;//"Force"(technically speed) applied to the boat when you throw someone
     [SerializeField] float boatImpulseTimer;//Time that it takes for the "Force"(technically speed) to be taken of the boat after throwing someone
 
+    [Header("Tweening")]
+    [SerializeField] float throwBodyShakeDuration;
+    [SerializeField] float throwBodyShakeForce;
+
 
     [Header("Raycast2D")]
     [SerializeField] LayerMask throwableMask; //Mask of the throwable object for the RayCast2D
@@ -122,7 +126,9 @@ public class ThrowInputHandler : MonoBehaviour
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+        Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
         throwObjectSystem.ThrowObject(targetObject, launchDirection, forcemultiplier * maxPullForce);
+        targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
 
         //This line takes care of the throwing AND "in the air" animation

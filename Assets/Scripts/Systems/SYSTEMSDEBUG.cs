@@ -43,9 +43,10 @@ public class SYSTEMSDEBUG : MonoBehaviour
         tester.transform.position = originalPosition;
         tester.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
         tester.transform.rotation = defaultrotation;
+        Physics2D.IgnoreCollision(tester.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), false);
         tester.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         tester.GetComponent<WindBehaviour>().DeactivateWindEffect();
-        tester.GetComponent<ThrowableObjectsMasterClass>().ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Idle);
+        tester.GetComponent<ThrowableObjectsMasterClass>().ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Land);
         tester.layer = 8;
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using DG.Tweening;
 /*********************************************************************************************
  * Throwable Object Master Class
  * Author: Muniz
@@ -16,12 +17,22 @@ using System;
 public abstract class ThrowableObjectsMasterClass : MonoBehaviour
 {
     //A scriptable object has to be set in the script component
+    [Header("Scriptable Object")]
     [SerializeField] protected ThrowableObjectScriptableObjectDefinition throwableScriptableObject;
     SpriteRendererAnimator spriteRendererAnimator;
 
+    [Header("Tweening")]
+    [SerializeField] float drownTimer;//Time until the npc starts to go down
+    [SerializeField] float drownSpeed;//How fast the npc should move down
+ 
+    #region events
+    public event EventHandler onNPCThrown;
+    public event EventHandler onNPCDrown;
+    #endregion
+
     private void Start()
     {
-        spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
+         spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
         ChangeAnimationState(AnimationType.Idle);
     }
     public void ChangeAnimationState(AnimationType animationtype)
@@ -38,7 +49,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites, false, () => ChangeAnimationState(AnimationType.Air)); break;
             case AnimationType.Land:
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor);
-                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites); break;
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites,false, () => ChangeAnimationState(AnimationType.Idle)); break;
             case AnimationType.Drown:
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWater);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.drownSprites); break;
@@ -47,8 +58,6 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         }
 
     }
-
-
     public enum AnimationType
     {
         Idle,
@@ -58,13 +67,21 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         Drown,
         Air
     }
-
-  
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Water"))
         {
+              
             ChangeAnimationState(AnimationType.Drown);
+            onNPCDrown?.Invoke(this, EventArgs.Empty);
+         
         }
+    }
+
+    IEnumerator DrownTweeningCourotine()
+    {
+        yield return new WaitForSeconds(drownTimer);
+
+         transform.DOMove(transform.position + Vector3.down * 3, 1/drownSpeed);
     }
 }

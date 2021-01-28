@@ -63,6 +63,8 @@ MonoBehaviour:
   minPullForce: 5
   boatImpulseForce: 10
   boatImpulseTimer: 0.5
+  throwBodyShakeDuration: 1
+  throwBodyShakeForce: 0.2
   throwableMask:
     serializedVersion: 2
     m_Bits: 256
@@ -82,8 +84,5 @@ MonoBehaviour:
   maxBoatSpeed: 50
   fatalBoatSpeed: 0.1
   postWaveBoatSpeed: 4
-  sharkBoostForce: 0
+  sharkBoostForce: 5
   waveDragFactor: 0.5
-  nudgeAccerelationTime: 0.5
-  nudgeDeaccelerationTime: 5
-  boatSpeedReadOnly: 0
