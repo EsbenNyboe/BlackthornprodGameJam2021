@@ -44,6 +44,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
             case AnimationType.Idle:
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.idleSprites); break;
             case AnimationType.Held:
+                SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcPickedUp);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites); break;
             case AnimationType.Thrown:
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcThrown);

@@ -29,6 +29,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{0F4580E3-9E2E-47B7-8D85-4B5B149D905E}" ShortID="7816472">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PrepareThrow" ID="{4E19112B-16BB-4588-9D40-39BA775CF889}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="NPC_CollWater" ID="{A64385B5-49B5-46C6-A936-58C90FED9A21}">
@@ -103,7 +113,17 @@
 				<Event Name="NPC_CollShark" ID="{41DF3983-FC4A-49AA-9CC3-E75D4BBA415F}"/>
 				<Event Name="NPC_PreparedForThrow" ID="{D768C651-E9DC-44A6-816E-04DB2D32A001}"/>
 				<Event Name="NPC_CollBird" ID="{FB04C9A0-AD98-46EE-9959-00C2272F9707}"/>
-				<Event Name="NPC_PickedUp" ID="{ADC0A475-25EC-4C75-B1EF-88750EE25ADD}"/>
+				<Event Name="NPC_PickedUp" ID="{ADC0A475-25EC-4C75-B1EF-88750EE25ADD}">
+					<ChildrenList>
+						<Action Name="" ID="{B92C6626-9E6B-4FAB-AF24-EA2589463D00}" ShortID="538918192">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PrepareThrow" ID="{4E19112B-16BB-4588-9D40-39BA775CF889}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="NPC_DroppedByBird" ID="{B61096E6-6A73-4B6E-A363-599C108ACA7A}"/>
 				<Event Name="Start_Ambience" ID="{CB74E3D1-1AE4-4699-A530-C3BDB77FFC5E}">
 					<ChildrenList>
@@ -149,6 +169,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Boat_Creak" ID="{A2BA24CC-968D-41F7-868C-DBA3B8AD766C}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B9D49D16-F6D4-428C-B806-A7000988BC5E}" ShortID="203705789">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BoatCrash_2" ID="{26A7C558-6881-49A4-890E-CCE240EF5F38}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

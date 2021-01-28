@@ -18,17 +18,21 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	659411096	BoatSpeed			\Default Work Unit\BoatSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	10658318	PrepareThrow_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\PrepareThrow_1_0E30E108.wem		\Actor-Mixer Hierarchy\Default Work Unit\PrepareThrow\PrepareThrow_02		44078
 	119650254	Footstep_Single_01	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_01		20624
 	151638671	Footstep_Single_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_03		18902
 	165999230	SolidCollision_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\SolidCollision_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SolidCollision_1		24656
 	390813675	Scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_1		97164
 	404512114	Scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_2		105950
 	451614913	Throw_1low	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Throw_1low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1low		31124
+	523046439	BoatCrash_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\BoatCrash_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BoatCrash_2		297176
+	528672744	PrepareThrow_01	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\PrepareThrow_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PrepareThrow\PrepareThrow_01		75886
 	558849201	Throw_1high	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Throw_1high_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1high		18620
 	615628854	Splash_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Splash_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splash_3		50128
 	760535665	Scream_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Scream_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream\Scream_3		158036
 	927972243	Footstep_Double_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Double_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Double_02		20224
 	943653409	Footstep_Single_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_02		16706
+	953461429	PrepareThrow_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\PrepareThrow_1_970210E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\PrepareThrow\PrepareThrow_03		53166
 	989576615	OceanAmbience_1 stereo loop	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\OceanAmbience_1 stereo loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience_Ocean\OceanAmbience_1 stereo loop		8235836
 	1068246890	BoatCreak_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\BoatCreak_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boat_Creak\BoatCreak_1		361860
 

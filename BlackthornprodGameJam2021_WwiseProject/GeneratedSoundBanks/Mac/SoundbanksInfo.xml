@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="1313952302">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1110009190">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
@@ -40,7 +40,22 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2016968455" Name="NPC_DroppedByBird" ObjectPath="\Events\Default Work Unit\NPC_DroppedByBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2050233766" Name="NPC_PickedUp" ObjectPath="\Events\Default Work Unit\NPC_PickedUp" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2050233766" Name="NPC_PickedUp" ObjectPath="\Events\Default Work Unit\NPC_PickedUp" DurationType="OneShot" DurationMin="0.560125" DurationMax="0.964936">
+					<IncludedMemoryFiles>
+						<File Id="10658318" Language="SFX">
+							<ShortName>PrepareThrow_1.wav</ShortName>
+							<Path>SFX\PrepareThrow_1_0E30E108.wem</Path>
+						</File>
+						<File Id="528672744" Language="SFX">
+							<ShortName>PrepareThrow_1.wav</ShortName>
+							<Path>SFX\PrepareThrow_1_10C4C929.wem</Path>
+						</File>
+						<File Id="953461429" Language="SFX">
+							<ShortName>PrepareThrow_1.wav</ShortName>
+							<Path>SFX\PrepareThrow_1_970210E3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4146794365" Name="NPC_PreparedForThrow" ObjectPath="\Events\Default Work Unit\NPC_PreparedForThrow" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2756003563" Name="NPC_Thrown" ObjectPath="\Events\Default Work Unit\NPC_Thrown" DurationType="OneShot" DurationMin="1.088262" DurationMax="1.811877">
 					<IncludedMemoryFiles>
@@ -104,7 +119,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2761884803" Name="Wave_Lost" ObjectPath="\Events\Default Work Unit\Wave_Lost" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2761884803" Name="Wave_Lost" ObjectPath="\Events\Default Work Unit\Wave_Lost" DurationType="OneShot" DurationMin="3.368617" DurationMax="3.368617">
+					<IncludedMemoryFiles>
+						<File Id="523046439" Language="SFX">
+							<ShortName>BoatCrash_2.wav</ShortName>
+							<Path>SFX\BoatCrash_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="659411096" Name="BoatSpeed" ObjectPath="\Game Parameters\Default Work Unit\BoatSpeed"/>
