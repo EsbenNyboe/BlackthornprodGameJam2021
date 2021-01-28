@@ -14,6 +14,12 @@
 						<Property Name="Max" Type="Real64" Value="5"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="DistanceToWave" ID="{7EB1BBA6-43E4-46B8-8177-E247C016B2AB}">
+					<PropertyList>
+						<Property Name="Max" Type="Real64" Value="50"/>
+						<Property Name="Min" Type="Real64" Value="-50"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -58,6 +58,9 @@ public class SoundSystem : MonoBehaviour
         npcImpactMan,
         npcImpactWoman,
         npcImpactChild,
-        filler
+
+        waveLoopBig,
+        waveLoopMedium,
+        waveLoopSmall
     }
 }

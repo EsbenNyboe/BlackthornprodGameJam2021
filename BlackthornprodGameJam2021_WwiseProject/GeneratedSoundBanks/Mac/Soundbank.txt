@@ -1,7 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
 	139855160	NPC_CollWater			\Default Work Unit\NPC_CollWater	
+	141150188	Wave_Loop_Big			\Default Work Unit\Wave_Loop_Big	
 	264499973	Wave_Enter			\Default Work Unit\Wave_Enter	
 	314326094	NPC_Fly_Grandpa			\Default Work Unit\NPC_Fly_Grandpa	
+	429804171	Wave_Loop_Medium			\Default Work Unit\Wave_Loop_Medium	
 	495534887	NPC_CollFloor			\Default Work Unit\NPC_CollFloor	
 	540993415	Start_Music			\MusicEvents\Start_Music	
 	651276332	NPC_Impact_Woman			\Default Work Unit\NPC_Impact_Woman	
@@ -16,6 +18,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2016968455	NPC_DroppedByBird			\Default Work Unit\NPC_DroppedByBird	
 	2050233766	NPC_PickedUp			\Default Work Unit\NPC_PickedUp	
 	2474133806	NPC_CollShark			\Default Work Unit\NPC_CollShark	
+	2751120299	Wave_Loop_Small			\Default Work Unit\Wave_Loop_Small	
 	2756003563	NPC_Thrown			\Default Work Unit\NPC_Thrown	
 	2761884803	Wave_Lost			\Default Work Unit\Wave_Lost	
 	3321089774	NPC_CollBird			\Default Work Unit\NPC_CollBird	
@@ -24,12 +27,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	4146794365	NPC_PreparedForThrow			\Default Work Unit\NPC_PreparedForThrow	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	295969768	DistanceToWave			\Default Work Unit\DistanceToWave	
 	659411096	BoatSpeed			\Default Work Unit\BoatSpeed	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	641107654	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Kid_Impact\kidInclSilence_01\silence\Wwise Silence	
+	816204600	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Kid_Impact\kidInclSilence\silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5531648	grandpa_scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\grandpa_scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Grandpa_Scream\grandpa_scream_1		201990
 	10658318	PrepareThrow_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\PrepareThrow_1_0E30E108.wem		\Actor-Mixer Hierarchy\Default Work Unit\PrepareThrow\PrepareThrow_02		44078
-	54963401	kid_impact_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\kid_impact_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\kid_impact_2		19050
+	54963401	kid_impact_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\kid_impact_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Kid_Impact\kidInclSilence_01\kid_impact_2		19050
 	119650254	Footstep_Single_01	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_01		20624
 	143107039	man_impact_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\man_impact_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Man_Impact\man_impact_1		22108
 	151638671	Footstep_Single_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_03		18902
@@ -37,6 +45,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	200947536	woman_impact_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\woman_impact_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Woman_Impact\woman_impact_1		95054
 	206821348	man_scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\man_scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_1		117270
 	240154784	grandpa_scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\grandpa_scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Grandpa_Scream\grandpa_scream_2		244668
+	307057162	Wave_Loop_Big	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Wave_Loop_1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wave_Loops\Wave_Loop_Big		1028982
 	368074924	kid_scream_6	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\kid_scream_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Boy_Scream\kid_scream_6		209438
 	401989199	man_scream_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\man_scream_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_4		128132
 	451614913	Throw_1low	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Throw_1low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1low		31124
@@ -54,5 +63,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	943653409	Footstep_Single_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\Footstep_Single_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_02		16706
 	953461429	PrepareThrow_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\PrepareThrow_1_970210E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\PrepareThrow\PrepareThrow_03		53166
 	989576615	OceanAmbience_1 stereo loop	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\OceanAmbience_1 stereo loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience_Ocean\OceanAmbience_1 stereo loop		8235836
+	1029545463	kid_impact_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\kid_impact_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Kid_Impact\kidInclSilence\kid_impact_1		18558
 	1068246890	BoatCreak_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Mac\SFX\BoatCreak_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boat_Creak\BoatCreak_1		361860
 
