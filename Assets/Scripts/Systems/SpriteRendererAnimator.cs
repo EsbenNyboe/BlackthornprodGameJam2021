@@ -59,6 +59,7 @@ public class SpriteRendererAnimator : MonoBehaviour
     /// Change set of sprites "being animated"
     /// </summary>
     /// <param name="sprites">Vector of sprites which is going to be animated</param>
+    /// <param name="looptheanimation">If true, the animation loops</param>
     public void ChangeSpriteArray(Sprite[] sprites, bool looptheanimation = true)
     {
         index = 0;
@@ -66,13 +67,13 @@ public class SpriteRendererAnimator : MonoBehaviour
         this.currentSprites = sprites;
 
     }
-
     /// <summary>
     /// Change set of sprites "being animated"
     /// </summary>
     /// <param name="sprites">Vector of sprites which is going to be animated</param>
+    /// <param name="looptheanimation">If true, the animation loops</param>
     /// <param name="spriteFrame">index of the sprite to show when to do the Action</param>
-    /// <param name="actionafterlastsprite">Action thats going to run after showing the last sprite of the array (only works if the sprite doesn't loop) </param>
+    /// <param name="actionatindex">Action that's going to run when the index sprite shows up</param>
     public void ChangeSpriteArray(Sprite[] sprites, bool looptheanimation, int spriteFrame, Action actionatindex)
     {
         if (spriteFrame > sprites.Length)
@@ -91,27 +92,35 @@ public class SpriteRendererAnimator : MonoBehaviour
     /// Change set of sprites "being animated"
     /// </summary>
     /// <param name="sprites">Vector of sprites which is going to be animated</param>
-    /// <param name="actionafterlastsprite">Action thats going to run after showing the last sprite of the array  </param>
+    /// <param name="looptheanimation">If true, the animation loops</param>
+    /// <param name="actionafterlastsprite">Action that's going to run after showing the last sprite of the array  </param>
     public void ChangeSpriteArray(Sprite[] sprites, bool looptheanimation, Action actionafterlastsprite)
     {
 
         if (!looptheanimation)
         {
-            ChangeSpriteArray(sprites, looptheanimation);
+            ChangeSpriteArray(sprites, false);
             actionWhenAnimationEnds = actionafterlastsprite;
         }
         else
         {
-            ChangeSpriteArray(sprites, looptheanimation, sprites.Length, actionafterlastsprite);
+            ChangeSpriteArray(sprites, true, sprites.Length, actionafterlastsprite);
         }
 
 
         ;
 
     }
-    public void ChangeSpriteArray(Sprite[] sprites, int index, Action actionatindex, Action actionafterlastsprite)
+    /// <summary>
+    /// Change set of sprites "being animated"
+    /// </summary>
+    /// <param name="sprites">Vector of sprites which is going to be animated</param>
+    /// <param name="spriteFrame">index of the sprite to show when to do the Action</param>
+    /// <param name="actionatindex">Action that's going to run when the index sprite shows up</param>
+    /// <param name="actionafterlastsprite">Action that's going to run after showing the last sprite of the array  </param>
+    public void ChangeSpriteArray(Sprite[] sprites, int spriteFrame, Action actionatindex, Action actionafterlastsprite)
     {
-        ChangeSpriteArray(sprites, false, index, actionatindex);
+        ChangeSpriteArray(sprites, false, spriteFrame, actionatindex);
         actionWhenAnimationEnds = actionafterlastsprite;
 
 
@@ -120,8 +129,8 @@ public class SpriteRendererAnimator : MonoBehaviour
     /// Change set of sprites "being animated"
     /// </summary>
     /// <param name="sprites">Vector of sprites which is going to be animated</param>
-    /// <param name="destroyonanimationended">if true, the gameobject is destroyed when the last sprite is shown</param>
     /// <param name="actionafterlastsprite">Action thats going to run after showing the last sprite of the array </param>
+    /// <param name="destroyonanimationended">if true, the gameobject is destroyed when the last sprite is shown</param>
     public void ChangeSpriteArray(Sprite[] sprites, Action actionafterlastsprite, bool destroyonanimationended)
     {
         ChangeSpriteArray(sprites, false,actionafterlastsprite);
