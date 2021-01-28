@@ -892,6 +892,815 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Folder Name="Voices" ID="{AA051723-46F9-4B64-A59C-29A9FE975AB5}" ShortID="136825682">
+					<ChildrenList>
+						<BlendContainer Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" ShortID="631718789">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Boy_Scream" ID="{7EB100CB-6414-4004-94CD-15209BCE11F8}" ShortID="589641585">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="kid_scream_6" ID="{2BDD41B0-7A17-4C2F-9BBC-575782FF942A}" ShortID="301231303">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_scream_6" ID="{A462A503-1727-44C2-BFDE-01413CD7DBA8}">
+													<Language>SFX</Language>
+													<AudioFile>kid_scream_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="368074924"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_scream_6" ID="{A462A503-1727-44C2-BFDE-01413CD7DBA8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="kid_scream_7" ID="{E4539552-BD2F-41D1-A426-F1D36BE387B1}" ShortID="846919415">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_scream_7" ID="{2E01CE05-0C0E-4501-91E5-C2E734338460}">
+													<Language>SFX</Language>
+													<AudioFile>kid_scream_7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="162745430"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_scream_7" ID="{2E01CE05-0C0E-4501-91E5-C2E734338460}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Girl_Scream" ID="{646E431A-9930-4676-9798-D1ABA065E1AB}" ShortID="385422305">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="kid_scream_1" ID="{60E2044D-346D-4494-A253-704E3664AA34}" ShortID="291334446">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_scream_1" ID="{0EC4A186-9C0C-4BBA-A237-B11B665B6117}">
+													<Language>SFX</Language>
+													<AudioFile>kid_scream_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="672425898"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_scream_1" ID="{0EC4A186-9C0C-4BBA-A237-B11B665B6117}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="kid_scream_2" ID="{02EF1B41-FBD9-42AE-AE98-7EC3DC83580B}" ShortID="486191127">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_scream_2" ID="{812C5A8A-F61C-4FEF-8DE8-608200937CF1}">
+													<Language>SFX</Language>
+													<AudioFile>kid_scream_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="920999630"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_scream_2" ID="{812C5A8A-F61C-4FEF-8DE8-608200937CF1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="kid_scream_3" ID="{B4E0D9C8-E8F8-41E3-9419-C1BED45455AA}" ShortID="20021033">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_scream_3" ID="{73E4F897-F2FF-4AD3-9473-6BE3ED9A6F77}">
+													<Language>SFX</Language>
+													<AudioFile>kid_scream_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="649969996"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_scream_3" ID="{73E4F897-F2FF-4AD3-9473-6BE3ED9A6F77}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="kid_scream_4" ID="{E7696176-4D5B-49DB-B844-6E839EAF1E89}" ShortID="633833065">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_scream_4" ID="{5FADB3BB-2AC2-4B0F-B48C-A2A999C03A4D}">
+													<Language>SFX</Language>
+													<AudioFile>kid_scream_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="299087270"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_scream_4" ID="{5FADB3BB-2AC2-4B0F-B48C-A2A999C03A4D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Grandpa_Impact" ID="{352ED30A-DF51-4EC8-A6BD-5C02A815F51F}" ShortID="85805774">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="grandpa_impact_1" ID="{A47783AE-B89A-426F-9AA9-AE6297F18E56}" ShortID="455790329">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="grandpa_impact_1" ID="{084DA74B-1D5B-43BD-B037-34B64FBB04F3}">
+													<Language>SFX</Language>
+													<AudioFile>grandpa_impact_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="503185017"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="grandpa_impact_1" ID="{084DA74B-1D5B-43BD-B037-34B64FBB04F3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Grandpa_Scream" ID="{041E4183-60D8-42EF-9308-19AE60027788}" ShortID="148496660">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="grandpa_scream_1" ID="{0FAE75C6-1198-4AC7-87D8-07A2131EAA59}" ShortID="570020430">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="grandpa_scream_1" ID="{BF47B0C9-1BA2-47FD-AAB7-0BD634494EA9}">
+													<Language>SFX</Language>
+													<AudioFile>grandpa_scream_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="5531648"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="grandpa_scream_1" ID="{BF47B0C9-1BA2-47FD-AAB7-0BD634494EA9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="grandpa_scream_2" ID="{EBF3B167-EA80-4887-B460-658C4B35290A}" ShortID="474051265">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="grandpa_scream_2" ID="{57514C2F-A436-4EC0-A3A3-836DAB02B720}">
+													<Language>SFX</Language>
+													<AudioFile>grandpa_scream_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="240154784"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="grandpa_scream_2" ID="{57514C2F-A436-4EC0-A3A3-836DAB02B720}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Kid_Impact" ID="{F2283077-5172-400C-9273-21CE994C59F1}" ShortID="175146226">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="kid_impact_1" ID="{85B92E85-103E-44FD-9A33-4B3ABDA44D2A}" ShortID="577013821">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_impact_1" ID="{AFB61043-9EE6-47A2-9737-12A53D457E53}">
+													<Language>SFX</Language>
+													<AudioFile>kid_impact_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1029545463"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_impact_1" ID="{AFB61043-9EE6-47A2-9737-12A53D457E53}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="kid_impact_2" ID="{8ACD889C-A9B9-4AB6-8106-50BF4F031C10}" ShortID="643379919">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="kid_impact_2" ID="{EDBF930D-8369-4AB4-821A-65D8AD7E1241}">
+													<Language>SFX</Language>
+													<AudioFile>kid_impact_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="54963401"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="kid_impact_2" ID="{EDBF930D-8369-4AB4-821A-65D8AD7E1241}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Man_Impact" ID="{B4BF422A-6546-48C0-9873-4949BB63C706}" ShortID="474057446">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>35</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="man_impact_1" ID="{90FB9E7E-7DA8-4B68-9FC5-555E9AE50059}" ShortID="88998606">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="man_impact_1" ID="{8E23D748-0375-4FE0-9444-C195BF69F283}">
+													<Language>SFX</Language>
+													<AudioFile>man_impact_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="143107039"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="man_impact_1" ID="{8E23D748-0375-4FE0-9444-C195BF69F283}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Man_Scream" ID="{0CE31E21-F38E-4432-8C32-7388D5DA63ED}" ShortID="966435996">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>35</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="man_scream_1" ID="{9A664C82-462E-4CE5-AA1F-66FED5BE2C22}" ShortID="217384799">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="man_scream_1" ID="{113B2EB0-9EC2-4566-9401-9F435B39ABED}">
+													<Language>SFX</Language>
+													<AudioFile>man_scream_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="206821348"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="man_scream_1" ID="{113B2EB0-9EC2-4566-9401-9F435B39ABED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="man_scream_2" ID="{D5F28F6B-8593-4DE6-8927-9F25BB088660}" ShortID="10895715">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="man_scream_2" ID="{C1E4B65E-AAC4-4934-8DD7-633B99F7F41D}">
+													<Language>SFX</Language>
+													<AudioFile>man_scream_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="820589324"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="man_scream_2" ID="{C1E4B65E-AAC4-4934-8DD7-633B99F7F41D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="man_scream_3" ID="{B2CDEAE8-84D2-499F-A63D-6E3CFB28DE1D}" ShortID="1072647285">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="man_scream_3" ID="{7EDF7234-5196-4774-A657-F341A69BB6D7}">
+													<Language>SFX</Language>
+													<AudioFile>man_scream_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="847845634"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="man_scream_3" ID="{7EDF7234-5196-4774-A657-F341A69BB6D7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="man_scream_4" ID="{EC15DD3F-222B-42DC-BB08-32A7854F19F3}" ShortID="751315814">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="man_scream_4" ID="{6635C7D4-72FC-4002-9BDB-9A605C740DE8}">
+													<Language>SFX</Language>
+													<AudioFile>man_scream_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="401989199"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="man_scream_4" ID="{6635C7D4-72FC-4002-9BDB-9A605C740DE8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="man_scream_5" ID="{A1670F70-4607-4FB3-A1F8-3B0784D99B88}" ShortID="963208671">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="man_scream_5" ID="{753BFF5C-5BBE-4586-9854-C39C59428EB0}">
+													<Language>SFX</Language>
+													<AudioFile>man_scream_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="765943243"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="man_scream_5" ID="{753BFF5C-5BBE-4586-9854-C39C59428EB0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Woman_Impact" ID="{16D7C538-9870-4231-AABB-45AF9B309344}" ShortID="758991272">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="woman_impact_1" ID="{66A7AFA7-6D4C-4F65-B789-C419A8ABD340}" ShortID="729831739">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woman_impact_1" ID="{95054444-BB20-4FC1-A8F2-6929CFD95AE0}">
+													<Language>SFX</Language>
+													<AudioFile>woman_impact_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="200947536"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woman_impact_1" ID="{95054444-BB20-4FC1-A8F2-6929CFD95AE0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Woman_Scream" ID="{7DF0DFA5-517A-4BDC-ADBB-C54C93351090}" ShortID="642172058">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="woman_scream_1" ID="{FCCEBC22-BA11-4CE7-B639-D93A5B74E1A6}" ShortID="438565335">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woman_scream_1" ID="{1FBA4A6F-EACD-4291-B280-6EEB2F7CB820}">
+													<Language>SFX</Language>
+													<AudioFile>woman_scream_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="389765414"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woman_scream_1" ID="{1FBA4A6F-EACD-4291-B280-6EEB2F7CB820}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="woman_scream_2" ID="{A66DA873-B4A4-48AD-9DD6-DBA4663DCC3C}" ShortID="450580935">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woman_scream_2" ID="{20756A81-D1C9-4208-809C-7E46E5A2976F}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.72498112943808"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.122268777373963"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>woman_scream_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="856163467"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woman_scream_2" ID="{20756A81-D1C9-4208-809C-7E46E5A2976F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="woman_scream_3" ID="{2671325E-E6D1-4969-A8F2-F640C7650BD5}" ShortID="801487842">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woman_scream_3" ID="{867D24A6-D5F6-4FFB-A906-69FFC98F4AF2}">
+													<Language>SFX</Language>
+													<AudioFile>woman_scream_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="942655357"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woman_scream_3" ID="{867D24A6-D5F6-4FFB-A906-69FFC98F4AF2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="woman_scream_4" ID="{2984D673-90E5-448F-8A67-4AB6855ED00D}" ShortID="651930363">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woman_scream_4" ID="{FA565FAD-59E8-4EEE-B4B6-14EB65301437}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.116355418879881"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0185110893672537"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>woman_scream_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="480216868"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woman_scream_4" ID="{FA565FAD-59E8-4EEE-B4B6-14EB65301437}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="woman_scream_5" ID="{A845FAC6-D453-44DB-8AE1-5CF2E916A9E7}" ShortID="465973871">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{468022C9-36EA-439A-B116-5E80C3EF6341}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1921A2F3-71A1-48CC-8D34-C23A3C262A88}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="woman_scream_5" ID="{6D06957A-EB72-4281-8FEC-662A7869A7BE}">
+													<Language>SFX</Language>
+													<AudioFile>woman_scream_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="993922006"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="woman_scream_5" ID="{6D06957A-EB72-4281-8FEC-662A7869A7BE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

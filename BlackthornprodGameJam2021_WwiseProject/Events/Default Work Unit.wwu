@@ -5,6 +5,17 @@
 			<ChildrenList>
 				<Event Name="NPC_Thrown" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}">
 					<ChildrenList>
+						<Action Name="" ID="{0F4580E3-9E2E-47B7-8D85-4B5B149D905E}" ShortID="7816472">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PrepareThrow" ID="{4E19112B-16BB-4588-9D40-39BA775CF889}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{F4544083-89C4-4998-AF6C-53A784D029C8}" ShortID="793830987">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -13,6 +24,13 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{A558CF75-80BA-4AFC-88E0-497FC2028C7E}" ShortID="98255526">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
@@ -22,6 +40,11 @@
 						<Action Name="" ID="{B8B0E276-5187-40E9-9B26-80E222F89FC0}" ShortID="287500630">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -29,13 +52,14 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{0F4580E3-9E2E-47B7-8D85-4B5B149D905E}" ShortID="7816472">
+						<Action Name="" ID="{A0662383-44DD-400D-88B1-226CB202C4E2}" ShortID="861876908">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="PrepareThrow" ID="{4E19112B-16BB-4588-9D40-39BA775CF889}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+									<ObjectRef Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -46,6 +70,11 @@
 						<Action Name="" ID="{120EEA17-EDEF-42CB-A9A7-7647BD4827BF}" ShortID="71931603">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Lowpass" Type="int16" Value="56"/>
 							</PropertyList>
 							<ReferenceList>
@@ -61,7 +90,23 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{D34335A9-CCDA-4322-9FAC-479655C8045A}" ShortID="701501725">
+						<Action Name="" ID="{3B76EB15-AA40-404F-A732-C22059F4FBC3}" ShortID="561640660">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Lowpass" Type="int16" Value="56"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_CollFloor" ID="{17955327-BFF8-43A4-B901-1431530910B2}">
+					<ChildrenList>
+						<Action Name="" ID="{ACFEA362-521B-412B-8FB1-2973124DD9ED}" ShortID="726028257">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="Inclusion" Type="bool">
@@ -76,24 +121,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="NPC_CollFloor" ID="{17955327-BFF8-43A4-B901-1431530910B2}">
-					<ChildrenList>
-						<Action Name="" ID="{ACFEA362-521B-412B-8FB1-2973124DD9ED}" ShortID="726028257">
+						<Action Name="" ID="{B510CFA6-7098-4780-9C56-C9B289770E4A}" ShortID="205778547">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Scream" ID="{F81AAB09-111D-48B5-AFDF-46C82B876F15}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+									<ObjectRef Name="SolidCollision_1" ID="{6D903966-20E4-468B-B69B-2301826E9CE5}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{B510CFA6-7098-4780-9C56-C9B289770E4A}" ShortID="205778547">
+						<Action Name="" ID="{1E671AAE-2234-44E0-B2B3-1DBC44378AEB}" ShortID="288490769">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SolidCollision_1" ID="{6D903966-20E4-468B-B69B-2301826E9CE5}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+									<ObjectRef Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -110,7 +159,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="NPC_CollShark" ID="{41DF3983-FC4A-49AA-9CC3-E75D4BBA415F}"/>
+				<Event Name="NPC_CollShark" ID="{41DF3983-FC4A-49AA-9CC3-E75D4BBA415F}">
+					<ChildrenList>
+						<Action Name="" ID="{CC932917-C3D0-4EA2-9EF6-A17D6CFA4E5A}" ShortID="579810588">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Voices" ID="{206BAFC7-D400-4CE7-BAE5-1301B1F518C4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="NPC_PreparedForThrow" ID="{D768C651-E9DC-44A6-816E-04DB2D32A001}"/>
 				<Event Name="NPC_CollBird" ID="{FB04C9A0-AD98-46EE-9959-00C2272F9707}"/>
 				<Event Name="NPC_PickedUp" ID="{ADC0A475-25EC-4C75-B1EF-88750EE25ADD}">
@@ -165,6 +228,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -198,10 +262,110 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Boat_Creak" ID="{A2BA24CC-968D-41F7-868C-DBA3B8AD766C}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Fly_Grandpa" ID="{C04ADC88-F450-445A-8517-A9C68883575D}">
+					<ChildrenList>
+						<Action Name="" ID="{4AD34DB0-81C3-45C9-977A-AB897A433B91}" ShortID="726285360">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grandpa_Scream" ID="{041E4183-60D8-42EF-9308-19AE60027788}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Fly_Man" ID="{47531FF4-BD47-40E7-A0ED-6F18537A4629}">
+					<ChildrenList>
+						<Action Name="" ID="{D0D1763D-722A-4480-96F8-7D02723D2A46}" ShortID="340264207">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Man_Scream" ID="{0CE31E21-F38E-4432-8C32-7388D5DA63ED}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Fly_Woman" ID="{4B9A463B-1F04-44E0-B7A2-17C1609E3304}">
+					<ChildrenList>
+						<Action Name="" ID="{055ADECB-EECE-473C-9C2C-8ED58F08DAC4}" ShortID="50825065">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Woman_Scream" ID="{7DF0DFA5-517A-4BDC-ADBB-C54C93351090}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Fly_Boy" ID="{A91AB034-848B-4B33-B3C3-CA81F0D74201}">
+					<ChildrenList>
+						<Action Name="" ID="{A738DD00-97C1-4D3D-9934-F037CE96F151}" ShortID="1021779939">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boy_Scream" ID="{7EB100CB-6414-4004-94CD-15209BCE11F8}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Impact_Grandpa" ID="{5D506B46-DEA2-443D-9EE6-F0B17DD3C8DE}">
+					<ChildrenList>
+						<Action Name="" ID="{728FE5FB-49FF-4D4A-96A6-9215CA2FA0B8}" ShortID="830212867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grandpa_Impact" ID="{352ED30A-DF51-4EC8-A6BD-5C02A815F51F}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Impact_Man" ID="{4324926F-70A9-4074-8DD9-E4B26B7C6AA9}">
+					<ChildrenList>
+						<Action Name="" ID="{D241DC10-340B-4DE2-8C9B-E116F3CFFB59}" ShortID="280653338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Man_Impact" ID="{B4BF422A-6546-48C0-9873-4949BB63C706}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Impact_Woman" ID="{FE3E0AC0-71E4-4379-96D6-94604E160969}">
+					<ChildrenList>
+						<Action Name="" ID="{A7ECAB64-8F51-4845-8BCF-DC1A52101A59}" ShortID="982714325">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Woman_Impact" ID="{16D7C538-9870-4231-AABB-45AF9B309344}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Impact_Child" ID="{B4EA606D-7596-4E70-8625-BC01BEA591D6}">
+					<ChildrenList>
+						<Action Name="" ID="{04DBA69D-2475-49C0-9DE1-2BF0A8D80E69}" ShortID="557933788">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Kid_Impact" ID="{F2283077-5172-400C-9273-21CE994C59F1}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="NPC_Fly_Girl" ID="{1CE0B2F1-5288-4BDB-94E0-AF186FB1A339}">
+					<ChildrenList>
+						<Action Name="" ID="{8673C203-C116-4D91-89DA-09EF369CBAF7}" ShortID="234436303">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Girl_Scream" ID="{646E431A-9930-4676-9798-D1ABA065E1AB}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

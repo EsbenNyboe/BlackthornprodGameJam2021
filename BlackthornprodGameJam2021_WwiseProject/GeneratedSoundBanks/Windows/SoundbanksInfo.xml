@@ -16,20 +16,13 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="1110009190">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1190329166">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3321089774" Name="NPC_CollBird" ObjectPath="\Events\Default Work Unit\NPC_CollBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="495534887" Name="NPC_CollFloor" ObjectPath="\Events\Default Work Unit\NPC_CollFloor" DurationType="OneShot" DurationMin="0.278821" DurationMax="0.278821">
-					<IncludedMemoryFiles>
-						<File Id="165999230" Language="SFX">
-							<ShortName>SolidCollision_1.wav</ShortName>
-							<Path>SFX\SolidCollision_1_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="495534887" Name="NPC_CollFloor" ObjectPath="\Events\Default Work Unit\NPC_CollFloor" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2474133806" Name="NPC_CollShark" ObjectPath="\Events\Default Work Unit\NPC_CollShark" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="139855160" Name="NPC_CollWater" ObjectPath="\Events\Default Work Unit\NPC_CollWater" DurationType="OneShot" DurationMin="0.567619" DurationMax="0.567619">
 					<IncludedMemoryFiles>
@@ -40,6 +33,102 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2016968455" Name="NPC_DroppedByBird" ObjectPath="\Events\Default Work Unit\NPC_DroppedByBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1811951503" Name="NPC_Fly_Boy" ObjectPath="\Events\Default Work Unit\NPC_Fly_Boy" DurationType="OneShot" DurationMin="2.004694" DurationMax="2.373855">
+					<IncludedMemoryFiles>
+						<File Id="162745430" Language="SFX">
+							<ShortName>kid_scream_7.wav</ShortName>
+							<Path>SFX\kid_scream_7_10C4C929.wem</Path>
+						</File>
+						<File Id="368074924" Language="SFX">
+							<ShortName>kid_scream_6.wav</ShortName>
+							<Path>SFX\kid_scream_6_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1765057129" Name="NPC_Fly_Girl" ObjectPath="\Events\Default Work Unit\NPC_Fly_Girl" DurationType="OneShot" DurationMin="2.378435" DurationMax="2.378435">
+					<IncludedMemoryFiles>
+						<File Id="672425898" Language="SFX">
+							<ShortName>kid_scream_1.wav</ShortName>
+							<Path>SFX\kid_scream_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="314326094" Name="NPC_Fly_Grandpa" ObjectPath="\Events\Default Work Unit\NPC_Fly_Grandpa" DurationType="OneShot" DurationMin="2.289410" DurationMax="2.773288">
+					<IncludedMemoryFiles>
+						<File Id="5531648" Language="SFX">
+							<ShortName>grandpa_scream_1.wav</ShortName>
+							<Path>SFX\grandpa_scream_1_10C4C929.wem</Path>
+						</File>
+						<File Id="240154784" Language="SFX">
+							<ShortName>grandpa_scream_2.wav</ShortName>
+							<Path>SFX\grandpa_scream_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1037768413" Name="NPC_Fly_Man" ObjectPath="\Events\Default Work Unit\NPC_Fly_Man" DurationType="OneShot" DurationMin="1.034739" DurationMax="1.675805">
+					<IncludedMemoryFiles>
+						<File Id="206821348" Language="SFX">
+							<ShortName>man_scream_1.wav</ShortName>
+							<Path>SFX\man_scream_1_10C4C929.wem</Path>
+						</File>
+						<File Id="401989199" Language="SFX">
+							<ShortName>man_scream_4.wav</ShortName>
+							<Path>SFX\man_scream_4_10C4C929.wem</Path>
+						</File>
+						<File Id="820589324" Language="SFX">
+							<ShortName>man_scream_2.wav</ShortName>
+							<Path>SFX\man_scream_2_10C4C929.wem</Path>
+						</File>
+						<File Id="847845634" Language="SFX">
+							<ShortName>man_scream_3.wav</ShortName>
+							<Path>SFX\man_scream_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3522606991" Name="NPC_Fly_Woman" ObjectPath="\Events\Default Work Unit\NPC_Fly_Woman" DurationType="OneShot" DurationMin="1.525843" DurationMax="1.807595">
+					<IncludedMemoryFiles>
+						<File Id="480216868" Language="SFX">
+							<ShortName>woman_scream_4.wav</ShortName>
+							<Path>SFX\woman_scream_4_3DC4E766.wem</Path>
+						</File>
+						<File Id="856163467" Language="SFX">
+							<ShortName>woman_scream_2.wav</ShortName>
+							<Path>SFX\woman_scream_2_C3FAB148.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1661441752" Name="NPC_Impact_Child" ObjectPath="\Events\Default Work Unit\NPC_Impact_Child" DurationType="OneShot" DurationMin="0.215261" DurationMax="0.215261">
+					<IncludedMemoryFiles>
+						<File Id="54963401" Language="SFX">
+							<ShortName>kid_impact_2.wav</ShortName>
+							<Path>SFX\kid_impact_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1900293553" Name="NPC_Impact_Grandpa" ObjectPath="\Events\Default Work Unit\NPC_Impact_Grandpa" DurationType="OneShot" DurationMin="0.252562" DurationMax="0.252562">
+					<IncludedMemoryFiles>
+						<File Id="503185017" Language="SFX">
+							<ShortName>grandpa_impact_1.wav</ShortName>
+							<Path>SFX\grandpa_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1533334522" Name="NPC_Impact_Man" ObjectPath="\Events\Default Work Unit\NPC_Impact_Man" DurationType="OneShot" DurationMin="0.249932" DurationMax="0.249932">
+					<IncludedMemoryFiles>
+						<File Id="143107039" Language="SFX">
+							<ShortName>man_impact_1.wav</ShortName>
+							<Path>SFX\man_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="651276332" Name="NPC_Impact_Woman" ObjectPath="\Events\Default Work Unit\NPC_Impact_Woman" DurationType="OneShot" DurationMin="1.076984" DurationMax="1.076984">
+					<IncludedMemoryFiles>
+						<File Id="200947536" Language="SFX">
+							<ShortName>woman_impact_1.wav</ShortName>
+							<Path>SFX\woman_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2050233766" Name="NPC_PickedUp" ObjectPath="\Events\Default Work Unit\NPC_PickedUp" DurationType="OneShot" DurationMin="0.560125" DurationMax="0.964936">
 					<IncludedMemoryFiles>
 						<File Id="10658318" Language="SFX">
@@ -57,16 +146,8 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="4146794365" Name="NPC_PreparedForThrow" ObjectPath="\Events\Default Work Unit\NPC_PreparedForThrow" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2756003563" Name="NPC_Thrown" ObjectPath="\Events\Default Work Unit\NPC_Thrown" DurationType="OneShot" DurationMin="1.088262" DurationMax="1.811877">
+				<Event Id="2756003563" Name="NPC_Thrown" ObjectPath="\Events\Default Work Unit\NPC_Thrown" DurationType="OneShot" DurationMin="0.262025" DurationMax="0.384471">
 					<IncludedMemoryFiles>
-						<File Id="390813675" Language="SFX">
-							<ShortName>Scream_1.wav</ShortName>
-							<Path>SFX\Scream_1_10C4C929.wem</Path>
-						</File>
-						<File Id="404512114" Language="SFX">
-							<ShortName>Scream_2.wav</ShortName>
-							<Path>SFX\Scream_2_10C4C929.wem</Path>
-						</File>
 						<File Id="451614913" Language="SFX">
 							<ShortName>Throw_1low.wav</ShortName>
 							<Path>SFX\Throw_1low_10C4C929.wem</Path>
@@ -74,10 +155,6 @@
 						<File Id="558849201" Language="SFX">
 							<ShortName>Throw_1high.wav</ShortName>
 							<Path>SFX\Throw_1high_10C4C929.wem</Path>
-						</File>
-						<File Id="760535665" Language="SFX">
-							<ShortName>Scream_3.wav</ShortName>
-							<Path>SFX\Scream_3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

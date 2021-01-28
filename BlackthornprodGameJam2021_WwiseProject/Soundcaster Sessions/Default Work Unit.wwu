@@ -30,6 +30,10 @@
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Ambience_Ocean" ID="{FCE5E46F-8DAB-4A5D-93B7-1FAD6D1DCA66}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Wave_Cleared" ID="{0B9D7E22-E805-4099-AF77-2C9EA15791DE}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="2" Y="2"/>
 						</Module>
