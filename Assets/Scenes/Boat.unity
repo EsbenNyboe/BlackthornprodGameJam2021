@@ -2502,8 +2502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  boatInertiaTimeDeacceleration: 0
-  boatInertiaTimeAcceleration: 0
+  boatInertiaTimeDeacceleration: 2
+  boatInertiaTimeAcceleration: 1
   boatShakeDuration: 1.5
   boatShakeStrength: 0.3
   centerOfMass: {fileID: 53092996}

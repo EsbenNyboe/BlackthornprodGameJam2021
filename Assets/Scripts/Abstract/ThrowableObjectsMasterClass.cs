@@ -24,7 +24,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     [Header("Tweening")]
     [SerializeField] float drownTimer;//Time until the npc starts to go down
     [SerializeField] float drownSpeed;//How fast the npc should move down
- 
+
     #region events
     public event EventHandler onNPCThrown;
     public event EventHandler onNPCDrown;
@@ -32,7 +32,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
 
     private void Start()
     {
-         spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
+        spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
         ChangeAnimationState(AnimationType.Idle);
     }
     public void ChangeAnimationState(AnimationType animationtype)
@@ -46,10 +46,10 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites); break;
             case AnimationType.Thrown:
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcThrown);
-                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites, false, () => ChangeAnimationState(AnimationType.Air)); break;
+                spriteRendererAnimator.ChangeSpriteArrayNoLoop(throwableScriptableObject.thrownSprites, () => ChangeAnimationState(AnimationType.Air)); break;
             case AnimationType.Land:
-                SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor);
-                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites,false, () => ChangeAnimationState(AnimationType.Idle)); break;
+                
+                spriteRendererAnimator.ChangeSpriteArrayNoLoop(throwableScriptableObject.landSprites,2, ()=>SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor),() => ChangeAnimationState(AnimationType.Idle));break;
             case AnimationType.Drown:
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWater);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.drownSprites); break;
@@ -71,10 +71,10 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     {
         if (collision.transform.CompareTag("Water"))
         {
-              
+
             ChangeAnimationState(AnimationType.Drown);
             onNPCDrown?.Invoke(this, EventArgs.Empty);
-         
+
         }
     }
 
@@ -82,6 +82,6 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     {
         yield return new WaitForSeconds(drownTimer);
 
-         transform.DOMove(transform.position + Vector3.down * 3, 1/drownSpeed);
+        transform.DOMove(transform.position + Vector3.down * 3, 1 / drownSpeed);
     }
 }

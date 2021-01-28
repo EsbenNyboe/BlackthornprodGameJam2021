@@ -101,15 +101,16 @@ public class Shark : MonoBehaviour
         if(oneOrzero == 1)
         {
             isSharkActive = true;
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
-            GetComponent<Collider2D>().enabled = false;
+            
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            GetComponent<Collider2D>().enabled = true;
             
         }
         else
         {
             isSharkActive = false;
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            GetComponent<Collider2D>().enabled = true;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            GetComponent<Collider2D>().enabled = false;
         }
         Color color = GetComponent<SpriteRenderer>().color;
         color.a = oneOrzero;
