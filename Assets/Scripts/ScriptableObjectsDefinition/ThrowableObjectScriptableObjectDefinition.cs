@@ -29,6 +29,9 @@ public class ThrowableObjectScriptableObjectDefinition : ScriptableObject
     public Sprite[] landSprites;
     public Sprite[] drownSprites;
     public Sprite[] AirSprites;
+
+    public SoundSystem.SoundEnum screamingSound;
+    public SoundSystem.SoundEnum impactSound;
  }
 public enum ThrowableObjectsType
 {

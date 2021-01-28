@@ -36,6 +36,10 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
         ChangeAnimationState(AnimationType.Idle);
     }
+    public void RemovePlayerPoints()
+    {
+
+    }
     public void ChangeAnimationState(AnimationType animationtype)
     {
 

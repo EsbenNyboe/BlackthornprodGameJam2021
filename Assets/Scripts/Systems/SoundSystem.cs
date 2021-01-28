@@ -33,7 +33,7 @@ public class SoundSystem : MonoBehaviour
     }
 
     public enum SoundEnum
-    {
+    {   none,
         npcPickedUp,
         npcPreparedForThrow,
         npcThrown,

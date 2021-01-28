@@ -69,31 +69,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDataArray:
-  - soundType: 0
-    eventName: NPC_PickedUp
   - soundType: 1
-    eventName: NPC_PreparedForThrow
+    eventName: NPC_PickedUp
   - soundType: 2
-    eventName: NPC_Thrown
+    eventName: NPC_PreparedForThrow
   - soundType: 3
-    eventName: NPC_CollFloor
+    eventName: NPC_Thrown
   - soundType: 4
-    eventName: NPC_CollBird
+    eventName: NPC_CollFloor
   - soundType: 5
-    eventName: NPC_DroppedByBird
+    eventName: NPC_CollBird
   - soundType: 6
-    eventName: NPC_CollShark
+    eventName: NPC_DroppedByBird
   - soundType: 7
-    eventName: NPC_CollWater
+    eventName: NPC_CollShark
   - soundType: 8
-    eventName: Player_Footsteps
+    eventName: NPC_CollWater
   - soundType: 9
-    eventName: Wave_Enter
+    eventName: Player_Footsteps
   - soundType: 10
-    eventName: Wave_Cleared
+    eventName: Wave_Enter
   - soundType: 11
-    eventName: Wave_Lost
+    eventName: Wave_Cleared
   - soundType: 12
-    eventName: Start_Ambience
+    eventName: Wave_Lost
   - soundType: 13
+    eventName: Start_Ambience
+  - soundType: 14
     eventName: Start_Music

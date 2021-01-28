@@ -18,5 +18,5 @@ public class WindScriptableObjectDefinition : ScriptableObject
 {
      public float windForce;
     public float windAngle;
-
+ 
 }
