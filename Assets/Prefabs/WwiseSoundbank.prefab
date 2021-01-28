@@ -97,3 +97,21 @@ MonoBehaviour:
     eventName: Start_Ambience
   - soundType: 14
     eventName: Start_Music
+  - soundType: 14
+    eventName: NPC_Fly_Grandpa
+  - soundType: 15
+    eventName: NPC_Fly_Man
+  - soundType: 16
+    eventName: NPC_Fly_Woman
+  - soundType: 17
+    eventName: NPC_Fly_Girl
+  - soundType: 18
+    eventName: NPC_Fly_Boy
+  - soundType: 19
+    eventName: NPC_Impact_Grandpa
+  - soundType: 20
+    eventName: NPC_Impact_Man
+  - soundType: 21
+    eventName: NPC_Impact_Woman
+  - soundType: 22
+    eventName: NPC_Impact_Child

@@ -18,6 +18,15 @@ namespace AK
         static const AkUniqueID NPC_COLLSHARK = 2474133806U;
         static const AkUniqueID NPC_COLLWATER = 139855160U;
         static const AkUniqueID NPC_DROPPEDBYBIRD = 2016968455U;
+        static const AkUniqueID NPC_FLY_BOY = 1811951503U;
+        static const AkUniqueID NPC_FLY_GIRL = 1765057129U;
+        static const AkUniqueID NPC_FLY_GRANDPA = 314326094U;
+        static const AkUniqueID NPC_FLY_MAN = 1037768413U;
+        static const AkUniqueID NPC_FLY_WOMAN = 3522606991U;
+        static const AkUniqueID NPC_IMPACT_CHILD = 1661441752U;
+        static const AkUniqueID NPC_IMPACT_GRANDPA = 1900293553U;
+        static const AkUniqueID NPC_IMPACT_MAN = 1533334522U;
+        static const AkUniqueID NPC_IMPACT_WOMAN = 651276332U;
         static const AkUniqueID NPC_PICKEDUP = 2050233766U;
         static const AkUniqueID NPC_PREPAREDFORTHROW = 4146794365U;
         static const AkUniqueID NPC_THROWN = 2756003563U;

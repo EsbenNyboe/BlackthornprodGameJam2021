@@ -47,6 +47,16 @@ public class SoundSystem : MonoBehaviour
         waveCleared,
         waveLost,
         startAmbience,
-        startMusic
+        startMusic,
+
+        npcThrownGrandpa,
+        npcThrownMan,
+        npcThrownWoman,
+        npcThrownGirl,
+        npcThrownBoy,
+        npcImpactGrandpa,
+        npcImpactMan,
+        npcImpactWoman,
+        npcImpactChild
     }
 }
