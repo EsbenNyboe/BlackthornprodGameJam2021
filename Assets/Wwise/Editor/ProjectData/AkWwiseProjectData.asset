@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: df6f94bccec1ad47a727e43e28d282a9
     GuidInternal: 
-    m_lastTime: -8585898303814289549
+    m_lastTime: -8585898185988709241
     List:
     - name: Soundbank
       guid: 36f25501cb41b142a2acfeecbb651671
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585897537350167780
+    m_lastTime: -8585897519813451090
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707
@@ -116,8 +116,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_CollWater
       maxAttenuation: 0
-      maxDuration: 0.567619
-      minDuration: 0.567619
+      maxDuration: 567619
+      minDuration: 567619
     - name: NPC_DroppedByBird
       guid: e69610b6736a6e4ba363599c108aca7a
       id: 2016968455
@@ -140,8 +140,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Fly_Boy
       maxAttenuation: 0
-      maxDuration: 2.373855
-      minDuration: 2.004694
+      maxDuration: 2373855
+      minDuration: 2004694
     - name: NPC_Fly_Girl
       guid: f1b2e01c8852db4b94e0af186fb1a339
       id: 1765057129
@@ -152,8 +152,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Fly_Girl
       maxAttenuation: 0
-      maxDuration: 2.378435
-      minDuration: 2.378435
+      maxDuration: 2378435
+      minDuration: 2378435
     - name: NPC_Fly_Grandpa
       guid: 88dc4ac050f45a448517a9c68883575d
       id: 314326094
@@ -164,8 +164,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Fly_Grandpa
       maxAttenuation: 0
-      maxDuration: 2.773288
-      minDuration: 2.28941
+      maxDuration: 2773288
+      minDuration: 2289410
     - name: NPC_Fly_Man
       guid: f41f534747bde740a0ed6f18537a4629
       id: 1037768413
@@ -176,8 +176,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Fly_Man
       maxAttenuation: 0
-      maxDuration: 1.675805
-      minDuration: 1.034739
+      maxDuration: 1675805
+      minDuration: 1034739
     - name: NPC_Fly_Woman
       guid: 3b469a4b041fe044b7a217c1609e3304
       id: 3522606991
@@ -188,8 +188,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Fly_Woman
       maxAttenuation: 0
-      maxDuration: 1.807595
-      minDuration: 1.525843
+      maxDuration: 1807595
+      minDuration: 1525843
     - name: NPC_Impact_Child
       guid: 6d60eab49675704e8625bc01bea591d6
       id: 1661441752
@@ -200,8 +200,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Impact_Child
       maxAttenuation: 0
-      maxDuration: 0.215261
-      minDuration: 0.215261
+      maxDuration: 215261
+      minDuration: 215261
     - name: NPC_Impact_Grandpa
       guid: 466b505da2de3d449ee6f0b17dd3c8de
       id: 1900293553
@@ -212,8 +212,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Impact_Grandpa
       maxAttenuation: 0
-      maxDuration: 0.252562
-      minDuration: 0.252562
+      maxDuration: 252562
+      minDuration: 252562
     - name: NPC_Impact_Man
       guid: 6f922443a97074408dd9e4b26b7c6aa9
       id: 1533334522
@@ -224,8 +224,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Impact_Man
       maxAttenuation: 0
-      maxDuration: 0.249932
-      minDuration: 0.249932
+      maxDuration: 249932
+      minDuration: 249932
     - name: NPC_Impact_Woman
       guid: c00a3efee471794396d694604e160969
       id: 651276332
@@ -236,8 +236,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Impact_Woman
       maxAttenuation: 0
-      maxDuration: 1.076984
-      minDuration: 1.076984
+      maxDuration: 1076984
+      minDuration: 1076984
     - name: NPC_PickedUp
       guid: 75a4c0adec25754cb1ef88750ee25add
       id: 2050233766
@@ -248,8 +248,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_PickedUp
       maxAttenuation: 0
-      maxDuration: 0.964936
-      minDuration: 0.560125
+      maxDuration: 964936
+      minDuration: 560125
     - name: NPC_PreparedForThrow
       guid: 51c668d7dce9a644816e04db2d32a001
       id: 4146794365
@@ -272,8 +272,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_Thrown
       maxAttenuation: 0
-      maxDuration: 0.384471
-      minDuration: 0.262025
+      maxDuration: 384471
+      minDuration: 262025
     - name: Player_Footsteps
       guid: 13d4e754475bda44a5fd0f598770495e
       id: 1730208058
@@ -284,8 +284,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Player_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.21376
-      minDuration: 0.163314
+      maxDuration: 213760
+      minDuration: 163314
     - name: Start_Ambience
       guid: d1e374cbe41a9946a530c3bdb77ffc5e
       id: 3626999974
@@ -332,8 +332,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Wave_Lost
       maxAttenuation: 0
-      maxDuration: 3.368617
-      minDuration: 3.368617
+      maxDuration: 3368617
+      minDuration: 3368617
   - PhysicalPath: Events\MusicEvents.wwu
     PathAndIcons:
     - ElementName: MusicEvents
@@ -341,7 +341,7 @@ MonoBehaviour:
     ParentPath: MusicEvents
     guid: 885390323fd91f438c80ab1e42196881
     GuidInternal: 
-    m_lastTime: -8585898303823384522
+    m_lastTime: -8585898185992596846
     List:
     - name: Start_Music
       guid: 94239384134aa24c8d621751a86fcb4c
@@ -363,7 +363,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 96b1bfe356c7d24ea3fb64a921b24949
     GuidInternal: 
-    m_lastTime: -8585898303823038778
+    m_lastTime: -8585898185992526884
     List:
     - name: BoatSpeed
       guid: 2019021828b88a408afa4aea5b64fe97
