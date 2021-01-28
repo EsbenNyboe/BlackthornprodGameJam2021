@@ -3820,8 +3820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableScriptableObject: {fileID: 11400000, guid: 1356ae488c5302a43b8001bfdeaf3c03, type: 2}
-  drownTimer: 0
-  drownSpeed: 0
+  drownTimer: 2
+  deepDistance: 3
+  drownSpeed: 1
 --- !u!4 &2087402510
 Transform:
   m_ObjectHideFlags: 0

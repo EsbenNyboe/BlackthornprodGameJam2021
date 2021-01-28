@@ -40,6 +40,10 @@ public class ThrowInputHandler : MonoBehaviour
     const float RAYCAST_RADIUS = 3;
     Vector3 launchDirection;
 
+    //quick-temporary fix
+    bool pulled;
+    //
+
 
 
     /// <summary>
@@ -57,7 +61,7 @@ public class ThrowInputHandler : MonoBehaviour
     private void Awake()
     {
         throwObjectSystem = new ThrowObjectSystem();
- 
+
     }
 
     // As default, left mouse button is the main controller.You can change it in the Update function
@@ -88,13 +92,17 @@ public class ThrowInputHandler : MonoBehaviour
                 forcemultiplier = distance / maxPullDistance;
             }
             float finalForce = forcemultiplier * maxPullForce;
-            if(finalForce < minPullForce)
+            if (finalForce < minPullForce)
             {
                 finalForce = minPullForce;
             }
             launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
             Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
-            throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+            if (!pulled)
+            {
+                throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                pulled = true;
+            }
             //enter the if statement if the player let go of the left mouse button
             if (Input.GetMouseButtonUp(0))
             {
@@ -109,6 +117,7 @@ public class ThrowInputHandler : MonoBehaviour
                   launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
                 */
                 DoAction();
+                pulled = false;
             }
 
         }
@@ -140,7 +149,7 @@ public class ThrowInputHandler : MonoBehaviour
         targetObject = null;
     }
 
-    
+
 
     /* private void OnDrawGizmos()
      {
