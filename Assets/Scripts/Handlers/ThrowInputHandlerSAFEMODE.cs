@@ -25,12 +25,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
     [SerializeField] float boatImpulseTimer;//Time that it takes for the "Force"(technically speed) to be taken of the boat after throwing someone
     [SerializeField] float raycastRadius;//Raycast (circle) size. We use this raycast to locate the nearest NPC to throw
 
-    [Header("Tweening")]
-    [SerializeField] float throwBodyShakeDuration;
-    [SerializeField] float throwBodyShakeForce;
-    [SerializeField] Transform npcHeldPosition;
-    [SerializeField] float timeToHoldNPC;
-
+    
 
     [Header("Raycast2D")]
     [SerializeField] LayerMask throwableMask; //Mask of the throwable object for the RayCast2D
@@ -124,7 +119,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
     void DoAction(float finalforce)
     {
        
-         Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
+        // Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
          if (targetObject.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None)
         {
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
@@ -132,7 +127,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
         }
         throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
         PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.throwNPC);
-        targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
+      //  targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
         throwableObjectsBehavior.ThrownData();
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
         
