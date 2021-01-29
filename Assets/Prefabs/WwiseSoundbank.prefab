@@ -77,7 +77,7 @@ MonoBehaviour:
     eventName: NPC_Thrown
   - soundType: 4
     eventName: NPC_CollFloor
-  - soundType: 23
+  - soundType: 5
     eventName: NPC_CollBird
   - soundType: 6
     eventName: NPC_DroppedByBird
@@ -116,4 +116,8 @@ MonoBehaviour:
   - soundType: 23
     eventName: NPC_Impact_Child
   - soundType: 24
-    eventName: none
+    eventName: Wave_Loop_Big
+  - soundType: 25
+    eventName: Wave_Loop_Medium
+  - soundType: 26
+    eventName: Wave_Loop_Small

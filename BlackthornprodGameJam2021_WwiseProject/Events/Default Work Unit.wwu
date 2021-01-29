@@ -395,37 +395,9 @@
 				<Event Name="NPC_Impact_Child" ID="{B4EA606D-7596-4E70-8625-BC01BEA591D6}">
 					<ChildrenList>
 						<Action Name="" ID="{04DBA69D-2475-49C0-9DE1-2BF0A8D80E69}" ShortID="557933788">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Kid_Impact" ID="{F2283077-5172-400C-9273-21CE994C59F1}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{E5264F47-7974-4165-9EC2-820B5C0E0A55}" ShortID="490236262">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="kid_impact_1" ID="{85B92E85-103E-44FD-9A33-4B3ABDA44D2A}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{9B95B2FA-96D8-4BB2-904B-3EEEDDCDEFD4}" ShortID="1004529995">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="kid_impact_2" ID="{EC02F742-63A7-4A6D-97BF-DAC69ADCFF33}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -437,6 +409,72 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Girl_Scream" ID="{646E431A-9930-4676-9798-D1ABA065E1AB}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Loop_Small" ID="{50529F06-B77F-49BC-B8FC-38BEE6BFBCCA}">
+					<ChildrenList>
+						<Action Name="" ID="{0D09F23C-47BA-42C2-9085-BB937DD606A7}" ShortID="307483807">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loops" ID="{912BF53E-0035-4734-9A09-277D548CA0C2}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{070D19F1-5AD9-4C5A-9FDC-81D233851575}" ShortID="355984361">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Small" ID="{4D88FC46-EB97-4108-B56B-B2C476217723}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Loop_Medium" ID="{5444B0C7-145D-4308-9489-D3AD7DCA39D0}">
+					<ChildrenList>
+						<Action Name="" ID="{8AA7A94F-9C8A-4462-A881-7189C78114E1}" ShortID="327059143">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loops" ID="{912BF53E-0035-4734-9A09-277D548CA0C2}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CDF1CF3B-60FD-4284-9DF3-02D162700082}" ShortID="387138512">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Medium" ID="{3C80C80A-628C-4CC1-97AB-A21352C9A527}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Loop_Big" ID="{1A050AC4-9E4D-4719-84BF-97AB79B44450}">
+					<ChildrenList>
+						<Action Name="" ID="{0E20C788-667C-43D0-8F3C-011A3B73ED26}" ShortID="92547868">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loops" ID="{912BF53E-0035-4734-9A09-277D548CA0C2}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EBCB8D60-BA86-4D48-84E0-983493A073B8}" ShortID="819093668">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Big" ID="{9AC53E06-E33D-4A55-8892-C5661F8BA65E}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -91,6 +91,7 @@ public class ThrowInputHandler : MonoBehaviour
         else
         {
             targetObject.transform.position = npcHeldPosition.position;
+            
             //Start aiming
             if (Input.GetMouseButtonDown(0))
             {
@@ -115,13 +116,14 @@ public class ThrowInputHandler : MonoBehaviour
                     finalForce = minPullForce;
                 }
                 launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
-                Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
+                
                 if (!pulled)
                 {
                     throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
                     pulled = true;
                 }
                 //enter the if statement if the player let go of the left mouse button
+                Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
                 if (Input.GetMouseButtonUp(0))
                 {
                     startPulling = false;
@@ -134,6 +136,7 @@ public class ThrowInputHandler : MonoBehaviour
                       }
                       launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
                     */
+                    
                     DoAction(finalForce);
                     pulled = false;
                     isHoldingSomething = false;
@@ -149,23 +152,27 @@ public class ThrowInputHandler : MonoBehaviour
     /// </summary>
     void DoAction(float finalforce)
     {
+       
+         Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
+        Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
         if (targetObject.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None)
         {
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         }
-        Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
         throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
         targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
-
+ 
         //This line takes care of the throwing AND "in the air" animation
         throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Thrown);
 
 
         Boat._instance.TemporaryBoost(boatImpulseForce, boatImpulseTimer);
-        targetObject.layer = 0;
+      
+
         targetObject = null;
+
     }
 
 

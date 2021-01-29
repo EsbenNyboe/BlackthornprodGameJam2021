@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement ;
 public class SYSTEMSDEBUG : MonoBehaviour
 {
     [SerializeField] GameObject tester;
+    ThrowObjectSystem handler;
     Vector3 originalPosition;
     static public SYSTEMSDEBUG instance;
     Quaternion defaultrotation;
@@ -16,9 +17,10 @@ public class SYSTEMSDEBUG : MonoBehaviour
     }
     private void Start()
     {
-
+        
         originalPosition = tester.transform.position;
         defaultrotation = tester.transform.rotation;
+        handler = new ThrowObjectSystem();
 
     }
 
@@ -28,6 +30,13 @@ public class SYSTEMSDEBUG : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+
+
+            handler.ThrowObject(tester, Vector2.up, 10);
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
