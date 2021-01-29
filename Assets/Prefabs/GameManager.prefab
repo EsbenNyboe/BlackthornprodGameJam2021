@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f63e6ff11351e48a8991d5b6950d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugMode: 0
   boatSpeedStart: 5
   maxBoatSpeed: 15
   fatalBoatSpeed: 0.1
@@ -68,7 +69,7 @@ MonoBehaviour:
   waveDragFactorMedium: 2
   waveDragFactorBig: 4
   maxWaveDragDynamics: 4
-  minWaveDragDynamics: 0.4
+  minWaveDragDynamics: 0.6
   LoseScreen: {fileID: 0}
   WinScreen: {fileID: 0}
 --- !u!114 &1879753675638941467
