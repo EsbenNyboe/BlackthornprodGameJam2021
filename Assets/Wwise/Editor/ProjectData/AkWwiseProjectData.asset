@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585896648940478291
+    m_lastTime: -8585896633006061888
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707
@@ -116,8 +116,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_CollWater
       maxAttenuation: 0
-      maxDuration: 0.567619
-      minDuration: 0.567619
+      maxDuration: 567619
+      minDuration: 567619
     - name: NPC_CollWaterMultipleNpcs
       guid: 24a4adde56fdc24786aecccde667f2bc
       id: 3101144128
@@ -128,8 +128,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\NPC_CollWaterMultipleNpcs
       maxAttenuation: 0
-      maxDuration: 0.567619
-      minDuration: 0.567619
+      maxDuration: 567619
+      minDuration: 567619
     - name: NPC_DroppedByBird
       guid: e69610b6736a6e4ba363599c108aca7a
       id: 2016968455
@@ -555,9 +555,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585897319070069101
     List: []
-  ExpandedItems:
-  - /BlackthornprodGameJam2021_WwiseProject
-  - /BlackthornprodGameJam2021_WwiseProject/Events
-  - /BlackthornprodGameJam2021_WwiseProject/Events/MusicEvents
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
