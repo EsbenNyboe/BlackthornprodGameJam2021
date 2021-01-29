@@ -47,6 +47,12 @@ public class Boat : MonoBehaviour
         defaultScale = transform.localScale;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
         boatPortLevelEnd = FindObjectOfType<EndOfLevel>().transform.parent.GetComponent<MoveSprite>(); // HELP: how do we ignore this line when in the menu?
+        GameManager.npcPointsSystem.OnPointsChanged += NpcPointsSystem_OnPointsChanged;
+    }
+
+    private void NpcPointsSystem_OnPointsChanged(object sender, PointsSystem.OnPointsDataEventArgs e)
+    {
+        if (peopleCountBar != null) peopleCountBar.SetVelocity(peopleOnBoat);
     }
 
     // Update is called once per frame
@@ -54,8 +60,7 @@ public class Boat : MonoBehaviour
     {
         //Ui Elements
         if (velocityBar != null) velocityBar.SetVelocity(speed);
-        if (peopleCountBar != null) peopleCountBar.SetVelocity(peopleOnBoat);
-
+ 
 
         if (!EndOfLevel.levelWon)
             boatPortLevelEnd.speed = speed;

@@ -79,7 +79,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
             //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
             if (startPulling && throwableObjectsBehavior.interactable)
             {
-
+                targetObject.transform.SetParent(null);
                 mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mouseOnWorldPosition.z = 0;
                 float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
@@ -133,6 +133,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
         throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
         PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.throwNPC);
         targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
+        throwableObjectsBehavior.ThrownData();
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
         
 

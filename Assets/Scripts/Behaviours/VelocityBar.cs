@@ -15,6 +15,7 @@ public class VelocityBar : MonoBehaviour
 
     public void SetVelocity(float velocity)
     {
+        if(velocity > slider.maxValue) slider.value = slider.maxValue;
         slider.value = velocity;
     }
 }

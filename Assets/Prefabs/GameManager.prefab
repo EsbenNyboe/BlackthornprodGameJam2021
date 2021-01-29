@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8195913032023910809}
   - component: {fileID: 8195913032023910810}
   - component: {fileID: 1879753675638941467}
+  - component: {fileID: 8195913033506171651}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -72,6 +73,8 @@ MonoBehaviour:
   minWaveDragDynamics: 0.6
   LoseScreen: {fileID: 0}
   WinScreen: {fileID: 0}
+  maxAmountOfPoints: 10
+  startingPoints: 10
 --- !u!114 &1879753675638941467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +100,42 @@ MonoBehaviour:
   throwableMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &8195913033506171651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195913032023910806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc9f5d1b68291f43bf0cc747bfd6335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwableObjectPrefab: {fileID: 1887318030367672148, guid: 74845edd06d0b314cb99fce60e3e4802, type: 3}
+  spawns:
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  - parent: {fileID: 0}
+    slotVacancy: 0
+  npcs:
+  - {fileID: 11400000, guid: d2d73eebb8fc46945843055ad8374f85, type: 2}
+  - {fileID: 11400000, guid: cf79726750940024d9af2bee7b9ae03d, type: 2}
+  - {fileID: 11400000, guid: 1356ae488c5302a43b8001bfdeaf3c03, type: 2}
+  - {fileID: 11400000, guid: 6f446680fc404c243b545df7be08c59c, type: 2}
+  - {fileID: 11400000, guid: 133c8af980a29c44b81c7e43ad2c40a7, type: 2}
+  - {fileID: 11400000, guid: b10131526f802b8429cb19a108a5e18d, type: 2}
+  - {fileID: 11400000, guid: 8d9fb5eb94243c84ba45e74b8555f14e, type: 2}
+  - {fileID: 11400000, guid: 881f06ebf6d20dd448b82d05b7f58cf6, type: 2}
