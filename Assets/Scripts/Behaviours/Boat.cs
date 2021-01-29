@@ -28,6 +28,9 @@ public class Boat : MonoBehaviour
     private Vector3 startCamPos;
     // Start is called before the first frame update
 
+    [Header("UI Elements")]
+    public VelocityBar velocityBar;
+
     #region singleton
     static public Boat _instance;
     private void Awake()
@@ -40,12 +43,12 @@ public class Boat : MonoBehaviour
     {
         defaultScale = transform.localScale;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
-     
     }
 
     // Update is called once per frame
     void Update()
     {
+        velocityBar.SetVelocity(speed);
     }
     public void PermanentBoost(float boostValue)
     {
