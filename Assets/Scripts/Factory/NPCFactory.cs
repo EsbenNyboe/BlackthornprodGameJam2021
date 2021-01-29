@@ -24,22 +24,24 @@ public class NPCFactory : MonoBehaviour
 
     public GameObject InstantiateNPC()
     {
-        if (GetSlot() != null)
-        {
-        GameObject spawnedNPC = Instantiate(throwableObjectPrefab,GetSlot());
+        SpawnData spawnData = GetData();
+        spawnData.slotVacancy = true;
+        GameObject spawnedNPC = Instantiate(throwableObjectPrefab, spawnData.parent);
         int randomNpcIndex = UnityEngine.Random.Range(0, npcs.Length);
         spawnedNPC.GetComponent<ThrowableObjectsMasterClass>().setThrowableScriptableObject(npcs[randomNpcIndex]);
+        spawnedNPC.GetComponent<ThrowableObjectsMasterClass>().SetSpawnData(spawnData);
         return spawnedNPC;
-        }
-        return null;
+       
     }
 
-    
 
-    Transform GetSlot()
+
+    SpawnData GetData()
     {
-       
-        return spawns.Where(p => p.slotVacancy == true).Select(p => p.parent).FirstOrDefault();
+        SpawnData spawnData = spawns.Where(p => p.slotVacancy == false).Select(p => p).FirstOrDefault();
+        if (spawnData == null) return null;
+        
+        return spawnData;
         
     }
 

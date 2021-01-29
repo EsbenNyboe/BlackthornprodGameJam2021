@@ -131,7 +131,7 @@ MonoBehaviour:
   - parent: {fileID: 0}
     slotVacancy: 0
   npcs:
-  - {fileID: 11400000, guid: 8da7047fd0beaa6419e9444659ceb992, type: 2}
+  - {fileID: 11400000, guid: d2d73eebb8fc46945843055ad8374f85, type: 2}
   - {fileID: 11400000, guid: cf79726750940024d9af2bee7b9ae03d, type: 2}
   - {fileID: 11400000, guid: 1356ae488c5302a43b8001bfdeaf3c03, type: 2}
   - {fileID: 11400000, guid: 6f446680fc404c243b545df7be08c59c, type: 2}
@@ -139,4 +139,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b10131526f802b8429cb19a108a5e18d, type: 2}
   - {fileID: 11400000, guid: 8d9fb5eb94243c84ba45e74b8555f14e, type: 2}
   - {fileID: 11400000, guid: 881f06ebf6d20dd448b82d05b7f58cf6, type: 2}
-  - {fileID: 11400000, guid: d2d73eebb8fc46945843055ad8374f85, type: 2}

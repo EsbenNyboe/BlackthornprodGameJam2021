@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnNPCLogic()
     {
+        if (npcPointsSystem.currentPoints <= 0) return;
         npcPointsSystem.RemovePoints(1);
         if (npcPointsSystem.currentPoints < 8)
         {
