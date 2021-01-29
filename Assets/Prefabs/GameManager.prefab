@@ -83,9 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a226a5dc9fccc74d97983b9924ef549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPullDistance: 30
-  maxPullForce: 10
-  minPullForce: 1
+  maxPullDistance: 6
+  maxPullForce: 30
+  minPullForce: 15
   boatImpulseForce: 15
   boatImpulseTimer: 0.1
   raycastRadius: 1.5

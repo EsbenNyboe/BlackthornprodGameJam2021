@@ -13352,7 +13352,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -13602,14 +13602,6 @@ PrefabInstance:
       propertyPath: npcHeldPosition
       value: 
       objectReference: {fileID: 1622527846}
-    - target: {fileID: 1879753675638941467, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: boatImpulseForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1879753675638941467, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: boatImpulseTimer
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8195913032023910806, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -13670,25 +13662,5 @@ PrefabInstance:
       propertyPath: LoseScreen
       value: 
       objectReference: {fileID: 557302801}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: fatalBoatSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: waveDragFactorBig
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: maxWaveDragDynamics
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: minWaveDragDynamics
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: waveDragFactorMedium
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}

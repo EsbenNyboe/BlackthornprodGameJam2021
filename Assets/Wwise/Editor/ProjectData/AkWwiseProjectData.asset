@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f3a22119a171cc488d34c23a3c262a88
     GuidInternal: 
-    m_lastTime: -8585897319078714868
+    m_lastTime: -8585896738698025085
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585896895844331156
+    m_lastTime: -8585896738697876285
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707
@@ -380,8 +380,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Wave_Lost
       maxAttenuation: 0
-      maxDuration: 3.368617
-      minDuration: 3.368617
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\MusicEvents.wwu
     PathAndIcons:
     - ElementName: MusicEvents
@@ -389,8 +389,44 @@ MonoBehaviour:
     ParentPath: MusicEvents
     guid: 885390323fd91f438c80ab1e42196881
     GuidInternal: 
-    m_lastTime: -8585897319079284951
+    m_lastTime: -8585896738697826683
     List:
+    - name: Music_Game
+      guid: 59e2c17eec262245b8af830026b5e42c
+      id: 1072299391
+      PathAndIcons:
+      - ElementName: MusicEvents
+        ObjectType: 12
+      - ElementName: Music_Game
+        ObjectType: 3
+      Path: MusicEvents\Music_Game
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Music_Lose
+      guid: c305e9ac707cd646989d47a5a65be2be
+      id: 3736367630
+      PathAndIcons:
+      - ElementName: MusicEvents
+        ObjectType: 12
+      - ElementName: Music_Lose
+        ObjectType: 3
+      Path: MusicEvents\Music_Lose
+      maxAttenuation: 0
+      maxDuration: 3.368617
+      minDuration: 3.368617
+    - name: Music_Win
+      guid: 63fb84c2be10ed47b24dfac6d7a606d6
+      id: 2682680661
+      PathAndIcons:
+      - ElementName: MusicEvents
+        ObjectType: 12
+      - ElementName: Music_Win
+        ObjectType: 3
+      Path: MusicEvents\Music_Win
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Start_Music
       guid: 94239384134aa24c8d621751a86fcb4c
       id: 540993415
@@ -401,8 +437,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: MusicEvents\Start_Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -448,8 +484,45 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 6e4cdd31e942f14981a116185ef70145
     GuidInternal: 
-    m_lastTime: -8585897319070229180
-    List: []
+    m_lastTime: -8585896764560950797
+    List:
+    - name: GameState
+      guid: 2ebb5a33c6e9e64ba829df030a1c9976
+      id: 4091656514
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameState
+        ObjectType: 9
+      Path: Default Work Unit\GameState
+      values:
+      - name: Game
+        guid: aefd4a4886967c478c2e7d90823b6c52
+        id: 702482391
+        PathAndIcons:
+        - ElementName: Game
+          ObjectType: 8
+      - name: Lose
+        guid: 77c72cd3432d4343abd941604277eebc
+        id: 221232726
+        PathAndIcons:
+        - ElementName: Lose
+          ObjectType: 8
+      - name: None
+        guid: 4833b7473444ad42839d1e7a10a4eea4
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Win
+        guid: 86bdf8b09465a940b04b245183d3e6ad
+        id: 979765101
+        PathAndIcons:
+        - ElementName: Win
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -470,6 +543,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585897319070069101
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /BlackthornprodGameJam2021_WwiseProject
+  - /BlackthornprodGameJam2021_WwiseProject/Events
+  - /BlackthornprodGameJam2021_WwiseProject/Events/MusicEvents
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
