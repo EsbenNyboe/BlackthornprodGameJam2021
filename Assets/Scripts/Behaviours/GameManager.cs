@@ -5,6 +5,8 @@ using System;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public bool debugMode;
+    public static bool debugModeStatic;
     [Header("Boat")]
     public float boatSpeedStart;
     public float maxBoatSpeed = 50;
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
     public GameObject WinScreen;
 
     public static bool gameLost;
+    public static bool gameWon;
 
     #region singleton
     static public GameManager instance;
@@ -44,9 +47,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        debugModeStatic = debugMode;
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         boat.speed = boatSpeedStart;
-        gameLost = false;
+        gameLost = gameWon = false;
         SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicGame);
     }
 
@@ -80,6 +84,7 @@ public class GameManager : MonoBehaviour
     }
     public void WinGame()
     {
+        gameWon = true;
         SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicWin);
         WinScreen.SetActive(true);
     }

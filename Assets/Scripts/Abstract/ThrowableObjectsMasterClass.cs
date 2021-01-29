@@ -31,10 +31,14 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     public event EventHandler onNPCDrown;
     #endregion
 
+    [HideInInspector]
+    public bool interactable;
+
     private void Start()
     {
         spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
         ChangeAnimationState(AnimationType.Idle);
+        interactable = true;
     }
     public void RemovePlayerPoints()
     {
@@ -42,7 +46,6 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     }
     public void ChangeAnimationState(AnimationType animationtype)
     {
-
         switch (animationtype)
         {
             case AnimationType.Idle:
@@ -51,24 +54,27 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcPickedUp);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites,false); break;
             case AnimationType.Thrown:
+                interactable = false;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.screamingSound);
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcThrown);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites,false, () => ChangeAnimationState(AnimationType.Air)); break;
-            case AnimationType.Land:                
+            case AnimationType.Land:
+                interactable = true;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites,false,2, ()=>SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor),() => ChangeAnimationState(AnimationType.Idle));break;
- 
             case AnimationType.Drown:
+                interactable = false;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWater);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.drownSprites); break;
             case AnimationType.Air:
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.AirSprites); break;
         }
-
+        if (GameManager.debugModeStatic)
+            interactable = true;
     }
 
- 
+
     public enum AnimationType
     {
         Idle,

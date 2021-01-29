@@ -61,50 +61,54 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
 
     void Update()
     {
-        //enter the if statement if the player clicks on the left mouse button
-        if (Input.GetMouseButtonDown(0))
+        if (!GameManager.gameWon && !GameManager.gameLost)
         {
-            mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hitInfo = Physics2D.CircleCast(mouseOnWorldPosition, raycastRadius, Vector2.zero, 0, throwableMask);
-            if (hitInfo && hitInfo.transform.gameObject != null)
+            //enter the if statement if the player clicks on the left mouse button
+            if (Input.GetMouseButtonDown(0))
             {
-                targetObject = hitInfo.transform.gameObject;
-                throwableObjectsBehavior = hitInfo.transform.GetComponent<ThrowableObjectsMasterClass>();
-                startPulling = true;
+                mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hitInfo = Physics2D.CircleCast(mouseOnWorldPosition, raycastRadius, Vector2.zero, 0, throwableMask);
+                if (hitInfo && hitInfo.transform.gameObject != null)
+                {
+                    targetObject = hitInfo.transform.gameObject;
+                    throwableObjectsBehavior = hitInfo.transform.GetComponent<ThrowableObjectsMasterClass>();
+                    startPulling = true;
 
+                }
             }
-        }
-        //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
-        if (startPulling)
-        {
+            //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
+            if (startPulling && throwableObjectsBehavior.interactable)
+            {
 
-            mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseOnWorldPosition.z = 0;
-            float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
-            if (distance > maxPullDistance) forcemultiplier = 1;
-            else
-            {
-                forcemultiplier = distance / maxPullDistance;
-            }
-            float finalForce = forcemultiplier * maxPullForce;
-            if (finalForce < minPullForce)
-            {
-                finalForce = minPullForce;
-            }
-            launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
-            Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
-            if (!pulled)
-            {
-                throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
-                pulled = true;
-            }
-            //enter the if statement if the player let go of the left mouse button
-            if (Input.GetMouseButtonUp(0))
-            {
-                startPulling = false;
-                 
-                DoAction(finalForce);
-                pulled = false;
+                mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mouseOnWorldPosition.z = 0;
+                float distance = Vector2.Distance(mouseOnWorldPosition, targetObject.transform.position);
+                if (distance > maxPullDistance) forcemultiplier = 1;
+                else
+                {
+                    forcemultiplier = distance / maxPullDistance;
+                }
+                float finalForce = forcemultiplier * maxPullForce;
+                if (finalForce < minPullForce)
+                {
+                    finalForce = minPullForce;
+                }
+                launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
+                Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
+                if (!pulled)
+                {
+                    throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                    pulled = true;
+                }
+                //enter the if statement if the player let go of the left mouse button
+                if (Input.GetMouseButtonUp(0))
+                {
+                    startPulling = false;
+
+                    DoAction(finalForce);
+                    pulled = false;
+                }
+
             }
 
         }

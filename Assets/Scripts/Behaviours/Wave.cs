@@ -64,7 +64,7 @@ public class Wave : MonoBehaviour
                 speedDiscriminator = gm.minWaveDragDynamics;
             else if (speedDiscriminator > gm.maxWaveDragDynamics)
                 speedDiscriminator = gm.maxWaveDragDynamics;
-            print("discr:" + speedDiscriminator);
+            //print("discr:" + speedDiscriminator);
             //speedDiscriminator = 1;
             if (boat.speed > 0)
             {

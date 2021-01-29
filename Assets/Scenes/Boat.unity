@@ -10809,6 +10809,7 @@ MonoBehaviour:
   drownTimer: 1
   deepDistance: 3
   drownSpeed: 2
+  interactable: 0
 --- !u!4 &1414690057
 Transform:
   m_ObjectHideFlags: 0
@@ -13425,6 +13426,7 @@ MonoBehaviour:
   drownTimer: 1
   deepDistance: 3
   drownSpeed: 2
+  interactable: 0
 --- !u!4 &2087402510
 Transform:
   m_ObjectHideFlags: 0
