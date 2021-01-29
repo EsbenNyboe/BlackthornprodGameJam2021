@@ -52,7 +52,8 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     }
     private void Update()
     {
-       if(!isNpcThrown)transform.position = mySpawnData.parent.position;
+        if (GameManager.useInstantiation)
+            if (!isNpcThrown) transform.position = mySpawnData.parent.position;
         if (isThrown)
         {
             timer += Time.deltaTime;

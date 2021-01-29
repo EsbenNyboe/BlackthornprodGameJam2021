@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     public static bool gameLost;
     public static bool gameWon;
 
+    public bool useInstantiationPlz;
+    public static bool useInstantiation;
 
     [Header("Points System")]
     [SerializeField] int maxAmountOfPoints;
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        useInstantiation = useInstantiationPlz;
         debugModeStatic = debugMode;
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         boat.speed = boatSpeedStart;
@@ -65,7 +68,8 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < 8; i++)
         {
-            NPCFactory.instance.InstantiateNPC();
+            if (useInstantiation)
+                NPCFactory.instance.InstantiateNPC();
         }
        
 
@@ -132,8 +136,8 @@ public class GameManager : MonoBehaviour
         npcPointsSystem.RemovePoints(1);
         if (npcPointsSystem.currentPoints < 8)
         {
-            NPCFactory.instance.InstantiateNPC();
-
+            if (useInstantiation)
+                NPCFactory.instance.InstantiateNPC();
         }
        
     }
