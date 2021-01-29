@@ -7924,6 +7924,7 @@ GameObject:
   - component: {fileID: 1877621941}
   - component: {fileID: 1877621943}
   - component: {fileID: 1877621942}
+  - component: {fileID: 1877621944}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7947,7 +7948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 256.42, y: -77.659836}
+  m_AnchoredPosition: {x: 600.8, y: -54.7}
   m_SizeDelta: {x: 195.94305, y: 47.152084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877621942
@@ -7971,19 +7972,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_Font: {fileID: 12800000, guid: dba72b50357759943af18a3c1a9fe157, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 43
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "People On\n Boat:"
 --- !u!222 &1877621943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7992,6 +7993,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877621940}
   m_CullTransparentMesh: 0
+--- !u!114 &1877621944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877621940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff1e57a27c10f740a69261b5c648677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1888871707
 GameObject:
   m_ObjectHideFlags: 0
