@@ -30,7 +30,8 @@ public class Boat : MonoBehaviour
 
     [Header("UI Elements")]
     public VelocityBar velocityBar;
-
+    public VelocityBar peopleCountBar;
+    public int peopleOnBoat; //Idk where is the real variable thats just a holder (kelvyn)
     MoveSprite boatPortLevelEnd;
 
     #region singleton
@@ -51,8 +52,11 @@ public class Boat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (velocityBar != null)
-            velocityBar.SetVelocity(speed);
+        //Ui Elements
+        if (velocityBar != null) velocityBar.SetVelocity(speed);
+        if (peopleCountBar != null) peopleCountBar.SetVelocity(peopleOnBoat);
+
+
         if (!EndOfLevel.levelWon)
             boatPortLevelEnd.speed = speed;
         else

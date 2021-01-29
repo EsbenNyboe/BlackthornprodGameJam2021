@@ -1534,6 +1534,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6053175158377331894, guid: c51fe86100438484197116a91765fe16, type: 3}
+      propertyPath: velocityBar
+      value: 
+      objectReference: {fileID: 391562272}
+    - target: {fileID: 6053175158377331894, guid: c51fe86100438484197116a91765fe16, type: 3}
+      propertyPath: peopleOnBoat
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053175158377331894, guid: c51fe86100438484197116a91765fe16, type: 3}
+      propertyPath: peopleCountBar
+      value: 
+      objectReference: {fileID: 1409965841}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c51fe86100438484197116a91765fe16, type: 3}
 --- !u!1 &519420028
@@ -5672,6 +5684,7 @@ GameObject:
   - component: {fileID: 1409965840}
   - component: {fileID: 1409965839}
   - component: {fileID: 1409965838}
+  - component: {fileID: 1409965841}
   m_Layer: 5
   m_Name: PeopleBar
   m_TagString: Untagged
@@ -5746,7 +5759,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 8
   m_WholeNumbers: 1
-  m_Value: 8
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5788,6 +5801,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409965836}
   m_CullTransparentMesh: 0
+--- !u!114 &1409965841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409965836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60629248ed077554eb060772f11bb392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1409965838}
 --- !u!1 &1410595550
 GameObject:
   m_ObjectHideFlags: 0
@@ -7711,7 +7737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862302730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.63, y: 0, z: 0}
+  m_LocalPosition: {x: -2.51, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1605387376}
@@ -7943,7 +7969,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.25
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
