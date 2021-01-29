@@ -59,6 +59,14 @@ public class BirdBehaviour : MonoBehaviour
            }*/
 
     }
+    public void CallBird(Vector3 firstpos, Vector3 lastpos, Vector3 offscreenpos)
+    {
+        firstPos = firstpos;
+        lastPos = lastpos;
+        offScreenPos = offscreenpos;
+        StopCoroutine(BirdCoroutine());
+        StartCoroutine(BirdCoroutine());
+    }
     public void CallBird()
     {
         StopCoroutine(BirdCoroutine());
