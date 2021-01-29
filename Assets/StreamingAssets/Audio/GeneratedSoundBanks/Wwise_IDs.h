@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID NPC_COLLFLOOR = 495534887U;
         static const AkUniqueID NPC_COLLSHARK = 2474133806U;
         static const AkUniqueID NPC_COLLWATER = 139855160U;
+        static const AkUniqueID NPC_COLLWATERMULTIPLENPCS = 3101144128U;
         static const AkUniqueID NPC_DROPPEDBYBIRD = 2016968455U;
         static const AkUniqueID NPC_FLY_BOY = 1811951503U;
         static const AkUniqueID NPC_FLY_GIRL = 1765057129U;

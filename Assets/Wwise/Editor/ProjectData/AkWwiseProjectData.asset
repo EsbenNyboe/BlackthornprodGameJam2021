@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f39ad4bcf6ed5a459654f73b9da168a9
     GuidInternal: 
-    m_lastTime: -8585896738697876285
+    m_lastTime: -8585896648940478291
     List:
     - name: NPC_CollBird
       guid: a0c904fb98adee46995900c2272f9707
@@ -115,6 +115,18 @@ MonoBehaviour:
       - ElementName: NPC_CollWater
         ObjectType: 3
       Path: Default Work Unit\NPC_CollWater
+      maxAttenuation: 0
+      maxDuration: 0.567619
+      minDuration: 0.567619
+    - name: NPC_CollWaterMultipleNpcs
+      guid: 24a4adde56fdc24786aecccde667f2bc
+      id: 3101144128
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NPC_CollWaterMultipleNpcs
+        ObjectType: 3
+      Path: Default Work Unit\NPC_CollWaterMultipleNpcs
       maxAttenuation: 0
       maxDuration: 0.567619
       minDuration: 0.567619

@@ -34,12 +34,32 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     [HideInInspector]
     public bool interactable;
 
+    bool isThrown = false;
+    bool drowned = false;
+    float timer = 0;
+    public static int npcsInTheAir;
+
     private void Start()
     {
         spriteRendererAnimator = GetComponent<SpriteRendererAnimator>();
         ChangeAnimationState(AnimationType.Idle);
         interactable = true;
+        npcsInTheAir = 0;
     }
+    private void Update()
+    {
+        if (isThrown)
+        {
+            timer += Time.deltaTime;
+            if (timer > 5)
+            {
+                npcsInTheAir--;
+                isThrown = false;
+            }
+        }
+        //print(npcsInTheAir);
+    }
+
     public void RemovePlayerPoints()
     {
 
@@ -58,18 +78,35 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcPickedUp);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites,false); break;
             case AnimationType.Thrown:
+                npcsInTheAir++;
+                isThrown = true;
                 interactable = false;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.screamingSound);
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcThrown);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites,false, () => ChangeAnimationState(AnimationType.Air)); break;
             case AnimationType.Land:
+                if (isThrown)
+                    npcsInTheAir--;
+                isThrown = false;
                 interactable = true;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites,false,2, ()=>SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor),() => ChangeAnimationState(AnimationType.Idle));break;
             case AnimationType.Drown:
+                if (isThrown)
+                    npcsInTheAir--;
+                isThrown = false;
                 interactable = false;
-                SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
-                SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWater);
+
+                if (!drowned)
+                {
+                    SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
+                    if (npcsInTheAir > 1)
+                        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWaterMultipleNpcs);
+                    else
+                        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollWater);
+                }
+                drowned = true;
+
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.drownSprites); break;
             case AnimationType.Air:
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.AirSprites); break;

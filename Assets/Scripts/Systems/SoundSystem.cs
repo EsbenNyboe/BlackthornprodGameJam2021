@@ -76,6 +76,8 @@ public class SoundSystem : MonoBehaviour
 
         musicGame,
         musicWin,
-        musicLose
+        musicLose,
+
+        npcCollWaterMultipleNpcs
     }
 }

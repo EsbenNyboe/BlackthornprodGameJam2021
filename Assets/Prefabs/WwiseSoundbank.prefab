@@ -129,3 +129,5 @@ MonoBehaviour:
     eventName: Music_Win
   - soundType: 30
     eventName: Music_Lose
+  - soundType: 31
+    eventName: NPC_CollWaterMultipleNpcs

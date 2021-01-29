@@ -24,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2751120299	Wave_Loop_Small			\Default Work Unit\Wave_Loop_Small	
 	2756003563	NPC_Thrown			\Default Work Unit\NPC_Thrown	
 	2761884803	Wave_Lost			\Default Work Unit\Wave_Lost	
+	3101144128	NPC_CollWaterMultipleNpcs			\Default Work Unit\NPC_CollWaterMultipleNpcs	
 	3321089774	NPC_CollBird			\Default Work Unit\NPC_CollBird	
 	3522606991	NPC_Fly_Woman			\Default Work Unit\NPC_Fly_Woman	
 	3626999974	Start_Ambience			\Default Work Unit\Start_Ambience	
@@ -56,7 +57,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	206821348	man_scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_1		117270
 	239071218	Lose_Impact	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Lose_Impact_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\LoseMusic\Music_Lose_Loop_108bpm_3_4\Lose_Impact		2428384
 	240154784	grandpa_scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\grandpa_scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Grandpa_Scream\grandpa_scream_2		244668
-	307057162	Wave_Loop_Small	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Wave_Loop_1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wave_Loops\Wave_Loop_Small		1028982
+	307057162	Wave_Loop_Big	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Wave_Loop_1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wave_Loops\Wave_Loop_Big		1028982
 	368074924	kid_scream_6	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\kid_scream_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Boy_Scream\kid_scream_6		209438
 	401989199	man_scream_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_scream_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_4		128132
 	425843475	Music_Win_108bpm_3_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Music_Win_108bpm_3_4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Music_Win_108bpm_3_4\Music_Win_108bpm_3_4		2352064

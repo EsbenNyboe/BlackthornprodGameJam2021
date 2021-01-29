@@ -609,6 +609,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="NPC_CollWaterMultipleNpcs" ID="{DEADA424-FD56-47C2-86AE-CCCDE667F2BC}">
+					<ChildrenList>
+						<Action Name="" ID="{695B82F1-0904-4702-ABC7-98DF637E7C78}" ShortID="567541080">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Splash_3" ID="{B8A7713B-16A7-4BBF-A74C-F0A66B0329F4}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
