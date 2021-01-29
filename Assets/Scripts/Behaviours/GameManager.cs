@@ -93,4 +93,14 @@ public class GameManager : MonoBehaviour
         //find this scene and re load it
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
