@@ -34,11 +34,19 @@ public class GameManager : MonoBehaviour
     public static bool gameLost;
     public static bool gameWon;
 
+
+    [Header("Points System")]
+    [SerializeField] int maxAmountOfPoints;
+    [SerializeField] int startingPoints;
+    //private stuff
+    static public PointsSystem npcPointsSystem;
+    //
     #region singleton
     static public GameManager instance;
     void Awake()
     {
         if (instance == null) instance = this;
+        npcPointsSystem = new PointsSystem(maxAmountOfPoints, startingPoints);
     }
     #endregion
     #region TriggerEvents
@@ -52,6 +60,20 @@ public class GameManager : MonoBehaviour
         boat.speed = boatSpeedStart;
         gameLost = gameWon = false;
         SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicGame);
+       
+        ThrowObjectSystem.onObjectThrown += ThrowObjectSystem_onObjectThrown;
+
+        for (int i = 0; i < 8; i++)
+        {
+            NPCFactory.instance.InstantiateNPC();
+        }
+       
+
+    }
+
+    private void ThrowObjectSystem_onObjectThrown(object sender, ThrowObjectSystem.CustomEventArgsData e)
+    {
+        SpawnNPCLogic();
     }
 
     // Update is called once per frame
@@ -103,4 +125,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    void SpawnNPCLogic()
+    {
+        npcPointsSystem.RemovePoints(1);
+        if (npcPointsSystem.currentPoints < 8)
+        {
+            NPCFactory.instance.InstantiateNPC();
+
+        }
+       
+    }
+
+
 }

@@ -78,7 +78,7 @@ public class PointsSystem
     /// <param name="value">value to be subtracted from this PointSystem 's Current Points.</param> 
     public void RemovePoints(int value)
     {
-        if (value <= 0)
+        if (value > 0)
         {
 
             int aux = currentPoints - value;
@@ -117,7 +117,7 @@ public class PointsSystem
     /// <param name="value">value to be summed to this PointSystem's Current Points.</param>
     public void AddValue(int value)
     {
-        if (value <= 0)
+        if (value > 0)
         {
 
             int aux = currentPoints + value;// Propriedade auxiliar para não precisar repetir função
