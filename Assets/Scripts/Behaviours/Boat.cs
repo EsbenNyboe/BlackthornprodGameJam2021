@@ -18,12 +18,18 @@ public class Boat : MonoBehaviour
     [SerializeField] float boatShakeStrength;//Boat shake force
     private Vector3 defaultScale;
 
+    [Header("Water Particle")]
+    public GameObject waterParticle; //Particle to water collision
+    public Transform waterPos; //Pos to water particle
 
     [Header("Physics")]
     public Transform centerOfMass;
     //private stuff
     private Vector3 startCamPos;
     // Start is called before the first frame update
+
+    [Header("UI Elements")]
+    public VelocityBar velocityBar;
 
     #region singleton
     static public Boat _instance;
@@ -42,6 +48,7 @@ public class Boat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        velocityBar.SetVelocity(speed);
     }
     public void PermanentBoost(float boostValue)
     {
@@ -96,8 +103,9 @@ public class Boat : MonoBehaviour
     {
         if (other.tag == "Water")
         {
-            transform.localScale = defaultScale;
-            transform.DOShakeScale(boatShakeDuration, boatShakeStrength*Vector3.down);
+            //transform.localScale = defaultScale;
+            //transform.DOShakeScale(boatShakeDuration, boatShakeStrength*Vector3.down);
+            Instantiate(waterParticle, waterPos.transform.position, Quaternion.identity);
         }
     }
 }

@@ -44,6 +44,10 @@
 							<Value>0.445</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="DistanceToWave" ID="{7EB1BBA6-43E4-46B8-8177-E247C016B2AB}"/>
+							<Value>-0.481308411214954</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="ThrowPower" ID="{85ED8721-368D-49E4-8EF2-AC691D9063E6}"/>
 							<Value>50</Value>
 						</RTPCValue>

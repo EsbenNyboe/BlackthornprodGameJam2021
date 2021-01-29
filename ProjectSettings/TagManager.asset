@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boat
   - Water
+  - resetSprite
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Throwable Object
   - Boat
   - Interactable
-  - 
+  - Player
   - 
   - 
   - 

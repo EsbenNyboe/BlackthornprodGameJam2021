@@ -10,6 +10,15 @@ public class Wave : MonoBehaviour
     public float waveDragFactor = 1;
     private float timeOnTheWave;
     private GameManager gm;
+
+    public enum WaveType
+    {
+        BigWave,
+        MediumWave,
+        SmallWave
+    }
+    public WaveType waveType;
+
     void Start()
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
@@ -56,6 +65,8 @@ public class Wave : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveEnter);
             }
             boatRidingNow = true;
+
+            GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>().emissionRate = 100;
         }
     }
 
@@ -69,6 +80,8 @@ public class Wave : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveCleared);
             }
             boatRidingNow = false;
+
+            GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>().emissionRate = 0;
         }
     }
 
