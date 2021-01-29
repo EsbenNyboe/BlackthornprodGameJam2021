@@ -94,10 +94,6 @@ MonoBehaviour:
   boatImpulseForce: 15
   boatImpulseTimer: 0.1
   raycastRadius: 1.5
-  throwBodyShakeDuration: 1
-  throwBodyShakeForce: 0.2
-  npcHeldPosition: {fileID: 0}
-  timeToHoldNPC: 0.5
   throwableMask:
     serializedVersion: 2
     m_Bits: 256

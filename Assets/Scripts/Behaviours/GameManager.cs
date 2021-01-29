@@ -150,4 +150,9 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+        ThrowObjectSystem.onObjectThrown -= ThrowObjectSystem_onObjectThrown;
+    }
 }
