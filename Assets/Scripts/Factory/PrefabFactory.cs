@@ -21,6 +21,8 @@ public class PrefabFactory : MonoBehaviour
 {
     [Header("Resource entrance")]
     [SerializeField] ProductData[] productDatas;
+    public GameObject throwableObjectPrefab;
+    public ThrowableObjectScriptableObjectDefinition[] npcs;
     public static PrefabFactory instance;
     private void Awake()
     {
@@ -58,15 +60,16 @@ public class PrefabFactory : MonoBehaviour
     /// <returns>The GameObject itself</returns>
     public GameObject InstantiateProduct(FactoryProduct factoryProduct, Vector3 position)
     {
-        GameObject gameObject = FindProduct(factoryProduct);
-
-        return Instantiate(gameObject, position, Quaternion.identity);
+        GameObject spawnedNPC = Instantiate(throwableObjectPrefab, position, Quaternion.identity);
+        int randomNpcIndex = UnityEngine.Random.Range(0, npcs.Length);
+        spawnedNPC.GetComponent<ThrowableObjectsMasterClass>().setThrowableScriptableObject(npcs[randomNpcIndex]);
+        return spawnedNPC;
     }
     //This is just a helper function to get the right prefab from the Product Data Vector/List based on the Enum chosen
-    GameObject FindProduct(FactoryProduct factoryProduct)
+    /*GameObject FindProduct(FactoryProduct factoryProduct)
     {
         return productDatas.Where(p => p.factoryProductType == factoryProduct).Select(p => p.prefab).First();
-    }
+    }*/
 
 
     // This class is a resource that holds the link between Prefab and Enum for the PrefabFactory 
