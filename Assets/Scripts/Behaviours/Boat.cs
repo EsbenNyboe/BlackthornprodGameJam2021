@@ -68,6 +68,7 @@ public class Boat : MonoBehaviour
         {
             return;
         }
+        StopCoroutine(InstantBoostCoroutine(boostValue, boostTime));
         StartCoroutine(InstantBoostCoroutine(boostValue, boostTime));
     }
 
