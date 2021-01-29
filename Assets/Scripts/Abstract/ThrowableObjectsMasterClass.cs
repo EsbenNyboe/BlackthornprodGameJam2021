@@ -26,6 +26,9 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     [SerializeField] float deepDistance;//Time until the npc starts to go down
     [SerializeField] float drownSpeed;//How fast the npc should move down
 
+    bool isNpcThrown;
+    public NPCFactory.SpawnData mySpawnData;
+
     #region events
     public event EventHandler onNPCThrown;
     public event EventHandler onNPCDrown;
@@ -45,9 +48,11 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         ChangeAnimationState(AnimationType.Idle);
         interactable = true;
         npcsInTheAir = 0;
+        Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
     }
     private void Update()
     {
+       if(!isNpcThrown)transform.position = mySpawnData.parent.position;
         if (isThrown)
         {
             timer += Time.deltaTime;
@@ -114,7 +119,16 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         if (GameManager.debugModeStatic)
             interactable = true;
     }
+    public void SetSpawnData(NPCFactory.SpawnData myspawndata)
+    {
+        mySpawnData = myspawndata;
+    }
 
+    public void ThrownData()
+    {
+        mySpawnData.slotVacancy = false;
+        isNpcThrown = true;
+    }
 
     public enum AnimationType
     {

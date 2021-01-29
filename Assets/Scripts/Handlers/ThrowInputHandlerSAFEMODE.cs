@@ -133,6 +133,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
         throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
         PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.throwNPC);
         targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
+        throwableObjectsBehavior.ThrownData();
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
         
 
