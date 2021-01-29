@@ -13139,7 +13139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   boatInertiaTimeDeacceleration: 1
-  boatInertiaTimeAcceleration: 2
+  boatInertiaTimeAcceleration: 0.3
   boatShakeDuration: 1
   boatShakeStrength: 0.2
   waterParticle: {fileID: 1861141574917311910, guid: 02391f7bf3b5b5543b70458f9288221c, type: 3}

@@ -25,7 +25,19 @@ public class Wave : MonoBehaviour
 
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         //set global wave drag factor
-        waveDragFactor = gm.waveDragFactor;
+        switch (waveType)
+        {
+            case WaveType.BigWave:
+                waveDragFactor = gm.waveDragFactorBig;
+                break;
+            case WaveType.MediumWave:
+                waveDragFactor = gm.waveDragFactorMedium;
+                break;
+            case WaveType.SmallWave:
+                waveDragFactor = gm.waveDragFactorSmall;
+                break;
+        }
+        //waveDragFactor = gm.waveDragFactor;
 
         GameManager.onGameLost += GameManager_onGameLost;
     }
@@ -76,7 +88,8 @@ public class Wave : MonoBehaviour
         {
             if (boatRidingNow)
             {
-                boat.speed = gm.postWaveBoatSpeed;
+                if (gm.usePostWaveBoatSpeed)
+                    boat.speed = gm.postWaveBoatSpeed;
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveCleared);
             }
             boatRidingNow = false;

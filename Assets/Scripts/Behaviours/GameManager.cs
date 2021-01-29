@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float boatSpeedStart;
     public float maxBoatSpeed = 50;
     public float fatalBoatSpeed = 1f;
+    public bool usePostWaveBoatSpeed;
     public float postWaveBoatSpeed;
     private Boat boat;
     [Header("Shark")]
@@ -17,10 +18,16 @@ public class GameManager : MonoBehaviour
     //how much speed dereases by each second on wave
     public float waveDragFactor = 1;
 
+    public float waveDragFactorSmall;
+    public float waveDragFactorMedium;
+    public float waveDragFactorBig;
+
      
     [Header("UI")]
     public GameObject LoseScreen;
     public GameObject WinScreen;
+
+    public static bool gameLost;
 
     #region singleton
     static public GameManager instance;
@@ -37,14 +44,16 @@ public class GameManager : MonoBehaviour
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         boat.speed = boatSpeedStart;
+        gameLost = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //check for boat speed to low
-        if (boat.speed <= fatalBoatSpeed)
+        if (!gameLost && boat.speed <= fatalBoatSpeed)
         {
+            gameLost = true;
             LoseGame();
         }
     }
