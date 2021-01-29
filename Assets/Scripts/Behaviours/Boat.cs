@@ -48,10 +48,13 @@ public class Boat : MonoBehaviour
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
         boatPortLevelEnd = FindObjectOfType<EndOfLevel>().transform.parent.GetComponent<MoveSprite>(); // HELP: how do we ignore this line when in the menu?
         GameManager.npcPointsSystem.OnPointsChanged += NpcPointsSystem_OnPointsChanged;
+        peopleOnBoat = GameManager.npcPointsSystem.currentPoints;
+        if (peopleCountBar != null) peopleCountBar.SetVelocity(peopleOnBoat);
     }
 
     private void NpcPointsSystem_OnPointsChanged(object sender, PointsSystem.OnPointsDataEventArgs e)
     {
+        peopleOnBoat = GameManager.npcPointsSystem.currentPoints;
         if (peopleCountBar != null) peopleCountBar.SetVelocity(peopleOnBoat);
     }
 
