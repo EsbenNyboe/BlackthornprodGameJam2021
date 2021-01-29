@@ -113,7 +113,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Win" ID="{B0F8BD86-6594-40A9-B04B-245183D3E6AD}"/>
+						<CurrentStateRef Name="Game" ID="{484AFDAE-9686-477C-8C2E-7D90823B6C52}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
