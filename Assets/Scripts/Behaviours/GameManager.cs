@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     [Header("Npcs")]
     public int maxNpcCount;
     public PrefabFactory prefabFactory;
-    private List<GameObject> spawnedNpcs;
+    public List<GameObject> spawnedNpcs;
     [Header("UI")]
     public GameObject LoseScreen;
     public GameObject WinScreen;
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < desiredSpawnedNpcs; i++)
         {
             Vector3 offset = new Vector3(UnityEngine.Random.Range(-4, -2), 0.2f, 0);
-            prefabFactory.InstantiateProduct(PrefabFactory.FactoryProduct.ThrowableObjectDog, boat.transform.position + offset);
+            spawnedNpcs.Add(prefabFactory.InstantiateProduct(PrefabFactory.FactoryProduct.ThrowableObjectDog, boat.transform.position + offset));
         }
     }
 }
