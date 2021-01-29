@@ -401,7 +401,7 @@ MonoBehaviour:
     ParentPath: MusicEvents
     guid: 885390323fd91f438c80ab1e42196881
     GuidInternal: 
-    m_lastTime: -8585896574076432708
+    m_lastTime: -8585896518390093021
     List:
     - name: Music_Game
       guid: 59e2c17eec262245b8af830026b5e42c
@@ -555,9 +555,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585897319070069101
     List: []
-  ExpandedItems:
-  - /BlackthornprodGameJam2021_WwiseProject
-  - /BlackthornprodGameJam2021_WwiseProject/Events
-  - /BlackthornprodGameJam2021_WwiseProject/Events/MusicEvents
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
