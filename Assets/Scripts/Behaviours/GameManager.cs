@@ -26,10 +26,7 @@ public class GameManager : MonoBehaviour
 
     public float maxWaveDragDynamics;
     public float minWaveDragDynamics;
-    [Header("Npcs")]
-    public int maxNpcCount;
-    public PrefabFactory prefabFactory;
-    private List<GameObject> spawnedNpcs;
+
     [Header("UI")]
     public GameObject LoseScreen;
     public GameObject WinScreen;
@@ -55,8 +52,6 @@ public class GameManager : MonoBehaviour
         boat.speed = boatSpeedStart;
         gameLost = gameWon = false;
         SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicGame);
-        spawnedNpcs = new List<GameObject>();
-        UpdateNpcs(30);
     }
 
     // Update is called once per frame
@@ -99,20 +94,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void UpdateNpcs(int points)
+    public void MainMenu()
     {
-        int desiredSpawnedNpcs = points;
-        desiredSpawnedNpcs -= spawnedNpcs.Count;
+        SceneManager.LoadScene("Menu");
+    }
 
-        if(desiredSpawnedNpcs > maxNpcCount)
-        {
-            desiredSpawnedNpcs -= (points - maxNpcCount);
-        }
-
-        for (int i = 0; i < desiredSpawnedNpcs; i++)
-        {
-            Vector3 offset = new Vector3(UnityEngine.Random.Range(-4, -2), 0.2f, 0);
-            prefabFactory.InstantiateProduct(PrefabFactory.FactoryProduct.ThrowableObjectDog, boat.transform.position + offset);
-        }
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
