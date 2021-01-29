@@ -45,7 +45,7 @@ public class Boat : MonoBehaviour
     {
         defaultScale = transform.localScale;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
-        boatPortLevelEnd = FindObjectOfType<EndOfLevel>().transform.parent.GetComponent<MoveSprite>();
+        boatPortLevelEnd = FindObjectOfType<EndOfLevel>().transform.parent.GetComponent<MoveSprite>(); // HELP: how do we ignore this line when in the menu?
     }
 
     // Update is called once per frame
@@ -82,14 +82,18 @@ public class Boat : MonoBehaviour
 
     public IEnumerator InstantBoostCoroutine(float boostvalue, float boosttime)
     {
+        boostvalue = boostvalue / GameManager.currentWaveDrag;
+        boosttime = boosttime / GameManager.currentWaveDrag;
+        float correctedInertiaAcc = boatInertiaTimeAcceleration / GameManager.currentWaveDrag;
         DOTween.Complete(gameObject);
        // Vector3 defaultPosition = transform.position;
-        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, boatInertiaTimeAcceleration);
+        DOTween.To(() => speed, (bv) => speed = bv, boostvalue, correctedInertiaAcc);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition + new Vector3(boatDistancePushed, 0, 0), boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition - new Vector3(0.5f, 0, 0);
-        yield return new WaitForSeconds(boosttime + boatInertiaTimeAcceleration);
-        DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, boatInertiaTimeDeacceleration);
+        yield return new WaitForSeconds(boosttime + correctedInertiaAcc);
+        float correctedInertiaDeacc = boatInertiaTimeDeacceleration / GameManager.currentWaveDrag;
+        DOTween.To(() => speed, (bv) => speed = bv, GameManager.instance.postWaveBoatSpeed, correctedInertiaDeacc);
         //DOTween.To(() => transform.position, (pos) => transform.position = pos, defaultPosition, boatInertiaTime);
 
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;

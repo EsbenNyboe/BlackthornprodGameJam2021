@@ -14,6 +14,7 @@ public class WaveChecker : MonoBehaviour
     public int nextWave;
     public int waveCount;
     public float distanceToWave;
+    public static float distanceToWaveRead;
     public bool lvlWonKinda;
 
     private void Start()
@@ -55,6 +56,7 @@ public class WaveChecker : MonoBehaviour
                 }
         }
         waveCount++;
+        GameManager.currentWaveDrag = waves[nextWave].GetComponent<Wave>().waveDragFactor;
     }
 
     private void PlayWaveSoundLoop()
@@ -75,6 +77,7 @@ public class WaveChecker : MonoBehaviour
 
     void Update()
     {
+        distanceToWaveRead = distanceToWave;
         if (!lvlWonKinda)
         {
             distanceToWave = waves[nextWave].transform.position.x - boat.transform.position.x;
@@ -83,6 +86,8 @@ public class WaveChecker : MonoBehaviour
                 AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave + delayDistanceToCheck);
             else if (distanceToWave > 0 && distanceToWave < maxDistanceToCheck)
                 AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave + delayDistanceToCheck);
+            if (distanceToWave < 0)
+                GameManager.currentWaveDrag = 1;
             //if (Mathf.Abs(distanceToWave) < maxDistanceToCheck + delayDistanceToCheck) // hmmm
             //    AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave + delayDistanceToCheck);
 

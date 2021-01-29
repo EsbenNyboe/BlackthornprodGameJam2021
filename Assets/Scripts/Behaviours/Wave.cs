@@ -56,7 +56,18 @@ public class Wave : MonoBehaviour
         if (boatRidingNow)
         {
             AkSoundEngine.SetRTPCValue("BoatSpeed", boat.speed);
-            if (boat.speed > 0) boat.speed -= Time.deltaTime * waveDragFactor;
+
+            float speedDiscriminator = gm.maxWaveDragDynamics * boat.speed / ThrowInputHandlerSAFEMODE.impulseForceRead;
+            if (speedDiscriminator < gm.minWaveDragDynamics)
+                speedDiscriminator = gm.minWaveDragDynamics;
+            else if (speedDiscriminator > gm.maxWaveDragDynamics)
+                speedDiscriminator = gm.maxWaveDragDynamics;
+            print("discr:" + speedDiscriminator);
+            //speedDiscriminator = 1;
+            if (boat.speed > 0)
+            {
+                boat.speed -= Time.deltaTime * waveDragFactor * speedDiscriminator;
+            }
             if (boat.speed < 0)
             {
                 boat.speed = 0;
@@ -64,6 +75,9 @@ public class Wave : MonoBehaviour
         }
         else
         {
+            //if (boat.speed < gm.postWaveBoatSpeed)
+            //    boat.speed += Time.deltaTime;
+
             timeOnTheWave = 0;
         }
     }

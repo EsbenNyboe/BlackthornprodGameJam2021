@@ -50,10 +50,11 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
 
 
 
-    
-    
+
+    public static float impulseForceRead;
     private void Awake()
     {
+        impulseForceRead = boatImpulseForce;
         throwObjectSystem = new ThrowObjectSystem();
 
     }

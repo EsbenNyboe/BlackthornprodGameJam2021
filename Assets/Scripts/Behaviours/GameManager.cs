@@ -16,13 +16,15 @@ public class GameManager : MonoBehaviour
     public float sharkBoostForce = 3;
     [Header("Wave")]
     //how much speed dereases by each second on wave
-    public float waveDragFactor = 1;
-
+    //public float waveDragFactor = 1;
+    public static float currentWaveDrag;
     public float waveDragFactorSmall;
     public float waveDragFactorMedium;
     public float waveDragFactorBig;
 
-     
+    public float maxWaveDragDynamics;
+    public float minWaveDragDynamics;
+
     [Header("UI")]
     public GameObject LoseScreen;
     public GameObject WinScreen;

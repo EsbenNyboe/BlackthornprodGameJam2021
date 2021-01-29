@@ -60,14 +60,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boatSpeedStart: 5
   maxBoatSpeed: 15
-  fatalBoatSpeed: 0.4
+  fatalBoatSpeed: 0.1
   usePostWaveBoatSpeed: 0
   postWaveBoatSpeed: 4
   sharkBoostForce: 5
-  waveDragFactor: 1
-  waveDragFactorSmall: 0.5
-  waveDragFactorMedium: 1
+  waveDragFactorSmall: 1
+  waveDragFactorMedium: 2
   waveDragFactorBig: 4
+  maxWaveDragDynamics: 4
+  minWaveDragDynamics: 0.4
   LoseScreen: {fileID: 0}
   WinScreen: {fileID: 0}
 --- !u!114 &1879753675638941467
@@ -85,7 +86,7 @@ MonoBehaviour:
   maxPullDistance: 30
   maxPullForce: 10
   minPullForce: 1
-  boatImpulseForce: 10
+  boatImpulseForce: 15
   boatImpulseTimer: 0.1
   raycastRadius: 1.5
   throwBodyShakeDuration: 1
