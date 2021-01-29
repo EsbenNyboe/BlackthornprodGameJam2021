@@ -119,7 +119,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
     void DoAction(float finalforce)
     {
        
-        // Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
+         Physics2D.IgnoreCollision(targetObject.GetComponent<Collider2D>(), Boat._instance.GetComponent<Collider2D>(), true);
          if (targetObject.GetComponent<Rigidbody2D>().constraints != RigidbodyConstraints2D.None)
         {
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
