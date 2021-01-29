@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78a8acb0a455014998c3510896e53c0, type: 3}
+  m_Name: Dog
+  m_EditorClassIdentifier: 
+  objectType: 5
+  speedBonusGiven: 12
+  pointsRemoved: 1
+  landSoundEvent: 
+  thrownSoundEvent: 
+  drownSoundEvent: 
+  idleSprites:
+  - {fileID: 4955340611337627167, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  - {fileID: 7368921399042383042, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  - {fileID: -6452436507305946013, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  - {fileID: 8730463610931831, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  heldSprites:
+  - {fileID: 3307946980028436893, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  thrownSprites:
+  - {fileID: 3307946980028436893, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  landSprites:
+  - {fileID: 4955340611337627167, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  drownSprites:
+  - {fileID: -8618617549718218644, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  - {fileID: 1580095428795953822, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  AirSprites:
+  - {fileID: 3307946980028436893, guid: 1f99e0970f139dd4dbdef79aca728aff, type: 3}
+  screamingSound: 0
+  impactSound: 0

@@ -65,6 +65,8 @@ public class Wave : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveEnter);
             }
             boatRidingNow = true;
+
+            GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>().emissionRate = 100;
         }
     }
 
@@ -78,6 +80,8 @@ public class Wave : MonoBehaviour
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveCleared);
             }
             boatRidingNow = false;
+
+            GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>().emissionRate = 0;
         }
     }
 

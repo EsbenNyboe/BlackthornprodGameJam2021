@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveChecker : MonoBehaviour
 {
     public GameObject[] waves;
+    [Space]
     public GameObject boat;
     public float maxDistanceToCheck;
 

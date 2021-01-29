@@ -18,6 +18,9 @@ public class Boat : MonoBehaviour
     [SerializeField] float boatShakeStrength;//Boat shake force
     private Vector3 defaultScale;
 
+    [Header("Water Particle")]
+    public GameObject waterParticle; //Particle to water collision
+    public Transform waterPos; //Pos to water particle
 
     [Header("Physics")]
     public Transform centerOfMass;
@@ -97,8 +100,9 @@ public class Boat : MonoBehaviour
     {
         if (other.tag == "Water")
         {
-            transform.localScale = defaultScale;
-            transform.DOShakeScale(boatShakeDuration, boatShakeStrength*Vector3.down);
+            //transform.localScale = defaultScale;
+            //transform.DOShakeScale(boatShakeDuration, boatShakeStrength*Vector3.down);
+            Instantiate(waterParticle, waterPos.transform.position, Quaternion.identity);
         }
     }
 }
