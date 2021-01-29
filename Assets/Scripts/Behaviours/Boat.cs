@@ -31,6 +31,8 @@ public class Boat : MonoBehaviour
     [Header("UI Elements")]
     public VelocityBar velocityBar;
 
+    MoveSprite boatPortLevelEnd;
+
     #region singleton
     static public Boat _instance;
     private void Awake()
@@ -43,6 +45,7 @@ public class Boat : MonoBehaviour
     {
         defaultScale = transform.localScale;
         GetComponent<Rigidbody2D>().centerOfMass = centerOfMass.localPosition;
+        boatPortLevelEnd = FindObjectOfType<EndOfLevel>().transform.parent.GetComponent<MoveSprite>();
     }
 
     // Update is called once per frame
@@ -50,6 +53,10 @@ public class Boat : MonoBehaviour
     {
         if (velocityBar != null)
             velocityBar.SetVelocity(speed);
+        if (!EndOfLevel.levelWon)
+            boatPortLevelEnd.speed = speed;
+        else
+            boatPortLevelEnd.speed = 0;
     }
     public void PermanentBoost(float boostValue)
     {
