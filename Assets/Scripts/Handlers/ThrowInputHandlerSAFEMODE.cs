@@ -98,6 +98,8 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
                 if (!pulled)
                 {
                     throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                    PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.holding);
+
                     pulled = true;
                 }
                 //enter the if statement if the player let go of the left mouse button
