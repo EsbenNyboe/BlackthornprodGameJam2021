@@ -169,8 +169,8 @@ public class ThrowInputHandler : MonoBehaviour
 
 
         Boat._instance.TemporaryBoost(boatImpulseForce, boatImpulseTimer);
-      
 
+        targetObject.layer = 0;
         targetObject = null;
 
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8195913032023910808}
   - component: {fileID: 8195913032023910809}
   - component: {fileID: 8195913032023910810}
+  - component: {fileID: 1879753675638941467}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -65,3 +66,28 @@ MonoBehaviour:
   waveDragFactor: 0.5
   LoseScreen: {fileID: 0}
   WinScreen: {fileID: 0}
+--- !u!114 &1879753675638941467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195913032023910806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a226a5dc9fccc74d97983b9924ef549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPullDistance: 30
+  maxPullForce: 30
+  minPullForce: 10
+  boatImpulseForce: 5
+  boatImpulseTimer: 0.5
+  raycastRadius: 1.5
+  throwBodyShakeDuration: 1
+  throwBodyShakeForce: 0.2
+  npcHeldPosition: {fileID: 0}
+  timeToHoldNPC: 0.5
+  throwableMask:
+    serializedVersion: 2
+    m_Bits: 256

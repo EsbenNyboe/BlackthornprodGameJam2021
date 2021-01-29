@@ -23,7 +23,7 @@ public class PlayerMovementHandler : MonoBehaviour
         if(horizontal != 0)
         {
             CheckLookingDirection(horizontal);
-            rb.AddForce(new Vector2(horizontal * speed, 0), ForceMode2D.Force);
+            rb.AddForce(new Vector2(horizontal * speed * Time.deltaTime, 0), ForceMode2D.Force);
         }
     }
     void CheckLookingDirection(float value)

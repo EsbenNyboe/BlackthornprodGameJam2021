@@ -22,7 +22,7 @@ public class SpriteRendererAnimator : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!loopTheAnimation && index == currentSprites.Length) return;
         currentFrame++;
