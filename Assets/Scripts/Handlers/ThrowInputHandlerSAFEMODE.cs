@@ -98,6 +98,8 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
                 if (!pulled)
                 {
                     throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                    PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.holding);
+
                     pulled = true;
                 }
                 //enter the if statement if the player let go of the left mouse button
@@ -129,9 +131,11 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
+        PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.throwNPC);
         targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
- 
+        
+
         //This line takes care of the throwing AND "in the air" animation
         throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Thrown);
 
