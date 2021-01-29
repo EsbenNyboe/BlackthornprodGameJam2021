@@ -44,6 +44,10 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     {
 
     }
+    public void setThrowableScriptableObject(ThrowableObjectScriptableObjectDefinition throwableScriptableObject)
+    {
+        this.throwableScriptableObject = throwableScriptableObject;
+    }
     public void ChangeAnimationState(AnimationType animationtype)
     {
         switch (animationtype)
