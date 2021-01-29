@@ -13,7 +13,7 @@ using System;
  * 
  *  Event: BlackthornProd GameJam #3
  * *******************************************************************************************/
-
+/*
 //Handler of the player input for the main mechanic. 
 public class ThrowInputHandler : MonoBehaviour
 {
@@ -101,6 +101,7 @@ public class ThrowInputHandler : MonoBehaviour
             //this boolean is to make sure the this function only cares about the "onButtonUnclicked" once the "onButtonClicked" is triggered
             if (startPulling)
             {
+                
 
                 mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mouseOnWorldPosition.z = 0;
@@ -120,6 +121,7 @@ public class ThrowInputHandler : MonoBehaviour
                 if (!pulled)
                 {
                     throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
+                    PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.holding);
                     pulled = true;
                 }
                 //enter the if statement if the player let go of the left mouse button
@@ -127,15 +129,7 @@ public class ThrowInputHandler : MonoBehaviour
                 if (Input.GetMouseButtonUp(0))
                 {
                     startPulling = false;
-                    /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                      float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
-                      if (distance > maxPullDistance) forcemultiplier = 1;
-                      else
-                      {
-                          forcemultiplier = distance / maxPullDistance;
-                      }
-                      launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
-                    */
+                   
                     
                     DoAction(finalForce);
                     pulled = false;
@@ -160,7 +154,9 @@ public class ThrowInputHandler : MonoBehaviour
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             targetObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+        PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.throwNPC);
         throwObjectSystem.ThrowObject(targetObject, launchDirection, finalforce);
+
         targetObject.transform.DOShakeScale(throwBodyShakeDuration, launchDirection * throwBodyShakeForce);
         targetObject.GetComponent<WindBehaviour>().ActivateWindEffect();
  
@@ -177,9 +173,6 @@ public class ThrowInputHandler : MonoBehaviour
 
 
 
-    /* private void OnDrawGizmos()
-     {
-         Gizmos.DrawWireSphere(mouseOnWorldPosition, RAYCAST_RADIUS);
-
-     }*/
-}
+    
+} 
+                    */

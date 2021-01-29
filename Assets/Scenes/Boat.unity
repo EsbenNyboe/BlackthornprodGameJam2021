@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &306166916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -872,7 +872,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.3203923, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &333047955
 MonoBehaviour:
@@ -2466,8 +2466,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 2.2418125, y: -1.9751368}
-      - {x: -1.440225, y: -1.8971368}
-      - {x: 0.49688527, y: 0.46496594}
+      - {x: -1.2335321, y: -1.8753246}
+      - {x: -0.1608333, y: -0.91586167}
+      - {x: 0.590837, y: -0.014906732}
+      - {x: 1.1182489, y: -0.17130607}
       - {x: 2.7739506, y: -1.7235533}
 --- !u!212 &707342623
 SpriteRenderer:
@@ -2562,7 +2564,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 512
   m_SurfaceLevel: 1
-  m_Density: 2
+  m_Density: 1
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -7763,7 +7765,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 512
   m_SurfaceLevel: 0.52
-  m_Density: 2
+  m_Density: 1
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -7809,10 +7811,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.8934634, y: -1.7431698}
+    - - {x: 1.2628039, y: 0.48910588}
+      - {x: 2.8934634, y: -1.7431698}
       - {x: -2.1424012, y: -1.657801}
-      - {x: -0.030697584, y: -0.31452304}
-      - {x: 1.5574536, y: 0.08269185}
+      - {x: -0.43078187, y: -0.33319235}
+      - {x: 0.68033546, y: 0.4187382}
 --- !u!212 &839451065
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7966,7 +7969,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 512
   m_SurfaceLevel: 0.72
-  m_Density: 2
+  m_Density: 1
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -8014,7 +8017,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 2.3857927, y: -1.8971509}
       - {x: -1.3446333, y: -1.8337792}
-      - {x: 0.9743047, y: 0.108661324}
+      - {x: -0.52251905, y: -1.1814942}
+      - {x: 0.1433067, y: -0.32924578}
+      - {x: 0.61485666, y: -0.009713598}
+      - {x: 0.90260684, y: -0.010325536}
       - {x: 1.6829288, y: -0.6598408}
 --- !u!212 &848203238
 SpriteRenderer:
@@ -8370,7 +8376,7 @@ Transform:
   m_Children:
   - {fileID: 3970098207086196747}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898954739
 GameObject:
@@ -9088,7 +9094,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 512
   m_SurfaceLevel: 0.52
-  m_Density: 2
+  m_Density: 1
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -9136,8 +9142,10 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 2.8934634, y: -1.7431698}
       - {x: -2.1424012, y: -1.657801}
-      - {x: -0.030697584, y: -0.31452304}
-      - {x: 1.5574536, y: 0.08269185}
+      - {x: -0.9317318, y: -0.8932585}
+      - {x: -0.105478466, y: 0.059879437}
+      - {x: 0.7031685, y: 0.4835627}
+      - {x: 1.2747759, y: 0.46851528}
 --- !u!212 &1046522274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9782,7 +9790,7 @@ Transform:
   - {fileID: 1833007675}
   - {fileID: 1605387376}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1252115111
 GameObject:
@@ -9914,6 +9922,11 @@ Transform:
   m_Father: {fileID: 1228492036}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1254173905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8908728427068384005, guid: caf6857bb35b36f4296595fdcbbe4104, type: 3}
+  m_PrefabInstance: {fileID: 1838449384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312050530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10191,8 +10204,9 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 2.3857927, y: -1.8971509}
       - {x: -1.3446333, y: -1.8337792}
-      - {x: 0.9743047, y: 0.108661324}
-      - {x: 1.6829288, y: -0.6598408}
+      - {x: 0.11560601, y: -0.8897673}
+      - {x: 0.78023016, y: -0.14921218}
+      - {x: 1.1981779, y: -0.046770692}
 --- !u!212 &1369826403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10286,7 +10300,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 512
   m_SurfaceLevel: 0.72
-  m_Density: 2
+  m_Density: 1
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -10919,7 +10933,7 @@ RectTransform:
   - {fileID: 1987229159}
   - {fileID: 795514455}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11558,11 +11572,6 @@ Transform:
   m_Father: {fileID: 1228492036}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1622527846 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3584882754606771550, guid: caf6857bb35b36f4296595fdcbbe4104, type: 3}
-  m_PrefabInstance: {fileID: 1838449384}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1622601796
 GameObject:
   m_ObjectHideFlags: 0
@@ -11772,7 +11781,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672903579
 GameObject:
@@ -12404,7 +12413,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2082526269}
     m_Modifications:
     - target: {fileID: 2883615481182495720, guid: caf6857bb35b36f4296595fdcbbe4104, type: 3}
       propertyPath: m_Name
@@ -12416,11 +12425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908728427068384005, guid: caf6857bb35b36f4296595fdcbbe4104, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4
+      value: 7.04
       objectReference: {fileID: 0}
     - target: {fileID: 8908728427068384005, guid: caf6857bb35b36f4296595fdcbbe4104, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7800001
+      value: -2.69
       objectReference: {fileID: 0}
     - target: {fileID: 8908728427068384005, guid: caf6857bb35b36f4296595fdcbbe4104, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12772,7 +12781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1987229159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12903,7 +12912,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 512
   m_SurfaceLevel: 1
-  m_Density: 2
+  m_Density: 1
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -12950,8 +12959,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 2.2418125, y: -1.9751368}
-      - {x: -1.440225, y: -1.8971368}
-      - {x: 0.49688527, y: 0.46496594}
+      - {x: -1.2820896, y: -1.8709134}
+      - {x: -0.22433755, y: -0.8298166}
+      - {x: 0.42911357, y: 0.045391113}
+      - {x: 1.0003994, y: 0.10215536}
       - {x: 2.7739506, y: -1.7235533}
 --- !u!212 &2003916683
 SpriteRenderer:
@@ -13145,8 +13156,9 @@ Transform:
   - {fileID: 510867124}
   - {fileID: 1757069469}
   - {fileID: 817870099}
+  - {fileID: 1254173905}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2082526270
 MonoBehaviour:
@@ -13485,7 +13497,7 @@ PrefabInstance:
       objectReference: {fileID: 333047950}
     - target: {fileID: 86795999497882591, guid: 88e45b63998a052418b7d1c7500d4775, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 86795999497882591, guid: 88e45b63998a052418b7d1c7500d4775, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13601,7 +13613,7 @@ PrefabInstance:
     - target: {fileID: 1879753675638941467, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
       propertyPath: npcHeldPosition
       value: 
-      objectReference: {fileID: 1622527846}
+      objectReference: {fileID: 0}
     - target: {fileID: 8195913032023910806, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
       propertyPath: m_Name
       value: GameManager
