@@ -38,7 +38,7 @@ public class ThrowObjectSystem
             objectRigidBody.AddForce(force * direction, ForceMode2D.Impulse);
             CustomEventArgsData customEventArgsData = new CustomEventArgsData(objectgameobject);
             onObjectThrown?.Invoke(this, customEventArgsData);
-            Debug.DrawRay(objectgameobject.transform.position, direction * force, Color.green, 100);
+           // Debug.DrawRay(objectgameobject.transform.position, direction * force, Color.green, 100);
         }
         else
         {

@@ -736,6 +736,7 @@ GameObject:
   - component: {fileID: 333047952}
   - component: {fileID: 333047951}
   - component: {fileID: 333047950}
+  - component: {fileID: 333047955}
   m_Layer: 0
   m_Name: Shark
   m_TagString: Untagged
@@ -873,6 +874,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333047955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333047949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c70ac483882f469840d2a8ed62f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSprites:
+  - {fileID: 118527550201479178, guid: 90cae8b1c8c677d4493c6210b53ef12b, type: 3}
+  - {fileID: -2218376988931914135, guid: 90cae8b1c8c677d4493c6210b53ef12b, type: 3}
+  - {fileID: 4523610342703112494, guid: 90cae8b1c8c677d4493c6210b53ef12b, type: 3}
+  - {fileID: 7166153606171294505, guid: 90cae8b1c8c677d4493c6210b53ef12b, type: 3}
+  - {fileID: -8895196655739710588, guid: 90cae8b1c8c677d4493c6210b53ef12b, type: 3}
+  - {fileID: -1166156488588394365, guid: 90cae8b1c8c677d4493c6210b53ef12b, type: 3}
+  spritePerFrame: 6
+  loopTheAnimation: 1
+  destroyOnAnimationEnded: 0
 --- !u!1 &391562267
 GameObject:
   m_ObjectHideFlags: 0

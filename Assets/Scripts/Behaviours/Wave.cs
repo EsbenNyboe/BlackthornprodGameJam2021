@@ -10,6 +10,7 @@ public class Wave : MonoBehaviour
     public float waveDragFactor = 1;
     private float timeOnTheWave;
     private GameManager gm;
+    ParticleSystem waterWaveParticle;
 
     public enum WaveType
     {
@@ -21,6 +22,7 @@ public class Wave : MonoBehaviour
 
     void Start()
     {
+        waterWaveParticle = GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>();
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
 
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
@@ -73,7 +75,7 @@ public class Wave : MonoBehaviour
                 boat.speed = 0;
             }
         }
-        else
+        else // is this ELSE needed?
         {
             //if (boat.speed < gm.postWaveBoatSpeed)
             //    boat.speed += Time.deltaTime;
@@ -92,7 +94,7 @@ public class Wave : MonoBehaviour
             }
             boatRidingNow = true;
 
-            GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>().emissionRate = 100;
+            waterWaveParticle.emissionRate = 100;
         }
     }
 
@@ -108,7 +110,7 @@ public class Wave : MonoBehaviour
             }
             boatRidingNow = false;
 
-            GameObject.Find("waterWaveParticle").GetComponent<ParticleSystem>().emissionRate = 0;
+            waterWaveParticle.emissionRate = 0;
         }
     }
 

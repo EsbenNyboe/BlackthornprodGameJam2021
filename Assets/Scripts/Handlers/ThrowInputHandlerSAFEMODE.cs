@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -102,15 +102,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 startPulling = false;
-                /*  mouseOnWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                  float distance = Vector2.Distance(mouseOnWorldPosition, forceTarget.transform.position);
-                  if (distance > maxPullDistance) forcemultiplier = 1;
-                  else
-                  {
-                      forcemultiplier = distance / maxPullDistance;
-                  }
-                  launchDirection = (forceTarget.transform.position - mouseOnWorldPosition).normalized;
-                */
+                 
                 DoAction(finalForce);
                 pulled = false;
             }
