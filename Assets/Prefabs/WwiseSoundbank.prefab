@@ -123,3 +123,9 @@ MonoBehaviour:
     eventName: Wave_Loop_Small
   - soundType: 27
     eventName: Wave_Loop_Stop
+  - soundType: 28
+    eventName: Music_Game
+  - soundType: 29
+    eventName: Music_Win
+  - soundType: 30
+    eventName: Music_Lose

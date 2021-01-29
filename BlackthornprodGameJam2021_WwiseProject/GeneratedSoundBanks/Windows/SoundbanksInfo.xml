@@ -11,16 +11,37 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="4145451387">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1021391979">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1661994096" Language="SFX" Hash="3167387175">
+		<SoundBank Id="1661994096" Language="SFX" Hash="1016955898">
 			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
 			<ShortName>Soundbank</ShortName>
 			<Path>Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1072299391" Name="Music_Game" ObjectPath="\Events\MusicEvents\Music_Game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3736367630" Name="Music_Lose" ObjectPath="\Events\MusicEvents\Music_Lose" DurationType="OneShot" DurationMin="3.368617" DurationMax="3.368617">
+					<IncludedMemoryFiles>
+						<File Id="523046439" Language="SFX">
+							<ShortName>BoatCrash_2.wav</ShortName>
+							<Path>SFX\BoatCrash_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\GameState\Lose"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2682680661" Name="Music_Win" ObjectPath="\Events\MusicEvents\Music_Win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\GameState\Win"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="3321089774" Name="NPC_CollBird" ObjectPath="\Events\Default Work Unit\NPC_CollBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="495534887" Name="NPC_CollFloor" ObjectPath="\Events\Default Work Unit\NPC_CollFloor" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2474133806" Name="NPC_CollShark" ObjectPath="\Events\Default Work Unit\NPC_CollShark" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -190,7 +211,47 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\MusicEvents\Start_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\MusicEvents\Start_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="172854790" Language="SFX">
+							<ShortName>Music_Lose_Loop_108bpm_3_4.wav</ShortName>
+							<Path>SFX\Music_Lose_Loop_108bpm_3_4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="239071218" Language="SFX">
+							<ShortName>Lose_Impact.wav</ShortName>
+							<Path>SFX\Lose_Impact_D79FB2B7.wem</Path>
+						</File>
+						<File Id="425843475" Language="SFX">
+							<ShortName>Music_Win_108bpm_3_4.wav</ShortName>
+							<Path>SFX\Music_Win_108bpm_3_4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="867803138" Language="SFX">
+							<ShortName>Music_Gamplay_Loop_108bpm_3_4.wav</ShortName>
+							<Path>SFX\Music_Gamplay_Loop_108bpm_3_4_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{484AFDAE-9686-477C-8C2E-7D90823B6C52}">
+							<Media>
+								<File Id="867803138"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{D32CC777-2D43-4343-ABD9-41604277EEBC}">
+							<Media>
+								<File Id="172854790"/>
+								<File Id="239071218"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B0F8BD86-6594-40A9-B04B-245183D3E6AD}">
+							<Media>
+								<File Id="425843475"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1973806823" Name="Wave_Cleared" ObjectPath="\Events\Default Work Unit\Wave_Cleared" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="264499973" Name="Wave_Enter" ObjectPath="\Events\Default Work Unit\Wave_Enter" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -225,19 +286,31 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2133808190" Name="Wave_Loop_Stop" ObjectPath="\Events\Default Work Unit\Wave_Loop_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2761884803" Name="Wave_Lost" ObjectPath="\Events\Default Work Unit\Wave_Lost" DurationType="OneShot" DurationMin="3.368617" DurationMax="3.368617">
-					<IncludedMemoryFiles>
-						<File Id="523046439" Language="SFX">
-							<ShortName>BoatCrash_2.wav</ShortName>
-							<Path>SFX\BoatCrash_2_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="2761884803" Name="Wave_Lost" ObjectPath="\Events\Default Work Unit\Wave_Lost" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="295969768" Name="DistanceToWave" ObjectPath="\Game Parameters\Default Work Unit\DistanceToWave"/>
 				<GameParameter Id="659411096" Name="BoatSpeed" ObjectPath="\Game Parameters\Default Work Unit\BoatSpeed"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\GameState\Lose">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\GameState\Win">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="4091656514" Name="GameState" ObjectPath="\States\Default Work Unit\GameState">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameState\None"/>
+						<State Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game"/>
+						<State Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\GameState\Win"/>
+						<State Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\GameState\Lose"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

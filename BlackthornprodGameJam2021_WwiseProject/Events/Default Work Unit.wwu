@@ -243,6 +243,7 @@
 						<Action Name="" ID="{0643A51D-1297-4382-91F8-99369DC13B86}" ShortID="776191359">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64" Value="-96"/>
 							</PropertyList>
 							<ReferenceList>
@@ -255,7 +256,22 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="12"/>
 								<Property Name="Delay" Type="Real64" Value="0.1"/>
-								<Property Name="FadeTime" Type="Real64" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Ocean" ID="{FCE5E46F-8DAB-4A5D-93B7-1FAD6D1DCA66}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A3CD063D-935A-429B-930C-8C3A90EC0127}" ShortID="468128938">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="10"/>
+								<Property Name="FadeTime" Type="Real64" Value="10"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -271,6 +287,11 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
@@ -280,6 +301,13 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{B9D49D16-F6D4-428C-B806-A7000988BC5E}" ShortID="203705789">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BoatCrash_2" ID="{26A7C558-6881-49A4-890E-CCE240EF5F38}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>

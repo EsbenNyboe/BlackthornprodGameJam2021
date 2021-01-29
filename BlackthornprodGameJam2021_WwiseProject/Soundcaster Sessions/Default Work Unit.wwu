@@ -6,53 +6,115 @@
 				<SoundcasterSession Name="ThrowingMechanic" ID="{4538C82E-0E1B-4DD2-9E66-C1650BA12735}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="NPC_PreparedForThrow" ID="{D768C651-E9DC-44A6-816E-04DB2D32A001}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="NPC_Thrown" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="NPC_CollFloor" ID="{17955327-BFF8-43A4-B901-1431530910B2}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="NPC_Fly_Boy" ID="{A91AB034-848B-4B33-B3C3-CA81F0D74201}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Wave_Enter" ID="{1F220B65-BAB2-4595-8EC0-5D72D97CDED3}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
-							<Position X="0" Y="2"/>
+							<ObjectRef Name="Start_Ambience" ID="{CB74E3D1-1AE4-4699-A530-C3BDB77FFC5E}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="NPC_Thrown" ID="{148EFB83-D7D4-4B65-901D-2B2479D4E05C}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="Wave_Loop_Stop" ID="{82E57714-88B3-4704-A9C6-ECBDD85A19FC}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Music" ID="{84932394-4A13-4CA2-8D62-1751A86FCB4C}" WorkUnitID="{32905388-D93F-431F-8C80-AB1E42196881}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_PickedUp" ID="{ADC0A475-25EC-4C75-B1EF-88750EE25ADD}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="NPC_CollWater" ID="{A64385B5-49B5-46C6-A936-58C90FED9A21}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="NPC_Fly_Grandpa" ID="{C04ADC88-F450-445A-8517-A9C68883575D}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Wave_Lost" ID="{F853C051-C1CE-4A60-A6CE-F11EC454B18D}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="NPC_Impact_Woman" ID="{FE3E0AC0-71E4-4379-96D6-94604E160969}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Ambience_Ocean" ID="{FCE5E46F-8DAB-4A5D-93B7-1FAD6D1DCA66}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
-							<Position X="2" Y="0"/>
+							<ObjectRef Name="Wave_Cleared" ID="{0B9D7E22-E805-4099-AF77-2C9EA15791DE}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Wave_Cleared" ID="{0B9D7E22-E805-4099-AF77-2C9EA15791DE}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<ObjectRef Name="Music_Game" ID="{7EC1E259-26EC-4522-B8AF-830026B5E42C}" WorkUnitID="{32905388-D93F-431F-8C80-AB1E42196881}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Fly_Man" ID="{47531FF4-BD47-40E7-A0ED-6F18537A4629}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Impact_Man" ID="{4324926F-70A9-4074-8DD9-E4B26B7C6AA9}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
 							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wave_Enter" ID="{1F220B65-BAB2-4595-8EC0-5D72D97CDED3}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_Win" ID="{C284FB63-10BE-47ED-B24D-FAC6D7A606D6}" WorkUnitID="{32905388-D93F-431F-8C80-AB1E42196881}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Fly_Girl" ID="{1CE0B2F1-5288-4BDB-94E0-AF186FB1A339}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Impact_Grandpa" ID="{5D506B46-DEA2-443D-9EE6-F0B17DD3C8DE}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wave_Loop_Big" ID="{1A050AC4-9E4D-4719-84BF-97AB79B44450}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_Lose" ID="{ACE905C3-7C70-46D6-989D-47A5A65BE2BE}" WorkUnitID="{32905388-D93F-431F-8C80-AB1E42196881}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_CollWater" ID="{A64385B5-49B5-46C6-A936-58C90FED9A21}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Fly_Woman" ID="{4B9A463B-1F04-44E0-B7A2-17C1609E3304}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Impact_Child" ID="{B4EA606D-7596-4E70-8625-BC01BEA591D6}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wave_Loop_Medium" ID="{5444B0C7-145D-4308-9489-D3AD7DCA39D0}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wave_Loop_Small" ID="{50529F06-B77F-49BC-B8FC-38BEE6BFBCCA}" WorkUnitID="{BCD49AF3-EDF6-455A-9654-F73B9DA168A9}"/>
+							<Position X="5" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="BoatSpeed" ID="{18021920-B828-408A-8AFA-4AEA5B64FE97}"/>
-							<Value>0.445</Value>
+							<Value>1.21</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DistanceToWave" ID="{7EB1BBA6-43E4-46B8-8177-E247C016B2AB}"/>
-							<Value>21.2666590684598</Value>
+							<Value>-7</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ThrowPower" ID="{85ED8721-368D-49E4-8EF2-AC691D9063E6}"/>
 							<Value>50</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Win" ID="{B0F8BD86-6594-40A9-B04B-245183D3E6AD}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

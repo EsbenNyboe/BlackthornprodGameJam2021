@@ -72,6 +72,10 @@ public class SoundSystem : MonoBehaviour
         waveLoopBig,
         waveLoopMedium,
         waveLoopSmall,
-        waveLoopStop
+        waveLoopStop,
+
+        musicGame,
+        musicWin,
+        musicLose
     }
 }

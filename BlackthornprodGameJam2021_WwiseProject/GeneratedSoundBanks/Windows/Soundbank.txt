@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	540993415	Start_Music			\MusicEvents\Start_Music	
 	651276332	NPC_Impact_Woman			\Default Work Unit\NPC_Impact_Woman	
 	1037768413	NPC_Fly_Man			\Default Work Unit\NPC_Fly_Man	
+	1072299391	Music_Game			\MusicEvents\Music_Game	
 	1533334522	NPC_Impact_Man			\Default Work Unit\NPC_Impact_Man	
 	1661441752	NPC_Impact_Child			\Default Work Unit\NPC_Impact_Child	
 	1730208058	Player_Footsteps			\Default Work Unit\Player_Footsteps	
@@ -19,13 +20,24 @@ Event	ID	Name			Wwise Object Path	Notes
 	2050233766	NPC_PickedUp			\Default Work Unit\NPC_PickedUp	
 	2133808190	Wave_Loop_Stop			\Default Work Unit\Wave_Loop_Stop	
 	2474133806	NPC_CollShark			\Default Work Unit\NPC_CollShark	
+	2682680661	Music_Win			\MusicEvents\Music_Win	
 	2751120299	Wave_Loop_Small			\Default Work Unit\Wave_Loop_Small	
 	2756003563	NPC_Thrown			\Default Work Unit\NPC_Thrown	
 	2761884803	Wave_Lost			\Default Work Unit\Wave_Lost	
 	3321089774	NPC_CollBird			\Default Work Unit\NPC_CollBird	
 	3522606991	NPC_Fly_Woman			\Default Work Unit\NPC_Fly_Woman	
 	3626999974	Start_Ambience			\Default Work Unit\Start_Ambience	
+	3736367630	Music_Lose			\MusicEvents\Music_Lose	
 	4146794365	NPC_PreparedForThrow			\Default Work Unit\NPC_PreparedForThrow	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4091656514	GameState			\Default Work Unit\GameState	
+
+State	ID	Name	State Group			Notes
+	221232726	Lose	GameState			
+	702482391	Game	GameState			
+	748895195	None	GameState			
+	979765101	Win	GameState			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	295969768	DistanceToWave			\Default Work Unit\DistanceToWave	
@@ -39,12 +51,15 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	143107039	man_impact_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_impact_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Man_Impact\man_impact_1		22108
 	151638671	Footstep_Single_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Single_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_03		18902
 	162745430	kid_scream_7	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\kid_scream_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Boy_Scream\kid_scream_7		176878
+	172854790	Music_Lose_Loop_108bpm_3_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Music_Lose_Loop_108bpm_3_4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\LoseMusic\Music_Lose_Loop_108bpm_3_4\Music_Lose_Loop_108bpm_3_4		2940064
 	200947536	woman_impact_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\woman_impact_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Woman_Impact\woman_impact_1		95054
 	206821348	man_scream_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_scream_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_1		117270
+	239071218	Lose_Impact	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Lose_Impact_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\LoseMusic\Music_Lose_Loop_108bpm_3_4\Lose_Impact		2428384
 	240154784	grandpa_scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\grandpa_scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Grandpa_Scream\grandpa_scream_2		244668
 	307057162	Wave_Loop_Small	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Wave_Loop_1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wave_Loops\Wave_Loop_Small		1028982
 	368074924	kid_scream_6	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\kid_scream_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Boy_Scream\kid_scream_6		209438
 	401989199	man_scream_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_scream_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_4		128132
+	425843475	Music_Win_108bpm_3_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Music_Win_108bpm_3_4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Music_Win_108bpm_3_4\Music_Win_108bpm_3_4		2352064
 	451614913	Throw_1low	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Throw_1low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Throw\Throw_1low		31124
 	480216868	woman_scream_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\woman_scream_4_3DC4E766.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Woman_Scream\woman_scream_4		134644
 	503185017	grandpa_impact_1	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\grandpa_impact_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\Grandpa_Impact\grandpa_impact_1		22340
@@ -56,6 +71,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	820589324	man_scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_scream_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_2		147870
 	847845634	man_scream_3	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\man_scream_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Man_Scream\man_scream_3		91328
 	856163467	woman_scream_2	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\woman_scream_2_C3FAB148.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_Voices\NPC_Screams\Woman_Scream\woman_scream_2		159494
+	867803138	Music_Gamplay_Loop_108bpm_3_4	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Music_Gamplay_Loop_108bpm_3_4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMusic\Music_Gamplay_Loop_108bpm_3_4\Music_Gamplay_Loop_108bpm_3_4		34692064
 	927972243	Footstep_Double_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Double_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Double_02		20224
 	943653409	Footstep_Single_02	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\Footstep_Single_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Single_02		16706
 	953461429	PrepareThrow_03	C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\SFX\PrepareThrow_1_970210E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\PrepareThrow\PrepareThrow_03		53166

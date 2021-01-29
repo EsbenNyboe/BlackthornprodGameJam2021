@@ -13,6 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID MUSIC_GAME = 1072299391U;
+        static const AkUniqueID MUSIC_LOSE = 3736367630U;
+        static const AkUniqueID MUSIC_WIN = 2682680661U;
         static const AkUniqueID NPC_COLLBIRD = 3321089774U;
         static const AkUniqueID NPC_COLLFLOOR = 495534887U;
         static const AkUniqueID NPC_COLLSHARK = 2474133806U;
@@ -41,6 +44,23 @@ namespace AK
         static const AkUniqueID WAVE_LOOP_STOP = 2133808190U;
         static const AkUniqueID WAVE_LOST = 2761884803U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMESTATE
+        {
+            static const AkUniqueID GROUP = 4091656514U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAME = 702482391U;
+                static const AkUniqueID LOSE = 221232726U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID WIN = 979765101U;
+            } // namespace STATE
+        } // namespace GAMESTATE
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {

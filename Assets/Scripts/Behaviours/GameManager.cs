@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         boat.speed = boatSpeedStart;
         gameLost = false;
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicGame);
     }
 
     // Update is called once per frame
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseGame()
     {
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicLose);
         onGameLost?.Invoke(this, EventArgs.Empty);
         print("Game Lost");
         //Make Boat sink
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour
     }
     public void WinGame()
     {
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.musicWin);
         WinScreen.SetActive(true);
     }
     public void RestartLevel()
