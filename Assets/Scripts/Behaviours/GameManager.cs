@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnNPCLogic()
     {
-        StartCoroutine(WaitSpawn());
+        //StartCoroutine(WaitSpawn());
     }
 
     IEnumerator WaitSpawn()

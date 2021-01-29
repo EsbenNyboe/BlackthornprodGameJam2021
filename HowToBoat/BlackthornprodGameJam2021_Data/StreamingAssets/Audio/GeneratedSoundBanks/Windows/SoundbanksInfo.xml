@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\GameDev Projects\BlackthornprodGameJam2021\BlackthornprodGameJam2021_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="1021391979">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1661994096" Language="SFX" Hash="4211727662">
+			<ObjectPath>\SoundBanks\Default Work Unit\Soundbank</ObjectPath>
+			<ShortName>Soundbank</ShortName>
+			<Path>Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1072299391" Name="Music_Game" ObjectPath="\Events\MusicEvents\Music_Game" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3736367630" Name="Music_Lose" ObjectPath="\Events\MusicEvents\Music_Lose" DurationType="OneShot" DurationMin="3.368617" DurationMax="3.368617">
+					<IncludedMemoryFiles>
+						<File Id="523046439" Language="SFX">
+							<ShortName>BoatCrash_2.wav</ShortName>
+							<Path>SFX\BoatCrash_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetState>
+						<ActionSetStateEntry Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\GameState\Lose"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2682680661" Name="Music_Win" ObjectPath="\Events\MusicEvents\Music_Win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<ActionSetState>
+						<ActionSetStateEntry Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\GameState\Win"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3321089774" Name="NPC_CollBird" ObjectPath="\Events\Default Work Unit\NPC_CollBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="495534887" Name="NPC_CollFloor" ObjectPath="\Events\Default Work Unit\NPC_CollFloor" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2474133806" Name="NPC_CollShark" ObjectPath="\Events\Default Work Unit\NPC_CollShark" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="139855160" Name="NPC_CollWater" ObjectPath="\Events\Default Work Unit\NPC_CollWater" DurationType="OneShot" DurationMin="0.567619" DurationMax="0.567619">
+					<IncludedMemoryFiles>
+						<File Id="615628854" Language="SFX">
+							<ShortName>Splash_3.wav</ShortName>
+							<Path>SFX\Splash_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3101144128" Name="NPC_CollWaterMultipleNpcs" ObjectPath="\Events\Default Work Unit\NPC_CollWaterMultipleNpcs" DurationType="OneShot" DurationMin="0.567619" DurationMax="0.567619">
+					<IncludedMemoryFiles>
+						<File Id="615628854" Language="SFX">
+							<ShortName>Splash_3.wav</ShortName>
+							<Path>SFX\Splash_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2016968455" Name="NPC_DroppedByBird" ObjectPath="\Events\Default Work Unit\NPC_DroppedByBird" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1811951503" Name="NPC_Fly_Boy" ObjectPath="\Events\Default Work Unit\NPC_Fly_Boy" DurationType="OneShot" DurationMin="2.004694" DurationMax="2.373855">
+					<IncludedMemoryFiles>
+						<File Id="162745430" Language="SFX">
+							<ShortName>kid_scream_7.wav</ShortName>
+							<Path>SFX\kid_scream_7_10C4C929.wem</Path>
+						</File>
+						<File Id="368074924" Language="SFX">
+							<ShortName>kid_scream_6.wav</ShortName>
+							<Path>SFX\kid_scream_6_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1765057129" Name="NPC_Fly_Girl" ObjectPath="\Events\Default Work Unit\NPC_Fly_Girl" DurationType="OneShot" DurationMin="2.378435" DurationMax="2.378435">
+					<IncludedMemoryFiles>
+						<File Id="672425898" Language="SFX">
+							<ShortName>kid_scream_1.wav</ShortName>
+							<Path>SFX\kid_scream_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="314326094" Name="NPC_Fly_Grandpa" ObjectPath="\Events\Default Work Unit\NPC_Fly_Grandpa" DurationType="OneShot" DurationMin="2.289410" DurationMax="2.773288">
+					<IncludedMemoryFiles>
+						<File Id="5531648" Language="SFX">
+							<ShortName>grandpa_scream_1.wav</ShortName>
+							<Path>SFX\grandpa_scream_1_10C4C929.wem</Path>
+						</File>
+						<File Id="240154784" Language="SFX">
+							<ShortName>grandpa_scream_2.wav</ShortName>
+							<Path>SFX\grandpa_scream_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1037768413" Name="NPC_Fly_Man" ObjectPath="\Events\Default Work Unit\NPC_Fly_Man" DurationType="OneShot" DurationMin="1.034739" DurationMax="1.675805">
+					<IncludedMemoryFiles>
+						<File Id="206821348" Language="SFX">
+							<ShortName>man_scream_1.wav</ShortName>
+							<Path>SFX\man_scream_1_10C4C929.wem</Path>
+						</File>
+						<File Id="401989199" Language="SFX">
+							<ShortName>man_scream_4.wav</ShortName>
+							<Path>SFX\man_scream_4_10C4C929.wem</Path>
+						</File>
+						<File Id="820589324" Language="SFX">
+							<ShortName>man_scream_2.wav</ShortName>
+							<Path>SFX\man_scream_2_10C4C929.wem</Path>
+						</File>
+						<File Id="847845634" Language="SFX">
+							<ShortName>man_scream_3.wav</ShortName>
+							<Path>SFX\man_scream_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3522606991" Name="NPC_Fly_Woman" ObjectPath="\Events\Default Work Unit\NPC_Fly_Woman" DurationType="OneShot" DurationMin="1.525843" DurationMax="1.807595">
+					<IncludedMemoryFiles>
+						<File Id="480216868" Language="SFX">
+							<ShortName>woman_scream_4.wav</ShortName>
+							<Path>SFX\woman_scream_4_3DC4E766.wem</Path>
+						</File>
+						<File Id="856163467" Language="SFX">
+							<ShortName>woman_scream_2.wav</ShortName>
+							<Path>SFX\woman_scream_2_C3FAB148.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1661441752" Name="NPC_Impact_Child" ObjectPath="\Events\Default Work Unit\NPC_Impact_Child" DurationType="OneShot" DurationMin="0.209683" DurationMax="0.215261">
+					<IncludedMemoryFiles>
+						<File Id="54963401" Language="SFX">
+							<ShortName>kid_impact_2.wav</ShortName>
+							<Path>SFX\kid_impact_2_10C4C929.wem</Path>
+						</File>
+						<File Id="1029545463" Language="SFX">
+							<ShortName>kid_impact_1.wav</ShortName>
+							<Path>SFX\kid_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1900293553" Name="NPC_Impact_Grandpa" ObjectPath="\Events\Default Work Unit\NPC_Impact_Grandpa" DurationType="OneShot" DurationMin="0.252562" DurationMax="0.252562">
+					<IncludedMemoryFiles>
+						<File Id="503185017" Language="SFX">
+							<ShortName>grandpa_impact_1.wav</ShortName>
+							<Path>SFX\grandpa_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1533334522" Name="NPC_Impact_Man" ObjectPath="\Events\Default Work Unit\NPC_Impact_Man" DurationType="OneShot" DurationMin="0.249932" DurationMax="0.249932">
+					<IncludedMemoryFiles>
+						<File Id="143107039" Language="SFX">
+							<ShortName>man_impact_1.wav</ShortName>
+							<Path>SFX\man_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="651276332" Name="NPC_Impact_Woman" ObjectPath="\Events\Default Work Unit\NPC_Impact_Woman" DurationType="OneShot" DurationMin="1.076984" DurationMax="1.076984">
+					<IncludedMemoryFiles>
+						<File Id="200947536" Language="SFX">
+							<ShortName>woman_impact_1.wav</ShortName>
+							<Path>SFX\woman_impact_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2050233766" Name="NPC_PickedUp" ObjectPath="\Events\Default Work Unit\NPC_PickedUp" DurationType="OneShot" DurationMin="0.560125" DurationMax="0.964936">
+					<IncludedMemoryFiles>
+						<File Id="10658318" Language="SFX">
+							<ShortName>PrepareThrow_1.wav</ShortName>
+							<Path>SFX\PrepareThrow_1_0E30E108.wem</Path>
+						</File>
+						<File Id="528672744" Language="SFX">
+							<ShortName>PrepareThrow_1.wav</ShortName>
+							<Path>SFX\PrepareThrow_1_10C4C929.wem</Path>
+						</File>
+						<File Id="953461429" Language="SFX">
+							<ShortName>PrepareThrow_1.wav</ShortName>
+							<Path>SFX\PrepareThrow_1_970210E3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4146794365" Name="NPC_PreparedForThrow" ObjectPath="\Events\Default Work Unit\NPC_PreparedForThrow" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2756003563" Name="NPC_Thrown" ObjectPath="\Events\Default Work Unit\NPC_Thrown" DurationType="OneShot" DurationMin="0.262025" DurationMax="0.384471">
+					<IncludedMemoryFiles>
+						<File Id="451614913" Language="SFX">
+							<ShortName>Throw_1low.wav</ShortName>
+							<Path>SFX\Throw_1low_10C4C929.wem</Path>
+						</File>
+						<File Id="558849201" Language="SFX">
+							<ShortName>Throw_1high.wav</ShortName>
+							<Path>SFX\Throw_1high_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player_Footsteps" DurationType="OneShot" DurationMin="0.163314" DurationMax="0.213760">
+					<IncludedMemoryFiles>
+						<File Id="119650254" Language="SFX">
+							<ShortName>Footstep_Single_01.wav</ShortName>
+							<Path>SFX\Footstep_Single_01_10C4C929.wem</Path>
+						</File>
+						<File Id="151638671" Language="SFX">
+							<ShortName>Footstep_Single_03.wav</ShortName>
+							<Path>SFX\Footstep_Single_03_10C4C929.wem</Path>
+						</File>
+						<File Id="927972243" Language="SFX">
+							<ShortName>Footstep_Double_02.wav</ShortName>
+							<Path>SFX\Footstep_Double_02_10C4C929.wem</Path>
+						</File>
+						<File Id="943653409" Language="SFX">
+							<ShortName>Footstep_Single_02.wav</ShortName>
+							<Path>SFX\Footstep_Single_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3626999974" Name="Start_Ambience" ObjectPath="\Events\Default Work Unit\Start_Ambience" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="989576615" Language="SFX">
+							<ShortName>OceanAmbience_1 stereo loop.wav</ShortName>
+							<Path>SFX\OceanAmbience_1 stereo loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\MusicEvents\Start_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="172854790" Language="SFX">
+							<ShortName>Music_Lose_Loop_108bpm_3_4.wav</ShortName>
+							<Path>SFX\Music_Lose_Loop_108bpm_3_4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="239071218" Language="SFX">
+							<ShortName>Lose_Impact.wav</ShortName>
+							<Path>SFX\Lose_Impact_D79FB2B7.wem</Path>
+						</File>
+						<File Id="425843475" Language="SFX">
+							<ShortName>Music_Win_108bpm_3_4.wav</ShortName>
+							<Path>SFX\Music_Win_108bpm_3_4_D79FB2B7.wem</Path>
+						</File>
+						<File Id="867803138" Language="SFX">
+							<ShortName>Music_Gamplay_Loop_108bpm_3_4.wav</ShortName>
+							<Path>SFX\Music_Gamplay_Loop_108bpm_3_4_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{484AFDAE-9686-477C-8C2E-7D90823B6C52}">
+							<Media>
+								<File Id="867803138"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{D32CC777-2D43-4343-ABD9-41604277EEBC}">
+							<Media>
+								<File Id="172854790"/>
+								<File Id="239071218"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{B0F8BD86-6594-40A9-B04B-245183D3E6AD}">
+							<Media>
+								<File Id="425843475"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1973806823" Name="Wave_Cleared" ObjectPath="\Events\Default Work Unit\Wave_Cleared" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="264499973" Name="Wave_Enter" ObjectPath="\Events\Default Work Unit\Wave_Enter" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1068246890" Language="SFX">
+							<ShortName>BoatCreak_1.wav</ShortName>
+							<Path>SFX\BoatCreak_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="141150188" Name="Wave_Loop_Big" ObjectPath="\Events\Default Work Unit\Wave_Loop_Big" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="307057162" Language="SFX">
+							<ShortName>Wave_Loop_1.wav</ShortName>
+							<Path>SFX\Wave_Loop_1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="429804171" Name="Wave_Loop_Medium" ObjectPath="\Events\Default Work Unit\Wave_Loop_Medium" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="307057162" Language="SFX">
+							<ShortName>Wave_Loop_1.wav</ShortName>
+							<Path>SFX\Wave_Loop_1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2751120299" Name="Wave_Loop_Small" ObjectPath="\Events\Default Work Unit\Wave_Loop_Small" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="307057162" Language="SFX">
+							<ShortName>Wave_Loop_1.wav</ShortName>
+							<Path>SFX\Wave_Loop_1_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2133808190" Name="Wave_Loop_Stop" ObjectPath="\Events\Default Work Unit\Wave_Loop_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2761884803" Name="Wave_Lost" ObjectPath="\Events\Default Work Unit\Wave_Lost" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="295969768" Name="DistanceToWave" ObjectPath="\Game Parameters\Default Work Unit\DistanceToWave"/>
+				<GameParameter Id="659411096" Name="BoatSpeed" ObjectPath="\Game Parameters\Default Work Unit\BoatSpeed"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\GameState\Lose">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\GameState\Win">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="4091656514" Name="GameState" ObjectPath="\States\Default Work Unit\GameState">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\GameState\None"/>
+						<State Id="702482391" Name="Game" ObjectPath="\States\Default Work Unit\GameState\Game"/>
+						<State Id="979765101" Name="Win" ObjectPath="\States\Default Work Unit\GameState\Win"/>
+						<State Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\GameState\Lose"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
