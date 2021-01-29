@@ -38,6 +38,7 @@ namespace AK
         static const AkUniqueID WAVE_LOOP_BIG = 141150188U;
         static const AkUniqueID WAVE_LOOP_MEDIUM = 429804171U;
         static const AkUniqueID WAVE_LOOP_SMALL = 2751120299U;
+        static const AkUniqueID WAVE_LOOP_STOP = 2133808190U;
         static const AkUniqueID WAVE_LOST = 2761884803U;
     } // namespace EVENTS
 

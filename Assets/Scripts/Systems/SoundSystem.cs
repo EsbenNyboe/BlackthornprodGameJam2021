@@ -13,7 +13,17 @@ public class SoundSystem : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(transform.parent.gameObject);
+        }
+        else Destroy(transform.parent.gameObject);
+    }
+    private void Start()
+    {
+        PlaySound(SoundEnum.startAmbience);
+        PlaySound(SoundEnum.startMusic);
     }
     public void PlaySound(SoundEnum soundtype)
     {
@@ -61,6 +71,7 @@ public class SoundSystem : MonoBehaviour
 
         waveLoopBig,
         waveLoopMedium,
-        waveLoopSmall
+        waveLoopSmall,
+        waveLoopStop
     }
 }

@@ -48,7 +48,8 @@ public class Boat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocityBar.SetVelocity(speed);
+        if (velocityBar != null)
+            velocityBar.SetVelocity(speed);
     }
     public void PermanentBoost(float boostValue)
     {

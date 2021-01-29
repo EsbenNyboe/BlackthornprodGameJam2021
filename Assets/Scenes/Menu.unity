@@ -567,7 +567,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 606472563}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1500,6 +1501,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &606472562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 195987459}
+    m_Modifications:
+    - target: {fileID: 2883615481182495720, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_Name
+      value: WwiseSoundbank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 152.87804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5295285
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -155.84767
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+--- !u!4 &606472563 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8908728427068384005, guid: 87251e876fcd39247bfca197a125a8a5, type: 3}
+  m_PrefabInstance: {fileID: 606472562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &834195979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,6 +4338,7 @@ MonoBehaviour:
   waterParticle: {fileID: 1861141574917311910, guid: 02391f7bf3b5b5543b70458f9288221c, type: 3}
   waterPos: {fileID: 196976725}
   centerOfMass: {fileID: 1878958674}
+  velocityBar: {fileID: 0}
 --- !u!50 &2122713143
 Rigidbody2D:
   serializedVersion: 4

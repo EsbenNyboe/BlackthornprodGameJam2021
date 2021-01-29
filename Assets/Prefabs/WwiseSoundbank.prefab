@@ -53,7 +53,7 @@ MonoBehaviour:
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
-  unloadTriggerList: 958ca0ea
+  unloadTriggerList: 
   bankNameInternal: 
   valueGuidInternal: 
 --- !u!114 &2039401051780592753
@@ -121,3 +121,5 @@ MonoBehaviour:
     eventName: Wave_Loop_Medium
   - soundType: 26
     eventName: Wave_Loop_Small
+  - soundType: 27
+    eventName: Wave_Loop_Stop

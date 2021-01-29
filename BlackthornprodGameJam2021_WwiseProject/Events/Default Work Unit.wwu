@@ -434,6 +434,31 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{936569D9-D44C-4B61-993A-26095F1F7D66}" ShortID="962385871">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Small" ID="{4D88FC46-EB97-4108-B56B-B2C476217723}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{781F8BE6-7449-4F12-AF33-966FED9E2C68}" ShortID="245415067">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Small" ID="{4D88FC46-EB97-4108-B56B-B2C476217723}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Wave_Loop_Medium" ID="{5444B0C7-145D-4308-9489-D3AD7DCA39D0}">
@@ -450,6 +475,31 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{CDF1CF3B-60FD-4284-9DF3-02D162700082}" ShortID="387138512">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Medium" ID="{3C80C80A-628C-4CC1-97AB-A21352C9A527}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A3AFB366-D6E3-4CD2-B01C-9A28C5E3F880}" ShortID="715437222">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Medium" ID="{3C80C80A-628C-4CC1-97AB-A21352C9A527}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{080C555C-2AE4-4035-9D68-8DB98937E76E}" ShortID="265733577">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Wave_Loop_Medium" ID="{3C80C80A-628C-4CC1-97AB-A21352C9A527}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
@@ -475,6 +525,57 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Wave_Loop_Big" ID="{9AC53E06-E33D-4A55-8892-C5661F8BA65E}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AB13C4CF-BB14-4FD7-B508-4712F3834F10}" ShortID="827870153">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Big" ID="{9AC53E06-E33D-4A55-8892-C5661F8BA65E}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AD118F92-AC14-4FEF-9E28-AFAF05A0E5F0}" ShortID="944813295">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="12"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loop_Big" ID="{9AC53E06-E33D-4A55-8892-C5661F8BA65E}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Wave_Loop_Stop" ID="{82E57714-88B3-4704-A9C6-ECBDD85A19FC}">
+					<ChildrenList>
+						<Action Name="" ID="{52F17A6F-6777-4849-B72F-D41288BAEAEC}" ShortID="668544685">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wave_Loops" ID="{912BF53E-0035-4734-9A09-277D548CA0C2}" WorkUnitID="{1459D84F-F307-4031-9EFA-89D8C08B129C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A47ABF67-1E0C-4AE6-BF5C-C477C4C25BCB}" ShortID="332694136">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DistanceToWave" ID="{7EB1BBA6-43E4-46B8-8177-E247C016B2AB}" WorkUnitID="{E3BFB196-C756-4ED2-A3FB-64A921B24949}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

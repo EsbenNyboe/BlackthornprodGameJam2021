@@ -8,26 +8,53 @@ public class WaveChecker : MonoBehaviour
     [Space]
     public GameObject boat;
     public float maxDistanceToCheck;
+    public float delayDistanceToCheck;
 
     // read only
     public int nextWave;
+    public int waveCount;
     public float distanceToWave;
     public bool lvlWonKinda;
 
-    //public enum WaveType
-    //{
-    //    BigWave,
-    //    MediumWave,
-    //    SmallWave
-    //}
-    //public WaveType waveType;
-
     private void Start()
     {
-        nextWave = 0;
         lvlWonKinda = false;
 
+        AutoWaveArray();
+
         PlayWaveSoundLoop();
+    }
+
+    private void AutoWaveArray()
+    {
+        foreach (Transform wave in transform)
+        {
+            waveCount++;
+        }
+        waves = new GameObject[waveCount];
+        waveCount = 0;
+        foreach (Transform wave in transform)
+        {
+            waves[waveCount] = wave.gameObject;
+            waveCount++;
+        }
+        FindTheNextWave();
+        waveCount = 0;
+    }
+
+    private void FindTheNextWave()
+    {
+        float closestDistance = 100;
+        for (int i = 0; i < waves.Length; i++)
+        {
+            if (waves[i].transform.position.x > 0)
+                if (waves[i].transform.position.x - boat.transform.position.x < closestDistance)
+                {
+                    closestDistance = waves[i].transform.position.x - boat.transform.position.x;
+                    nextWave = i;
+                }
+        }
+        waveCount++;
     }
 
     private void PlayWaveSoundLoop()
@@ -51,17 +78,29 @@ public class WaveChecker : MonoBehaviour
         if (!lvlWonKinda)
         {
             distanceToWave = waves[nextWave].transform.position.x - boat.transform.position.x;
-            if (Mathf.Abs(distanceToWave) < maxDistanceToCheck)
-                AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave);
 
-            if (distanceToWave + maxDistanceToCheck < 0)
+            if (distanceToWave < 0 && -distanceToWave < maxDistanceToCheck + delayDistanceToCheck)
+                AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave + delayDistanceToCheck);
+            else if (distanceToWave > 0 && distanceToWave < maxDistanceToCheck)
+                AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave + delayDistanceToCheck);
+            //if (Mathf.Abs(distanceToWave) < maxDistanceToCheck + delayDistanceToCheck) // hmmm
+            //    AkSoundEngine.SetRTPCValue("DistanceToWave", distanceToWave + delayDistanceToCheck);
+
+            if (distanceToWave + delayDistanceToCheck + maxDistanceToCheck < 0)
             {
-                nextWave++;
-                if (nextWave > waves.Length - 1)
+                //nextWave++;
+                FindTheNextWave();
+                if (waveCount > waves.Length - 1)
+                    //if (nextWave > waves.Length - 1)
                     lvlWonKinda = true;
                 else
                     PlayWaveSoundLoop();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.waveLoopStop);
     }
 }

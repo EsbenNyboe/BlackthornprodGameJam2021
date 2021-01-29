@@ -37,8 +37,6 @@ public class GameManager : MonoBehaviour
     {
         boat = GameObject.FindGameObjectWithTag("Boat").GetComponent<Boat>();
         boat.speed = boatSpeedStart;
-        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.startAmbience);
-        SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.startMusic);
     }
 
     // Update is called once per frame
