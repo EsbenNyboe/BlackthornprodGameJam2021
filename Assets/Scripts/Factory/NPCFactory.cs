@@ -26,33 +26,34 @@ public class NPCFactory : MonoBehaviour
 
 
     public GameObject InstantiateNPC()
-    {
+    {
+
         SpawnData spawnData = GetData();
         spawnData.slotVacancy = true;
         GameObject spawnedNPC = Instantiate(throwableObjectPrefab, spawnData.parent);
         int randomNpcIndex = UnityEngine.Random.Range(0, npcs.Length);
         spawnedNPC.GetComponent<ThrowableObjectsMasterClass>().setThrowableScriptableObject(npcs[randomNpcIndex]);
         spawnedNPC.GetComponent<ThrowableObjectsMasterClass>().SetSpawnData(spawnData);
-        return spawnedNPC;
+        return spawnedNPC;
+
        
-    }
-
-
-
+    }
+
+
+
+
+
+
+
     SpawnData GetData()
-    {
+    {
+
         SpawnData spawnData = spawns.Where(p => p.slotVacancy == false).Select(p => p).FirstOrDefault();
         if (spawnData == null) return null;
         
-        return spawnData;
+        return spawnData;
+
         
-    }
-
-    [Serializable]
-    public class SpawnData
-    {
-        public Transform parent;
-        public bool slotVacancy;
     }
 
     [Serializable]
