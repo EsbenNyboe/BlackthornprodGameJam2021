@@ -7,9 +7,9 @@ public class BirdBehaviour : MonoBehaviour
 {
 
     [Header("Behaviour Control")]
-    [SerializeField] float highestHeightPos;
-    [SerializeField] float lowestHeightPos;
-    [SerializeField] float speedHeightChangePos;
+    //[SerializeField] float highestHeightPos;
+    //[SerializeField] float lowestHeightPos;
+    //[SerializeField] float speedHeightChangePos;
     [SerializeField] Vector3 firstPos;
     [SerializeField] Vector3 lastPos;
     [SerializeField] Vector3 offScreenPos;
@@ -19,17 +19,19 @@ public class BirdBehaviour : MonoBehaviour
     bool flipMov;
     float heightRef;
     Tween logicTween;
+    SpriteRenderer spriteRenderer;
     #region singleton
     static public BirdBehaviour instance { get; private set; }
     void Awake()
     {
         if (instance = null) instance = this;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     #endregion
     // Start is called before the first frame update
     void Start()
     {
-       // HandleHeightMovement();
+        // HandleHeightMovement();
 
         //debug
         CallBird();
@@ -39,18 +41,23 @@ public class BirdBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*     if (transform.position.y >= highestHeightPos) flipMov = !flipMov;
-             else if (transform.position.y <= lowestHeightPos) flipMov = !flipMov;
+        /*   if (heightRef > highestHeightPos || heightRef < lowestHeightPos)
+           {
+               heightRef = 0;
+               flipMov = !flipMov;
+           }
+           if (flipMov)
+           {
+               transform.position += new Vector3(0, Time.deltaTime * speedHeightChangePos, 0);
+               heightRef += Time.deltaTime * speedHeightChangePos;
+           }
+           else
+           {
+               transform.position -= new Vector3(0, Time.deltaTime * speedHeightChangePos, 0);
+               heightRef += Time.deltaTime * speedHeightChangePos;
 
-             if (flipMov)
-             {
-                 transform.position += new Vector3(0, Time.deltaTime * speedHeightChangePos, 0);
-             }
-             else
-             {
-                 transform.position -= new Vector3(0, Time.deltaTime * speedHeightChangePos, 0);
-             }
-     */
+           }*/
+
     }
     public void CallBird()
     {
@@ -59,20 +66,38 @@ public class BirdBehaviour : MonoBehaviour
     }
     IEnumerator BirdCoroutine()
     {
+        spriteRenderer.flipX = false;
+        CheckFlipX(offScreenPos, firstPos); ;
+
         logicTween?.Complete();
         logicTween = null;
         logicTween = transform.DOMove(firstPos, 100 / speedPosChange);
         yield return logicTween.WaitForCompletion();
         yield return new WaitForSeconds(holdPositionTimer);
+        CheckFlipX(firstPos, lastPos);
         logicTween = transform.DOMove(lastPos, 100 / speedPosChange);
         yield return logicTween.WaitForCompletion();
         yield return new WaitForSeconds(holdPositionTimer);
+        CheckFlipX(lastPos, offScreenPos);
         logicTween = transform.DOMove(offScreenPos, 100 / speedPosChange);
 
     }
-    void HandleHeightMovement()
+    void DoAction()
     {
-        TweenCallback lowerHeight = () => transform.DOMove(new Vector3(transform.position.x, transform.position.y + lowestHeightPos), 100 / speedHeightChangePos).OnComplete(() => HandleHeightMovement());
-        transform.DOMove(new Vector3(transform.position.x, transform.position.y - highestHeightPos), 100 / speedHeightChangePos).OnComplete(lowerHeight);
+
     }
+    void CheckFlipX(Vector3 beforeChange, Vector3 afterChange)
+    {
+        //the default sprite direction has to be looking to the left
+        if (beforeChange.x < afterChange.x) spriteRenderer.flipX = true; // look to the right
+        else { spriteRenderer.flipX = false; } //look to the left
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("NPC"))
+        {
+            DoAction();
+        }
+    }
+    
 }
