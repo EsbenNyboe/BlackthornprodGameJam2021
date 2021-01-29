@@ -16,6 +16,9 @@ public class NPCFactory : MonoBehaviour
 
     public ThrowableObjectScriptableObjectDefinition[] npcs;
     public static NPCFactory instance;
+
+
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -24,23 +27,24 @@ public class NPCFactory : MonoBehaviour
 
     public GameObject InstantiateNPC()
     {
-        if (GetSlot() != null)
-        {
+        //if (GetSlot() != null)
+        //{
         GameObject spawnedNPC = Instantiate(throwableObjectPrefab,GetSlot());
         int randomNpcIndex = UnityEngine.Random.Range(0, npcs.Length);
         spawnedNPC.GetComponent<ThrowableObjectsMasterClass>().setThrowableScriptableObject(npcs[randomNpcIndex]);
         return spawnedNPC;
-        }
-        return null;
+        //}
+        //return null;
     }
 
     
 
     Transform GetSlot()
     {
-       
-        return spawns.Where(p => p.slotVacancy == true).Select(p => p.parent).FirstOrDefault();
-        
+        SpawnData spawnData = spawns.Where(p => p.slotVacancy == false).Select(p => p).FirstOrDefault();
+        if (spawnData == null) return null;
+        spawnData.slotVacancy = true;
+        return spawnData.parent;
     }
 
     [Serializable]
