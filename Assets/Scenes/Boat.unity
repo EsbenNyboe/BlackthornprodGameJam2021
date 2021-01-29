@@ -4016,7 +4016,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 930264827}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: NextScene
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6269,7 +6269,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next LEVEL
+  m_Text: Restart
 --- !u!222 &1519644265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8660,8 +8660,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1879753675638941467, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
-      propertyPath: npcHeldPosition
-      value: 
+      propertyPath: boatImpulseForce
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8195913032023910806, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
       propertyPath: m_Name
