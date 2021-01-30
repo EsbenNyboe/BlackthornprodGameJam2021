@@ -52,6 +52,7 @@ MonoBehaviour:
   drownTimer: 2
   deepDistance: 3
   drownSpeed: 1
+  shrinkSpeed: 1
   mySpawnData:
     parent: {fileID: 0}
     slotVacancy: 0

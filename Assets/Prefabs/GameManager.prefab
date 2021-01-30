@@ -74,8 +74,8 @@ MonoBehaviour:
   LoseScreen: {fileID: 0}
   WinScreen: {fileID: 0}
   useInstantiationPlz: 1
-  maxAmountOfPoints: 10
-  startingPoints: 10
+  maxAmountOfPoints: 16
+  startingPoints: 16
 --- !u!114 &1879753675638941467
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     [SerializeField] float drownTimer;//Time until the npc starts to go down
     [SerializeField] float deepDistance;//Time until the npc starts to go down
     [SerializeField] float drownSpeed;//How fast the npc should move down
+    [SerializeField] float shrinkSpeed;//How fast the npc should shrink
 
     bool isNpcThrown;
     public NPCFactory.SpawnData mySpawnData;
@@ -66,10 +67,6 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
         //print(npcsInTheAir);
     }
 
-    public void RemovePlayerPoints()
-    {
-
-    }
     public void setThrowableScriptableObject(ThrowableObjectScriptableObjectDefinition throwableScriptableObject)
     {
         this.throwableScriptableObject = throwableScriptableObject;
@@ -82,21 +79,21 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
                 spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.idleSprites); break;
             case AnimationType.Held:
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcPickedUp);
-                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites,false); break;
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.heldSprites, false); break;
             case AnimationType.Thrown:
                 npcsInTheAir++;
                 isThrown = true;
                 interactable = false;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.screamingSound);
                 SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcThrown);
-                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites,false, () => ChangeAnimationState(AnimationType.Air)); break;
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.thrownSprites, false, () => ChangeAnimationState(AnimationType.Air)); break;
             case AnimationType.Land:
                 if (isThrown)
                     npcsInTheAir--;
                 isThrown = false;
                 interactable = true;
                 SoundSystem.instance.PlaySound(throwableScriptableObject.impactSound);
-                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites,false,2, ()=>SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor),() => ChangeAnimationState(AnimationType.Idle));break;
+                spriteRendererAnimator.ChangeSpriteArray(throwableScriptableObject.landSprites, false, 2, () => SoundSystem.instance.PlaySound(SoundSystem.SoundEnum.npcCollFloor), () => ChangeAnimationState(AnimationType.Idle)); break;
             case AnimationType.Drown:
                 if (isThrown)
                     npcsInTheAir--;
@@ -147,7 +144,7 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
 
             ChangeAnimationState(AnimationType.Drown);
             onNPCDrown?.Invoke(this, EventArgs.Empty);
-          //  StartCoroutine(DrownTweeningCourotine());
+            StartCoroutine(DrownTweeningCourotine());
 
         }
     }
@@ -155,7 +152,10 @@ public abstract class ThrowableObjectsMasterClass : MonoBehaviour
     IEnumerator DrownTweeningCourotine()
     {
         yield return new WaitForSeconds(drownTimer);
-
-        GetComponent<Rigidbody2D>().DOMoveY(-deepDistance, 1 / drownSpeed);
-     }
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        transform.DOMoveY(transform.position.y - deepDistance, 1 / drownSpeed).OnComplete(()=> transform.DOScale(0, 1 / shrinkSpeed).OnComplete(() => Destroy(gameObject)));
+         
+        
+    }
 }
