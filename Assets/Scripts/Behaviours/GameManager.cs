@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < 8; i++)
         {
-            if (useInstantiation)NPCFactory.instance.InstantiateNPC();
+            if (useInstantiation) NPCFactory.instance.InstantiateNPC();
         }
 
 
@@ -131,18 +131,19 @@ public class GameManager : MonoBehaviour
 
     void SpawnNPCLogic()
     {
-        if (npcPointsSystem.currentPoints <= 0) return;              
+        if (npcPointsSystem.currentPoints <= 0) return;
+
         npcPointsSystem.RemovePoints(1);
+        if (npcPointsSystem.currentPoints < 8) return;
         StartCoroutine(WaitSpawn());
     }
 
     IEnumerator WaitSpawn()
     {
         yield return new WaitForSeconds(1f);
-        if (npcPointsSystem.currentPoints >= 8)
-        {
-            if (useInstantiation) NPCFactory.instance.InstantiateNPC();
-        }
+
+        if (useInstantiation) NPCFactory.instance.InstantiateNPC();
+
 
 
     }

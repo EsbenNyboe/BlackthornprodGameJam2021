@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 9870e617229f9c0498722112146ab2ed
   - enabled: 1
-    path: Assets/Scenes/Boat Broken Beauty.unity
-    guid: 7023ab1abb369ca42bcf34be60c63005
+    path: Assets/Scenes/Boat.unity
+    guid: e71ecedc088f1864389153efc9ec4fc0
   m_configObjects: {}

@@ -51,7 +51,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
     {
         impulseForceRead = boatImpulseForce;
         throwObjectSystem = new ThrowObjectSystem();
-
+        DirectionalArrowBehaviour.SetupArrow(() => launchDirection);
     }
 
     void Update()
@@ -89,9 +89,10 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
                     finalForce = minPullForce;
                 }
                 launchDirection = (targetObject.transform.position - mouseOnWorldPosition).normalized;
-                Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
+              //  Debug.DrawRay(targetObject.transform.position, launchDirection * finalForce);
                 if (!pulled)
                 {
+                    DirectionalArrowBehaviour.instance.ShowArrow();
                     throwableObjectsBehavior.ChangeAnimationState(ThrowableObjectsMasterClass.AnimationType.Held);
                     PlayerBehaviour.instance.ChangeAnimationState(PlayerBehaviour.PlayerAnimationType.holding);
 
@@ -141,6 +142,7 @@ public class ThrowInputHandlerSAFEMODE : MonoBehaviour
 
        
         targetObject = null;
+        DirectionalArrowBehaviour.instance.HideArrow();
 
     }
 
