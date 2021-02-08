@@ -8757,6 +8757,18 @@ PrefabInstance:
       propertyPath: LoseScreen
       value: 
       objectReference: {fileID: 557302801}
+    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
+      propertyPath: startingPoints
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
+      propertyPath: maxAmountOfPoints
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195913032023910810, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
+      propertyPath: waveDragFactorBig
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8195913033506171651, guid: 0d0cf9dbba169564e9d213b0fe5ff78d, type: 3}
       propertyPath: spawns.Array.data[0].parent
       value: 
